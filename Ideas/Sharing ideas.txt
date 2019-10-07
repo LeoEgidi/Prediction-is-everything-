@@ -45,6 +45,8 @@ SOME QUESTIONS, SOME TEMPTATIVE ANSWERS
       Karl Popper says that the idea of predicting social science events is often useless. However, produce predictions does not
       seem that we cannot do predictions.
 
+  (d) Model checking and AI, Andrew's blog (https://statmodeling.stat.columbia.edu/2016/11/21/) + Lake et al. (2016)
+
 SOME INITIAL REFERENCES
 
  - Gelman, Popper, Breiman, Mayo, Russell, Hennig
