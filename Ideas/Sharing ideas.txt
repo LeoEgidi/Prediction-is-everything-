@@ -1,0 +1,52 @@
+Temptative titles:  
+Prediction isn't everything, but everything is prediction
+Prediction is nothing without control
+
+GENERAL IDEAS
+
+- Statistics has always been thought as the "science of inference", or "science of the estimates", but rarely
+ statisticians face the idea to validate their models on the ground of predictive accuracy (or prediction)
+- Conversely, machine learning is the "science of the prediction", and rarrely machine learners try
+ to explain how this predictive power has been gained.
+- In terms of metaphors, the 'two-cultures' of Leo Breiman may be seen as follows:
+    - statisticians are very elegant in using their guns, and they perfectly know how 
+      to use them, how they are built, how much precision they may obtain
+    - machine learners are very aggressive with their bazooka, they only have a 
+      rough idea how they are built, they use them to 'kill the rabbit'.
+
+COMMUNICATION DUTIES 
+
+- Statisticians should remark the appealing idea of predictive accuracy based on uncertainty, such as the
+posterior predictive distribution for future data. Point predictions are dangerous
+
+SOME QUESTIONS, SOME TEMPTATIVE ANSWERS
+
+  (a) Is the prediction part of a science design? 
+  
+      Using Bertrand Russel's words, I mean with science design the following scheme:
+
+      1) hypothesis formulation
+      2) Data collection
+      3) Validation of the hypothesis through data
+   
+     In such a view, statistical science is deeply scientific and inductive. And according to this,
+     prediction task is far away from the scientific practice.
+     (I would say, that statistics may be seen as the 'skeleton of science')
+
+  (b) Then, can we really state that machine learning procedures and Artificial Intelligence algorithms are valid and 
+      good scientific tools only because they 'predict well'?
+  
+      Out-of-sample data are observable, not observed, so we should not truly trust the plausibility of our
+      predictions, since they 'cannot fit the out-of-sample' data. Moreover, as Popper says, 'every scientific theory should
+      be falsifiable': how could we falsify a theory if we do not have the data yet?
+
+  (c) Is prediction useful in social science applications (presidential elections, economics measurements, political choices, etc.)?
+
+      Karl Popper says that the idea of predicting social science events is often useless. However, produce predictions does not
+      seem that we cannot do predictions.
+
+SOME INITIAL REFERENCES
+
+ - Gelman, Popper, Breiman, Mayo, Russell, Hennig
+
+
