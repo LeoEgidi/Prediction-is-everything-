@@ -13,6 +13,8 @@ GENERAL IDEAS
       to use them, how they are built, how much precision they may obtain
     - machine learners are very aggressive with their bazooka, they only have a 
       rough idea how they are built, they use them to 'kill the rabbit'.
+- ML techniques are often not generative about the problem of interest.
+- ML techniques often rely on the so called 'training-sample shaking'.
 
 COMMUNICATION DUTIES 
 
@@ -49,6 +51,6 @@ SOME QUESTIONS, SOME TEMPTATIVE ANSWERS
 
 SOME INITIAL REFERENCES
 
- - Gelman, Popper, Breiman, Mayo, Russell, Hennig
+ - Gelman, Popper, Breiman, Mayo, Russell, Hennig, Bzdok
 
 
