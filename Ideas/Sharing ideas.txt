@@ -30,7 +30,23 @@ SOME QUESTIONS, SOME TEMPTATIVE ANSWERS
       1) hypothesis formulation
       2) Data collection
       3) Validation of the hypothesis through data
-   
+
+      and this is quite the the same as the rules suggested by Andrew Gelam about Bayesian inference foundations, when he
+      says:
+
+      "The process of Bayesian data analysis can be idealized by dividing it into the following three steps:
+
+	1. Setting up a full probability model—a joint probability distribution for all observable and unobservable quantities 
+           in a problem. The model should be consistent with knowledge about the underlying scientific problem and the data collection 
+           process.
+
+        2. Conditioning on observed data: calculating and interpreting the appropriate posterior distribution—the conditional probability 
+           distribution of the unobserved quantities of ultimate interest, given the observed data.
+
+	3. Evaluating the fit of the model and the implications of the resulting posterior distribution: how well does the model fit the 
+           data, are the substantive conclusions reasonable, and how sensitive are the results to the modeling assumptions in step 1? 
+           In response, one can alter or expand the model and repeat the three steps.
+         "
      In such a view, statistical science is deeply scientific and inductive. And according to this,
      prediction task is far away from the scientific practice.
      (I would say, that statistics may be seen as the 'skeleton of science')
