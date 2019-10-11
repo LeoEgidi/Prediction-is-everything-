@@ -15,11 +15,14 @@ GENERAL IDEAS
       rough idea how they are built, they use them to 'kill the rabbit'.
 - ML techniques are often not generative about the problem of interest.
 - ML techniques often rely on the so called 'training-sample shaking'.
+- The role of overfitting in prediction
 
 COMMUNICATION DUTIES 
 
 - Statisticians should remark the appealing idea of predictive accuracy based on uncertainty, such as the
 posterior predictive distribution for future data. Point predictions are dangerous
+- ML also use a sort of underlying uncertainty, by using B trees in Random forests or in Bagging. This uncertainty is
+often not so transparent.
 
 SOME QUESTIONS, SOME TEMPTATIVE ANSWERS
 
