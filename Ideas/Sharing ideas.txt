@@ -16,6 +16,10 @@ GENERAL IDEAS
 - ML techniques are often not generative about the problem of interest.
 - ML techniques often rely on the so called 'training-sample shaking'.
 - The role of overfitting in prediction
+- We should investigate the role of prediction in distinct areas of statistics: supervised and unsupervised
+ learning. But also regression and classification
+- Softwares like Stan, which are transparent and make clear the use of the generated quantities, are the best
+ predictive-oriented statistical tools.
 
 COMMUNICATION DUTIES 
 
@@ -23,6 +27,11 @@ COMMUNICATION DUTIES
 posterior predictive distribution for future data. Point predictions are dangerous
 - ML also use a sort of underlying uncertainty, by using B trees in Random forests or in Bagging. This uncertainty is
 often not so transparent.
+- There is an ongoing debate about the supremacy of prediction over accomodation: quickly, is a theory which predicts new items
+ better than a theory designed 'just' to describe the current data? The so called 'predictivism' philosophy (Maher, Worrall) 
+ states this supremacy. Accomodation is often seen to degenerate in overfitting (Hitchcok and Sober)
+- However, only statistics (and not ML) makes clear how to predict and forecast, having an underlying data mechanism.
+ Generative models are useful also for prediction!
 
 SOME QUESTIONS, SOME TEMPTATIVE ANSWERS
 
