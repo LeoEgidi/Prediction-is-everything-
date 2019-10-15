@@ -87,9 +87,100 @@ USA.}
 
 \section{Introduction}
 
+\section{Prediction for science or science for prediction?}
+
+\subsection{It is prediction part of the science design?}
+
+\color{blue}
+
+Bertrand Russell's scheme, Cartesio
+
+\color{black}
+
 \section{The role of prediction in statistics}
 
-Statistics has always been thought as the 
+Statistics has always been thought as the \emph{science of inference}, or \emph{science of estimates}, and inference is always seen as separate from prediction. Inference is based on 
+an underlying mathematical model for the data-generating process \citep{bzdok2018points}, its main task is to describe an unknown mechanism working through generalization: the 
+inferential laws should in fact be as broad as possible, ideally valid for the population of interest, and not symptomatic of the observed data (it is out of the scope of this aper to review the distinct inferential 
+approaches). Prediction moves from the observed to the unobserved, being the action designed to forecast future events without requiring a full understanding of the data-
+generation process. Each person is more or less confident with the weather's predictions or with presidential election predictions, but rarely that person is aware of the underlying 
+statistical model required to produce that forecast, unless he is a statistician/data scientist. In such a view, inference seems hard and obscure, and prediction easy and close 
+to the people. This is often a paradoxical argument, since the inference is often associated to the \emph{explanation} of the problem, and should be relevant and available to the majority of the population
+
+As statisticians, we are often faced with a double task. First, we must create a sound mathematical model to accomodate the data and retrieve useful inferences for our 
+parameters---there is not distinction here between classical and Bayesian statistics, they are both designed to draw inferential conclusions, either in form of point estimates/confidence intervals or in terms of posterior quantiles/credibility intervals. Then, we should use this model to make predictions, but this is rarely accounted by the statisticians in a transparent way.
+
+For illustration purposes only, we consider the classical linear regression model, where $y_n$ denotes the response variable, $X$ is the $n \times p$ predictor matrix, and $\alpha,\beta_1,\beta_2,\ldots,\beta_p$ are the $p+1$ parameters---the intercept $\alpha$ and the $p$ regression parameters, we have
+
+\begin{equation}
+y_n = \alpha + \sum_{k=1}^p \beta_j x_{nk} + \epsilon_n, \ n=1,2,\ldots,N,
+\label{eq:linear}
+\end{equation}
+%
+with $\epsilon_n \sim \mathcal{N}(0, \sigma^2_{\epsilon})$. Once the model has been estimated and we have retrieved some parameters' estimates $\hat{\alpha}, \hat{\beta_1}, \beta_{2},\ldots,\hat{\beta}_p$, we could use them to provide a point forecast $\tilde{y}_{n+1}$ for the unobserved ${y}_{n+1}$ associated to the predictor vector $\tilde{x}_{n+1k}$. To account for uncertainty, rather than using a point forecast, we could also compute the prediction interval for $\tilde{y}_{n+1}$.
+
+Once the value $y_{n+1}$ is known, the statistician can validate his prediction and check its plausibility. This \emph{ex post} validation is not available when fitting the model, and as such should not represent the plausibility of the model fit itself, since the model construction did not require $y_{n+1}$. In this misalignment between the fitting of the model without the $n+1$-th unit and the forecast validation of $y_{n+1}$ there is space for an infinite debate about the scientific role of prediction.
+
+
+
+
+\subsection{Overfitting and data accomodation}
+
+Even a simple linear regression case poses many challenges: should the statistician use all the $N$ data to build a reasonable/useful model, or could he take only a portion of the sample to accomodate the model (the training set) and use the remaining values to validate the model (the test set)? This apparently naive question pushed many scholars to debate about the presumed supremacy of prediction over accomodation \citep{maher1988prediction, hitchcock2004prediction, worrall2014prediction}. According to this competition, the statistician should ask himself whether he wants models that are true---or  approximately true---or predictively accurate. 
+
+It is well-known that more complex models tend to yield poor predictive results
+
+
+
+\subsection{Prediction as a confirmation theory approach}
+
+\textcolor{blue}{Popper, Kuhn, Mayo}
+
+\subsection{The Bayesian framework}
+
+\textcolor{blue}{Gelman's scheme of Bayesian inference. Draw connection with Bertrand Russell}
+
+As stated by \cite{gelman2013bayesian}, the process of Bayesian data analysis can be idealized by dividing it into the following three steps:
+
+\begin{enumerate}
+\item Setting up a full probability model—--a joint probability distribution---for all observable and unobservable quantities 
+           in a problem. The model should be consistent with knowledge about the underlying scientific problem and the data collection 
+           process.
+\item Conditioning on observed data: calculating and interpreting the appropriate posterior distribution, i.e. the conditional probability 
+           distribution of the unobserved quantities of ultimate interest, given the observed data.
+\item Evaluating the fit of the model and the implications of the resulting posterior distribution: how well does the model fit the 
+           data, are the substantive conclusions reasonable, and how sensitive are the results to the modeling assumptions in step 1? 
+           In response, one can alter or expand the model and repeat the three steps.
+\end{enumerate}
+%
+In the above paradigm, predictions are never mentioned. But this does not mean that predictions are not relevant in the Bayesian paradigm. Denoted by $\tilde{y}$ the unobserved vector of future values, we may derive the posterior predictive distribution as
+
+\begin{equation}
+p(\tilde{y}|y) = \int p(\tilde{y}|\theta)p(\theta|y) d\theta,
+\label{eq:ppdist}
+\end{equation}
+%
+where $p(\theta|y)$ is the posterior distribution for $\theta$, whereas $p(\tilde{y}|\theta)$ is the likelihood function for future observable values. In the linear regression case~\eqref{eq:linear}, the posterior predictive distribution for the future observation $\tilde{y}_{n+1}$ is given by:
+
+$$ p(\tilde{y}_{n+1}|y)= \int \mathcal{N}(\alpha+\sum_{k=1}^{p}\beta_p \tilde{x}_{n+1k}, \sigma^2_{\epsilon}) p(\alpha, \beta_1, \beta_2,\ldots,\beta_p|y) d\alpha  d\beta_1 d\beta_2\ldots d\beta_p.$$
+
+
+\subsection{Communication duties}
+
+
+\section{The role of prediction in machine learning}
+
+\color{blue}
+
+Breiman, Bzdok, Popper (we could argue that ML procedures are not falsifiable!)
+
+\color{black}
+
+\section{Going beyond inference and prediction: a tentative unifying approach}
+
+\section{Applied examples}
+
+\section{Conclusions}
 
 
 
