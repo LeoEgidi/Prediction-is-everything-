@@ -2,6 +2,15 @@ Temptative titles:
 Prediction isn't everything, but everything is prediction
 Prediction is nothing without control
 
+POSSIBLE OUTLINE
+
+1. Introduction
+2. The role of prediction in statistics
+3. The role of prediction in ML
+4. A tentative comparison
+5. Applied examples
+6. Conclusions
+
 GENERAL IDEAS
 
 - Statistics has always been thought as the "science of inference", or "science of the estimates", but rarely
