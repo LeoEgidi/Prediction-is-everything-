@@ -29,6 +29,7 @@ GENERAL IDEAS
  learning. But also regression and classification
 - Softwares like Stan, which are transparent and make clear the use of the generated quantities, are the best
  predictive-oriented statistical tools.
+- In Bayesian analysis, the distinction between inference and prediction is more attenuate!
 
 COMMUNICATION DUTIES 
 
