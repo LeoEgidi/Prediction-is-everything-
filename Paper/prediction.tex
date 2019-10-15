@@ -1,0 +1,95 @@
+\documentclass{statsoc}
+\usepackage[english]{babel}
+\usepackage[a4paper]{geometry}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%%\usepackage{graphics}
+\usepackage[authoryear]{natbib}
+\usepackage{relsize}
+%\usepackage{color}
+\usepackage[table]{xcolor}
+\usepackage{multirow}
+\usepackage{mathptmx}
+%\usepackage{transparent}
+%\usepackage{xcolor}
+%\usepackage{efbox}
+\usepackage{float}
+%\usepackage{subfig}
+%
+%\usepackage{hvfloat}
+%\usepackage{booktabs}
+%\usepackage[font=footnotesize]{caption}
+\usepackage{etoolbox}
+\usepackage{url}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps} 
+
+
+\makeatletter
+\patchcmd{\@makecaption}
+{\parbox}
+{\advance\@tempdima-\fontdimen2\font\parbox} % decrease the width!
+{}{}
+\makeatother  
+
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+\usepackage{enumerate}
+\usepackage{comment}
+\usepackage{float}
+
+\newcommand\Pair[4]{%
+  \arrayrulecolor{cyan!60!black!40}%
+  \arrayrulewidth=1pt
+  \renewcommand\extrarowheight{1.5pt}%
+  \begin{tabular}{|p{2cm}|>{\centering\arraybackslash}p{10pt}|}
+  \hline
+  \rowcolor{cyan!60!black!10}\textcolor{red!60!black}{#1} & \textcolor{red!60!black}{#2} \\
+  \hline 
+  \rowcolor{cyan!60!black!10}\textcolor{red!60!black}{#3} & \textcolor{red!60!black}{#4} \\
+  \hline
+  \end{tabular}%
+}
+
+
+
+
+
+\newtheorem{thm}{Theorem}
+
+\title[]{Prediction is not everything, but everything is prediction}
+\author[Egidi and Gabry]{Leonardo Egidi}
+\address{Dipartimento di Scienze Economiche, Aziendali, Matematiche e Statistiche `Bruno de Finetti',
+	Universit\`{a} degli Studi di Trieste,
+	Trieste,
+	Italy.}
+\email{legidi@units.it}
+\author[Egidi and Gabry]{Jonah Sol Gabry}
+\address{Department of Statistics, Columbia University, New York,
+USA.}
+\email{jgabry@gmail.com}
+ 
+ 
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+
+
+
+
+
+\bibliographystyle{chicago}
+%\bibliography{volley}
+
+\end{document}
