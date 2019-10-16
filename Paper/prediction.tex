@@ -97,18 +97,55 @@ Bertrand Russell's scheme, Cartesio
 
 \color{black}
 
+\subsection{Prediction as a confirmation theory approach}
+
+\textcolor{blue}{Popper, Kuhn, Mayo}
+
+For Popper \citep{popper2005logic}, a theory is scientific only if is falsifiable, where the falsification of a theory is meant to be the the possibility to compare its predictions 
+with the observed data. In his view, theories whose predictions conflict with any observed evidence must be rejected: prediction corroborates (or confirms) a theory when it survives 
+an attempt at falsification; prediction delegitimizes a theory when it does not pass the falsification test.
+
+The confirmation nature of prediction is crucial in natural sciences, such as physics. In general,  as \cite{hitchcock2004prediction} argue,   mathematical descriptions of the 
+invariant behaviour of a physical phenomenon---such as Newton's and Keplero's laws, or Maxwell's equations---are essentially predictive: further experiments and observations can validate these theories. 
+
+A well-known historical example of predictive confirmation in chemistry dates back to the middle of the 19th century---see \cite{maher1988prediction} for a detailed version of the 
+example. At that time, more than 60 chemical elements were known, and new ones continuing to be discovered. Some prominent chemists attempted to determine their atomic weights, 
+density and other properties, by collecting many experimental observations. In 1871, the Russian chemist Dmitri Mendeleev noticed that arranging the elements by their atomic 
+weights, valences and other chemical properties tended to show a periodical recurrence. He found some gaps in the pattern, and he argued that these missing values corresponded to 
+some existing elements which had not yet been discovered: he named three of these elements eka-aluminium, eka-boron, and eka-silicon, by giving some detailed description of their 
+properties. Despite the skepticism of the scientific community, the French Paul-Emile Lecoq de Boisbaudran in 1874, the Swedish Lars Fredrik Nilson in 1878, and the German Clemens 
+Winkler in 1886 discovered three elements which corresponded to descriptions of eka-aluminium, eka-boron, and exa-silicon, respectively: these three elements are better known 
+now as gallium, scandium and germanium. The predictive ability of Mendeleev was remarkable---the Royal Society awarded him the Davy Medal in 1882---, and the new discovered elements well represent pieces of evidence which confirmed the theory.
+
+Predictive confirmation is still ambiguous in social sciences. As argued by \textcolor{blue}{Popper, previsione} and \cite{sarewitz1999prediction}, social sciences 
+have long tried to emulate physical sciences in developing invariant mathematical laws of human behaviour and interaction to predict economics quantities, elections, policies, etc.; 
+many scholars agreed about the fact that a social theory should be judged on its power to predict \citep{friedman1953essays}. 
+
+However, we believe that social science predictions require more and more motivations to validate the underlying theory. In the 2016 United States Presidential Election the Republican Donald Trump defeated the Democrat Hillary Clinton by winning the Electoral College (304 vs 227), but gaining lower voters' percentage (46.1\% vs 48.2\%). According to various online poll aggregators, Hillary Clinton was given a 65\% or 80\% or 90\% chance of winning the electoral college.  As \cite{gelman2016elections} argues:
+
+\begin{quote}
+ These probabilities were high because Clinton had been leading in the polls for months; the probabilities were not 100\% because it was recognized that the final polls might be off by quite a bit from the actual election outcome. Small differences in how the polls were averaged corresponded to large apparent differences in win probabilities; hence we argued that the forecasts that were appearing, were not so different as they seemed based on those reported odds. The final summary is that the polls were off by about 2\% (or maybe 3\%, depending on which poll averaging you’re using), which, again, is a real error of moderate size that happened to be highly consequential given the distribution of the votes in the states this year.
+\end{quote}
+%
+In November 2016, many modelers, included Nate Silver, the founder of the well-known FiveThirtyEight blog (\url{https://fivethirtyeight.com}), failed to predict the Trumps' win. However, it is naive to conclude that those models failed because their underlying mechanism was wrong; rather, the political science predictions cannot  entirely act as theory's confirmation tools, due to many reasons attributed, for instance, to nonresponse and voters' turnout, as explained by \cite{gelman2016elections2}:
+
+\begin{quote}
+Yes, the probability statements are not invalidated by the occurrence of a low-probability event. But we can learn from these low-probability outcomes. In the polling example, yes an error of 2\% is within what one might expect from nonsampling error in national poll aggregates, but the point is that nonsampling error has a reason: it’s not just random. In this case it seems to have arisen from a combination of differential nonresponse, unexpected changes in turnout, and some sloppy modeling choices. It makes sense to try to understand this, not to just say that random things happen and leave it at that.
+\end{quote}
+
 \section{The role of prediction in statistics}
 
 Statistics has always been thought as the \emph{science of inference}, or \emph{science of estimates}, and inference is always seen as separate from prediction. Inference is based on 
 an underlying mathematical model for the data-generating process \citep{bzdok2018points}, its main task is to describe an unknown mechanism working through generalization: the 
-inferential laws should in fact be as broad as possible, ideally valid for the population of interest, and not symptomatic of the observed data (it is out of the scope of this aper to review the distinct inferential 
+inferential laws should in fact be as broad as possible, ideally valid for the population of interest, and not symptomatic of the observed data (it is out of the scope of this paper to review the distinct inferential 
 approaches). Prediction moves from the observed to the unobserved, being the action designed to forecast future events without requiring a full understanding of the data-
 generation process. Each person is more or less confident with the weather's predictions or with presidential election predictions, but rarely that person is aware of the underlying 
 statistical model required to produce that forecast, unless he is a statistician/data scientist. In such a view, inference seems hard and obscure, and prediction easy and close 
 to the people. This is often a paradoxical argument, since the inference is often associated to the \emph{explanation} of the problem, and should be relevant and available to the majority of the population
 
 As statisticians, we are often faced with a double task. First, we must create a sound mathematical model to accomodate the data and retrieve useful inferences for our 
-parameters---there is not distinction here between classical and Bayesian statistics, they are both designed to draw inferential conclusions, either in form of point estimates/confidence intervals or in terms of posterior quantiles/credibility intervals. Then, we should use this model to make predictions, but this is rarely accounted by the statisticians in a transparent way.
+parameters---there is not distinction here between classical and Bayesian statistics, they are both designed to draw inferential conclusions, either in form of point estimates/
+confidence intervals or in terms of posterior quantiles/credibility intervals. Then, we should use this model to make predictions, but this is rarely accounted by the statisticians in a transparent way.
 
 For illustration purposes only, we consider the classical linear regression model, where $y_n$ denotes the response variable, $X$ is the $n \times p$ predictor matrix, and $\alpha,\beta_1,\beta_2,\ldots,\beta_p$ are the $p+1$ parameters---the intercept $\alpha$ and the $p$ regression parameters, we have
 
@@ -132,13 +169,11 @@ It is well-known that more complex models tend to yield poor predictive results
 
 
 
-\subsection{Prediction as a confirmation theory approach}
-
-\textcolor{blue}{Popper, Kuhn, Mayo}
-
-\subsection{The Bayesian framework}
+\subsection{The falsificationist Bayesianism framework}
 
 \textcolor{blue}{Gelman's scheme of Bayesian inference. Draw connection with Bertrand Russell}
+
+\cite{gelman2013philosophy} argue that a key part of Bayesian data analysis regards the model checking through posterior predictive checks. In such a view, the prior is seen as a testable part of the Bayesian model and is open to falsification: from such intuition, \cite{gelman2017beyond} name this framework \emph{falsificationist Bayesianism}.
 
 As stated by \cite{gelman2013bayesian}, the process of Bayesian data analysis can be idealized by dividing it into the following three steps:
 
@@ -163,7 +198,15 @@ p(\tilde{y}|y) = \int p(\tilde{y}|\theta)p(\theta|y) d\theta,
 where $p(\theta|y)$ is the posterior distribution for $\theta$, whereas $p(\tilde{y}|\theta)$ is the likelihood function for future observable values. In the linear regression case~\eqref{eq:linear}, the posterior predictive distribution for the future observation $\tilde{y}_{n+1}$ is given by:
 
 $$ p(\tilde{y}_{n+1}|y)= \int \mathcal{N}(\alpha+\sum_{k=1}^{p}\beta_p \tilde{x}_{n+1k}, \sigma^2_{\epsilon}) p(\alpha, \beta_1, \beta_2,\ldots,\beta_p|y) d\alpha  d\beta_1 d\beta_2\ldots d\beta_p.$$
+%
+Equation~\eqref{eq:ppdist} may be resambled in the following way:
 
+\begin{equation}
+p(\tilde{y}|y) = \frac{p(\tilde{y},y)}{p(y)}= \frac{1}{p(y)}\int p(\tilde{y},y,\theta)d\theta.
+\label{eq:ppdist2}
+\end{equation}
+%
+From Equation~\eqref{eq:ppdist2} we immediately notice that whenever we are interesting in predictions, we need to consider a joint model $p(\tilde{y},y,\theta)$ for both the observed data $y$ and the unobserved quantities $\tilde{y},\theta$. This joint model incorporates bot the likelihood and the prior, being $p(\tilde{y},y,\theta) = p(\tilde{y}|\theta)p(y|\theta)p(\theta)$. Thus, the joint model for the predictions, the data and the parameters is transparently posed, and open to falsification when the observable $\tilde{y}$ becomes known.
 
 \subsection{Communication duties}
 
