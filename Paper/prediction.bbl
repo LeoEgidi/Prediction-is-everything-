@@ -1,5 +1,12 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citeauthoryear{Breiman et~al.}{Breiman
+  et~al.}{2001}]{breiman2001statistical}
+Breiman, L. et~al. (2001).
+\newblock Statistical modeling: The two cultures (with comments and a rejoinder
+  by the author).
+\newblock {\em Statistical science\/}~{\em 16\/}(3), 199--231.
+
 \bibitem[\protect\citeauthoryear{Bzdok, Altman, and Krzywinski}{Bzdok
   et~al.}{2018}]{bzdok2018points}
 Bzdok, D., N.~Altman, and M.~Krzywinski (2018).
@@ -53,9 +60,24 @@ Maher, P. (1988).
   science association}, Volume 1988, pp.\  273--285. Philosophy of Science
   Association.
 
+\bibitem[\protect\citeauthoryear{Popper}{Popper}{1944}]{popper1944poverty}
+Popper, K. (1944).
+\newblock The poverty of historicism, ii. a criticism of historicist methods.
+\newblock {\em Economica\/}~{\em 11\/}(43), 119--137.
+
+\bibitem[\protect\citeauthoryear{Popper}{Popper}{1945}]{popper1945poverty}
+Popper, K. (1945).
+\newblock The poverty of historicism, iii.
+\newblock {\em Economica\/}~{\em 12\/}(46), 69--89.
+
 \bibitem[\protect\citeauthoryear{Popper}{Popper}{2005}]{popper2005logic}
 Popper, K. (2005).
 \newblock {\em The logic of scientific discovery}.
+\newblock Routledge.
+
+\bibitem[\protect\citeauthoryear{Russell}{Russell}{1931}]{russell2017scientific}
+Russell, B. (1931).
+\newblock {\em The scientific outlook}.
 \newblock Routledge.
 
 \bibitem[\protect\citeauthoryear{Sarewitz and Pielke~Jr}{Sarewitz and
