@@ -208,15 +208,31 @@ Parlare della pistola
 
 
 
-\subsection{Overfitting and data accomodation}
+\subsection{Overfitting, data accomodation, and communication}
 
-Even a simple linear regression case poses many challenges: should the statistician use all the $N$ data to build a reasonable/useful model, or could he take only a portion of the sample to accomodate the model (the training set) and use the remaining values to validate the model (the test set)? This apparently naive question pushed many scholars to debate about the presumed supremacy of prediction over accomodation \citep{maher1988prediction, hitchcock2004prediction, worrall2014prediction}. According to this competition, the statistician should ask himself whether he wants models that are true---or  approximately true---or predictively accurate. 
+Even a simple linear regression case poses many challenges: should the statistician use all the $N$ data to build a reasonable/useful model, or could he take only a portion of the 
+sample to accomodate the model (the training set) and use the remaining values to validate the model (the test set)? This apparently naive question pushed many scholars to debate 
+about the supposed supremacy of prediction over accomodation \citep{maher1988prediction, hitchcock2004prediction, worrall2014prediction}. According to this competition, the 
+statistician should ask himself whether he wants models that are true---or  approximately true---or predictively accurate. 
 
-It is well-known that more complex models tend to yield poor predictive results
+It is well-known that the performance of a statistical method requires low variance as well low bias. Given a new data-point $y_{n+1}$ associated to the vector of predictors $\tilde{x}_{n+1}$, and a generic function $f$ to predict the unobserved value, we can define the expected test mean square error as:
+
+\begin{equation}
+E \left[ y_{n+1}-\hat{f}(\tilde{x}_{n+1}) \right]^2 = \text{Var}(\hat{f}(\tilde{x}_{n+1}))+ \text{Bias}^2(\hat{f}(\tilde{x}_{n+1}))+\text{Var}(\epsilon),
+\label{eq:exp_MSE}
+\end{equation}
+%
+where $\text{Var}(f(x_{n+1}))$ is the variance for $f(x_{n+1})$, $\text{Bias}^2(\hat{f}(x_{n+1}))$ is the squared bias, and $\text{Var}(\epsilon)$ is the error variance.
+More complex models, with lower bias, tend to overfit the data, by yielding  poor  predictive results and then higher variance; conversely, too simple models tend to not fit the data adequately and have higher bias. Statistical procedures often incur in the bias-variance 
+trade-off \citep{james2013introduction}, the challenge is to find a compromise by controlling both the bias and the variance.
+
+When building a model for real-life applications to extract information from the data, it is good practice to keep in mind the bias-variance trade-off. Nevertheless, it is often 
+problematic to assess the performance of a statistical model by looking at the elements in Equation~\eqref{eq:exp_MSE}. When $f$ is unobserved, it is even impossible to compute the expected test MSE.
 
 \color{blue}
 
-Qui il discorso va portato a termine, magari non portandolo troppo per le lunghe, visto che si tratta di concetti molto noti
+Da finire
+
 
 \color{black}
 
@@ -238,6 +254,9 @@ As stated by \cite{gelman2013bayesian}, the process of Bayesian data analysis ca
            In response, one can alter or expand the model and repeat the three steps.
 \end{enumerate}
 %
+
+\subsection{Going beyond inference and prediction: a tentative unifying approach}
+
 In the above paradigm, predictions are never mentioned. But this does not mean that predictions are not relevant in the Bayesian paradigm. Denoted by $\tilde{y}$ the unobserved vector of future values, we may derive the posterior predictive distribution as
 
 \begin{equation}
@@ -258,10 +277,10 @@ p(\tilde{y}|y) = \frac{p(\tilde{y},y)}{p(y)}= \frac{1}{p(y)}\int p(\tilde{y},y,\
 %
 From Equation~\eqref{eq:ppdist2} we immediately notice that whenever we are interesting in predictions, we need to consider a joint model $p(\tilde{y},y,\theta)$ for both the observed data $y$ and the unobserved quantities $\tilde{y},\theta$. This joint model incorporates bot the likelihood and the prior, being $p(\tilde{y},y,\theta) = p(\tilde{y}|\theta)p(y|\theta)p(\theta)$. Thus, the joint model for the predictions, the data and the parameters is transparently posed, and open to falsification when the observable $\tilde{y}$ becomes known.
 
-\subsection{Communication duties}
-
-\color{blue}
-Forse questa parte potrebbe andare anche nelle conclusioni e nel testo, e non per forza come sezione a se stante
+%\subsection{Communication duties}
+%
+%\color{blue}
+%Forse questa parte potrebbe andare anche nelle conclusioni e nel testo, e non per forza come sezione a se stante
 
 \color{black}
 
@@ -274,38 +293,172 @@ Forse questa parte potrebbe andare anche nelle conclusioni e nel testo, e non pe
 
 \color{black}
 
-As brilliantly argued by \cite{breiman2001statistical}, there are two cultures in the use of statistical modeling to reach conclusion from data: the data modeling culture, and the 
-algorithmic modeling culture, also named machine learning (ML) culture. The two approaches differ in the underlying idea of how to explain the response variable $y$--stochastic data 
-model vs. predictors function---and in the validation phase---goodness-of-fit tests vs. predictive accuracy. It is out of the scope of this paper to cover in more detail the two modeling classes, it is enough to be aware of the differences.
+\subsection{The two cultures of Leo Breiman}
+
+As brilliantly argued by \cite{breiman2001statistical}, there are two cultures in the use of statistical modeling to reach conclusion from data: a stochastic data model consisting 
+of predictors, parameters and random noise to explain the response variable $y$ is adopted by the data modeling culture; a function of the predictors to predict the response variable 
+$y$ is assumed by the algorithmic modeling culture, also named machine learning (ML) culture. The two approaches strongly differ in their validation: goodness-of-fit tests vs. 
+predictive accuracy on out-of-sample data.  It is evident that the data modeling culture---linear regression, generalized linear models, Cox model, etc.---is aimed at extracting some information about how nature is associating the response variable to the dependent variable, whereas the algorithmic culture---decision and classification trees, neural nets---is more oriented to predict future values of the response variable given the values of the predictors.
+%It is out of the scope of this paper to cover in more detail the two modeling classes, it is enough to be aware of the differences.
+
+In the mid-1980s neural nets and decision trees became incredibly popular \citep{breiman1984classification} in areas where data models were not applicable, such as 
+speech recognition, image recognition, handwriting recognition, and prediction in financial markets. In analysing real data from this fields, the only criterion to evaluate these 
+algorithms was predictive accuracy: this is translated in finding an algorithm $f(x)$ able to be a good predictor for $y$ for future values of $x$, the so called \emph{test set}. 
+
+\subsection{Training set selection: the tree case}
+
+Data scientists are used to train their procedures on the \emph{training set}, which is chosen at the beginning in many possible ways. A common strategy is to select the first half of a 
+dataset to train the algorithm, and the second half to test it. Another strategy consists of selecting only a percentage---say, the 75\% of the dataset---and use the remaining 25\% to  test the algorithm. However, a small change in the dataset can cause a large change in the final predictions, and some adjustments are often required to increase the algorithm's robustness. 
+
+In the case of decision trees, it turned out that a tree that is grown very deep tends to suffer from high variance and low bias. This means that the tree is likely to 
+overfit the training data: if we randomly split the training set into two parts, and fit a tree to both halves, the results could be quite different. To alleviate this lack of 
+robustness, in the mid-1990s some data scientists argued that by aggregating many trees and perturbing the training set, using bagging \citep{breiman1996bagging}, boosting 
+\citep{freund1996experiments} or random forests \citep{ho1995random}, dramatically increased the predictive accuracy of the trees, by decreasing the variance. Bootstrap 
+aggregating, or bagging, repeatedly ($B$ times) selects a random sample with replacement of the training set and fits trees to these samples. After training, predictions are averaged 
+over the $B$ samples: the method leads to better predictions  because it decreases the variance of the model, without increasing the bias. Random forests improve over the bagged 
+trees by using a modified tree learning algorithm that selects, at each candidate split in the learning process, a random subset of the predictors. The reason is that if one or a few 
+predictors are very strong predictive for the response variable, these features will be selected in many of the $B$ trees, causing them to become correlated. A new sample of 
+approximately $\sqrt{p}$ predictors is taken at each split, by decorrelating the trees; predictions are then obtained as in bagging, by averaging over the $B$ samples. Boosting 
+works in a similar way to bagging and random forests, but the trees are grown sequentially, thus each tree is grown using information from the previous grown tree. This procedure does 
+not rely on bootstrap sampling, instead each tree is fit on a modified version of the original dataset.
+
+\subsection{ML scientists are strong instrumentalist}
+
+As emerges from this quick overview of the well-known decision tree methods, the only rationale to evaluate the goodness of an algorithmic modeling procedure is to look at its 
+predictive accuracy on out-of-sample/future data. `Shaking the training set' became popular to ensure lower variance and higher accuracy, with the data scientist apparently ready to 
+do `whatever it takes' to improve over the previous methods. From a philosophical and scientific point of view, algorithmic modelers are \emph{strong instrumentalist}, since for 
+them the predictive accuracy carried out by their algorithms is constitutive---and not only symptomatic---of the broader scientific success.
+
+Evaluating a model/algorithm in light of its ability to predict future data is not shameful at all; conversely, it turned out to be beneficial in many areas where a parametric 
+stochastic model failed to be really generative and useful. However, in line with Popper, predictions of future data are good tools to falsify a posed theory, but many times ML 
+techniques lack of a general and valid theoretical framework. The number of predictors at each split of a random forest is a tuning parameters fixed at $\sqrt{p}$ in most cases, but 
+in practice the best values for these parameters will depend on the problem. Predictions should corroborate or reject an underlying theory, but if the method (the theory) is tuned 
+and selected on the ground of its predictive accuracy, the theory to be falsified is bogus, and not posed in a transparent way.
+
+In other way said, a supposedly valid scientific should exist \emph{before} the future data have been revealed and produce some immediate benefits to the scientific community: corroborating or rejecting a model/algorithm on the basis of observable future values only is often far from the scientists' requirements and economic funds of the current project.
 
 \color{blue}
 
-Fare qualche esempio di classification tree, reandom forest
-
-Parlare della scelta del training set e del test set, procedure spesso arbitrarie e non falsificabili.
-
-Parlare del fatto che le procedure ML puntano davvero a validarsi secondo la previsione futura (strong instrumentalism), mentre le procedure statistiche modellistiche no.
-
-Il paradosso sta nel fatto che allora, se le procedure di ML sono falsificabili mediante nuove previsioni, vi deve essere, sottostante all'analisi, una procedura da falsificare. Si, ma quale?? I metodi ML sono sempre data-driven, la loro falsificazione è generata dalla natura dei dati. Quindi, nascerebbero come procedure fortemente strumentaliste, ma in realtà non sono falsificabili.
-
-Parlare del bazooka
+%\vspace{1cm}
+%
+%Fare qualche esempio di classification tree, reandom forest
+%
+%Parlare della scelta del training set e del test set, procedure spesso arbitrarie e non falsificabili.
+%
+%Parlare del fatto che le procedure ML puntano davvero a validarsi secondo la previsione futura (strong instrumentalism), mentre le procedure statistiche modellistiche no.
+%
+%Il paradosso sta nel fatto che allora, se le procedure di ML sono falsificabili mediante nuove previsioni, vi deve essere, sottostante all'analisi, una procedura da falsificare. Si, ma quale?? I metodi ML sono sempre data-driven, la loro falsificazione è generata dalla natura dei dati. Quindi, nascerebbero come procedure fortemente strumentaliste, ma in realtà non sono falsificabili.
+%
+%Parlare del bazooka
 
 \color{black}
 
-\section{Going beyond inference and prediction: a tentative unifying approach}
+
+
+\section{Applied example: football Russia World Cup 2018}
 
 \color{blue}
-
-Forse questa sezione si può mettere dopo la attuale 3.2, in quanto ne sarebbe naturale appendice.
-
-\color{black}
-
-\section{Applied examples}
-
-\color{blue}
-Mondiali 2018. Scelte di dataset ben diverse portano a risultati ben diversi. Pensare alla relazione con la falsificazione.
+%Mondiali 2018. Scelte di dataset ben diverse portano a risultati ben diversi. Pensare alla relazione con la falsificazione.
 
 \color{black}
+
+In this section we put in evidence the influence of the training set for future predictions by revealing some paradoxical considerations  in ML results from  a small-sample case. We consider here the dataset containing the results of all the 64 tournament's matches (48 of the group stages, and 16 of the knockout stage) for the FIFA World Cup 2018 hosted in Russia and won by France.
+
+Let $(y^{H}_{n}, y^{A}_{n})$ denote the observed number of goals scored by the home and the away team in the $n$-th game, respectively. A general bivariate Poisson model allowing for goals' correlation \citep{karlis2003analysis} is the following:
+
+\begin{eqnarray}
+\begin{split}
+Y^H_n, Y^A_n| \lambda_{1n}, \lambda_{2n}, \lambda_{3n} & \sim \mathsf{BivPoisson}(\lambda_{1n}, \lambda_{2n}, \lambda_{3n})\\ 
+\log(\lambda_{1n}) & = \theta+\text{att}_{h_n}+\text{def}_{a_n}+\frac{\gamma}{2} w_n\\
+\log(\lambda_{2n}) & = \theta+\text{att}_{a_n}+\text{def}_{h_n}-\frac{\gamma}{2} w_n\\
+\log(\lambda_{3n}) & =\beta_0,
+\end{split}
+\label{eq:bivariate}
+\end{eqnarray}
+where the case $\lambda_{3n}=0$ reduces to the double Poisson model \citep{baio2010bayesian}.  $\lambda_{1n}, \lambda_{2n}$ represent the scoring rates for the home and the away team, respectively, where: $\theta$ is the common baseline parameter; the parameters $\text{att}_T$ and $\text{def}_T$ represent the attack and the defence abilities, 
+respectively, for each team $T$, $T=1,\ldots,N_T$; the nested indexes $h_{n}, a_{n}=1,\ldots,N_T$ denote the home and the away team playing in the $n$-th game, 
+respectively; the only predictor is $w_n= (\text{rank}_{h_n}- \text{rank}_{a_n} )$, the difference of the FIFA World Rankings (\url{https://www.fifa.com/fifa-world-ranking/})---expressed in FIFA ranking points divided by $10^3$---between the home and the away team in 
+the $n$-th game, multiplied by a parameter ${\gamma}/{2}$.  This last term tries to correct for the well-known phenomenon of \emph{draw inflation} \citep{karlis2003analysis}, 
+favouring the draw occurrence when teams are close in terms of their FIFA rankings. The value of the 
+FIFA ranking difference $w$ included in the models was considered on June 7th, only a bunch 
+of days before the tournament takes place.  In a Bayesian framework, attack and defence parameters are usually assigned some noninformative prior distributions \citep{baio2010bayesian} and imposed a sum-to-zero constraint to achieve identifiability.
+
+ 
+
+%However, the choice of the \emph{training set} and the \emph{test set} is of crucial importance  and is likely to affect the predictions. 
+We decided to train our statistical models/ML techniques on distinct portions of matches from the group stage, where teams are more heterogeneous in terms of their FIFA rankings 
+and actual strengths. To assess predictive performance between statistical models and ML algorithms in predicting football outcomes, we compare the double Poisson and the bivariate 
+Poisson model, fitted by \texttt{rstan} package \citep{rstan}, with five ML procedures: Random Forest, Classification and Regression Trees (CART), Bagged CART, Multivariate 
+Adaptive Regression Splines (MARS) and Neural Network, according to their standard use as provided by the \texttt{caret} package \citep{caret}.
+The three different prediction scenarios are:
+
+\begin{enumerate}
+%  \emph{Train set}   \emph{Test set} 
+\item \emph{Train} 75\% of randomly selected group stage matches \\
+\emph{Test}  Remaining 25\% group stage matches
+\item \emph{Train}  Group stage matches\\
+ \emph{Test}  Knockout stage 
+ \item \emph{Train} Group stage matches for which both the teams have a Fifa ranking greater than 1 \\
+   \emph{Test}  Knockout stage.
+\end{enumerate}
+
+\begin{center}
+\begin{figure}
+\subfloat[Scenario A]
+{\includegraphics[scale=0.27]{ScenarioA.pdf}}~
+\subfloat[Scenario B]
+{\includegraphics[scale=0.27]{ScenarioB.pdf}}\\
+\centering
+\subfloat[Scenario C]
+{\includegraphics[scale=0.27]{ScenarioC.pdf}}
+\caption{For each prediction scenarios, the values of the FIFA rankings for each match are shown in blue colour for the training set and in orange colour for the test set.}
+\label{Fig1}
+\end{figure}
+\end{center}
+%
+Figure~\ref{Fig1} displays for each scenario the values for the FIFA rankings for the training set matches (blue points) and the test set matches (orange points), along with the 
+line $\text{Rank }1= \text{Rank }2$, implying that the ranking difference is $w=0$. In Scenario A, the test set matches are randomly selected from the group stage, and they do not 
+show any particular pattern around the line $w=0$. In scenarios B and C, test set matches belong to the knockout stage, where the teams are expected to be stronger and 
+closer each other in terms of their rankings. In fact, the majority of the orange points (13 out of 16) is displayed towards the bottom right corner---higher rankings--- and closer to the line $w=0$---closer strengths. Scenario B uses more and more data to predict test set results---all the 48 group stage matches---whereas Scenario C only six matches.
+
+Table 1 shows the accuracy in the predictions for the seven methods and the three  scenarios.  As already argued, the choice of the training and the test set can dramatically 
+change the predictive performance of the ML algorithms, which over-perform statistical models only when considering a portion of the group stage to predict the remaining 
+group stage matches. Instead, it is worth noting that statistical models better predict the knockout stage matches (scenario B and C), and seem to be constant across the different scenarios.
+
+Although the example is quite simple and the dataset is too small to extract general conclusions, there are enough arguments to emphasize the paradoxical performance achieved by ML techniques. Their predictive accuracy is too much influenced by the training set 
+structure, making impossible to draw conclusions about their plausibility for predicting the football World Cup. In other way said, from this simple case study we cannot openly 
+falsify our ML techniques on the ground of future predictions. Conversely, Poisson models are quite stable in the three scenarios in terms of predictive accuracy, and they 
+seem to learn from the group stage training set in an efficient way. We are not claiming they are better than ML tools, we are just suggesting that they seem to be less sensitive to the training set structure, and then falsifiable in a broader sense.
+
+\begin{center}
+\begin{table}
+%\centering
+\caption{Prediction accuracy for the selected methods, according to three prediction  scenarios.}
+\begin{tabular}{|r|rrr|}
+\hline 
+ \emph{Train}& 75\% group  & 100\% group  & rank $>$ 1   \\ 
+  \hline
+\emph{Test} & 25\% group & knockout & knockout\\ 
+  \hline
+\emph{Random forest} & 0.67 & 0.25 & 0.44 \\ 
+  \emph{Bagged CART} & 0.67 & 0.31 & 0.37  \\ 
+%  bayesglm & 0.25 & 0.19 & 0.19 \\ 
+  \emph{CART} & 0.58 & 0.31 & 0.19  \\ 
+  \emph{MARS} & 0.58 & 0.38 & 0.49 \\ 
+  \emph{NN} & 0.67 & 0.25 & 0.44  \\ 
+  %Multinomial & 0.50 & 0.50 & 0.50 \\ 
+  %Multinomial  & 0.42 & 0.62 & 0.62  \\ 
+  \emph{Double Pois.} & 0.58 & 0.50 & 0.56  \\ 
+  \emph{Biv. Pois.} & 0.58 & 0.56 & 0.56  \\ 
+   \hline
+\end{tabular}
+%\label{tab1}
+\end{table}
+\end{center}
+%
+
+%Obviously it should be noted that the results presented here are only preliminary also considering the small size of the dataset here analysed. A full appreciation of the 
+%different performances  is out-of the scope of the current paper and should be definitely considered for future research, also aimed  at defining a strategy for stacking models in this specific application case.
 
 \section{Conclusions}
 

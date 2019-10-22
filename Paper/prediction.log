@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.1.31)  17 OCT 2019 15:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.1.31)  22 OCT 2019 18:16
 entering extended mode
 **./prediction.tex
 (prediction.tex
@@ -587,7 +587,9 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 
 Excluding comment 'comment')
 \c@thm=\count137
- (prediction.aux)
+ (prediction.aux
+\statsocwidth@a=\dimen179
+)
 \openout1 = `prediction.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
@@ -610,13 +612,13 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count138
-\scratchdimen=\dimen179
+\scratchdimen=\dimen180
 \scratchbox=\box42
 \nofMPsegments=\count139
 \nofMParguments=\count140
 \everyMPshowfont=\toks38
 \MPscratchCnt=\count141
-\MPscratchDim=\dimen180
+\MPscratchDim=\dimen181
 \MPnumerator=\count142
 \makeMPintoPDFobject=\count143
 \everyMPtoPDFconversion=\toks39
@@ -788,42 +790,73 @@ Overfull \hbox (14.43243pt too wide) in paragraph at lines 173--174
 [4]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no   in font ptmr7t!
+ [5]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
- [5]
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¨ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no   in font ptmr7t!
  [6]
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ² in font ptmr7t!
- (prediction.bbl [7]) [8] (prediction.aux) ) 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 375.
+
+[8]
+<ScenarioA.pdf, id=44, 722.7pt x 469.755pt>
+File: ScenarioA.pdf Graphic file (type pdf)
+<use ScenarioA.pdf>
+Package pdftex.def Info: ScenarioA.pdf  used on input line 408.
+(pdftex.def)             Requested size: 195.1316pt x 126.83554pt.
+<ScenarioB.pdf, id=45, 722.7pt x 469.755pt>
+File: ScenarioB.pdf Graphic file (type pdf)
+<use ScenarioB.pdf>
+Package pdftex.def Info: ScenarioB.pdf  used on input line 410.
+(pdftex.def)             Requested size: 195.1316pt x 126.83554pt.
+<ScenarioC.pdf, id=46, 722.7pt x 469.755pt>
+File: ScenarioC.pdf Graphic file (type pdf)
+<use ScenarioC.pdf>
+Package pdftex.def Info: ScenarioC.pdf  used on input line 413.
+(pdftex.def)             Requested size: 195.1316pt x 126.83554pt.
+ [9] [10 <./ScenarioA.pdf> <./ScenarioB.pdf> <./ScenarioC.pdf>]
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7.4> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 434.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 434.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 434.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 434.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 434.
+
+(prediction.bbl [11]) [12] (prediction.aux
+\statsocwidth@a=\dimen182
+) ) 
 Here is how much of TeX's memory you used:
- 15182 strings out of 493303
- 285100 string characters out of 3138691
- 343744 words of memory out of 3000000
- 18366 multiletter control sequences out of 15000+200000
- 37393 words of font info for 84 fonts, out of 3000000 for 9000
+ 15281 strings out of 493303
+ 286606 string characters out of 3138691
+ 344235 words of memory out of 3000000
+ 18450 multiletter control sequences out of 15000+200000
+ 56389 words of font info for 131 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,7n,54p,799b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/
-enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/rsfs/rsfs10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/hel
-vetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on prediction.pdf (8 pages, 142365 bytes).
+ 55i,17n,54p,799b,415s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/rsfs/rsfs10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
+symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on prediction.pdf (12 pages, 184992 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 122 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
