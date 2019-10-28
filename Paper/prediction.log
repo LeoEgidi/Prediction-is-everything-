@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.1.31)  23 OCT 2019 15:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.1.31)  28 OCT 2019 18:18
 entering extended mode
 **./prediction.tex
 (prediction.tex
@@ -721,58 +721,63 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 83.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 100.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 10
-0.
+ [1{C:/Users/17245/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 131.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 13
+1.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ztmcm.fd"
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 10
-0.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 13
+1.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlztmcm.fd"
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 10
-0.
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 13
+1.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsztmcm.fd"
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 10
-0.
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 13
+1.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omxztmcm.fd"
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 100.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 131.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8.14006> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 100.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 131.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6.60007> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 100.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 131.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.14006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.60007> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
 
-Overfull \hbox (1.0015pt too wide) in paragraph at lines 103--110
+Overfull \hbox (1.0015pt too wide) in paragraph at lines 134--141
 []\OT1/ptm/m/n/11 Scientific method, as we un-der-stand it, comes into the worl
 d full-fledged with Galileo
  []
 
-[1{C:/Users/17245/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-Overfull \hbox (7.78459pt too wide) in paragraph at lines 170--171
+[4]
+Overfull \hbox (7.78459pt too wide) in paragraph at lines 201--202
 \OT1/ptm/m/n/11 In Novem-ber 2016, many mod-el-ers, in-cluded Nate Sil-ver, the
  founder of the well-known FiveThir-
  []
@@ -781,20 +786,20 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-Overfull \hbox (14.43243pt too wide) in paragraph at lines 173--174
+Overfull \hbox (14.43243pt too wide) in paragraph at lines 204--205
 []\OT1/ptm/m/n/11 Yes, the prob-a-bil-ity state-ments are not in-val-i-dated by
  the oc-cur-rence of a low-probability
  []
 
-[3]
-Overfull \hbox (6.6539pt too wide) in paragraph at lines 206--208
+[5]
+Overfull \hbox (6.6539pt too wide) in paragraph at lines 237--239
 \OT1/ptm/m/n/11 tor/covariate/independent vari-able $\OML/ztmcm/m/it/11 X[]$\OT
 1/ptm/m/n/11 , the sin-gle $\OML/ztmcm/m/it/11 y[]$ \OT1/ptm/m/n/11 is the ob-s
 erved value of the de-pen-dent/response
  []
 
-[4]
-Overfull \hbox (0.38821pt too wide) in paragraph at lines 212--217
+
+Overfull \hbox (0.38821pt too wide) in paragraph at lines 243--248
 \OT1/ptm/m/n/11 where $[]\OT1/ztmcm/m/n/11 (\OML/ztmcm/m/it/11 x[]\OT1/ztmcm/m/
 n/11 )$ \OT1/ptm/m/n/11 is the pre-dic-tion for $\OML/ztmcm/m/it/11 y[]$ \OT1/p
 tm/m/n/11 pro-duced by $[]$, $[]\OT1/ztmcm/m/n/11 ([](\OML/ztmcm/m/it/11 x[]\OT
@@ -802,83 +807,72 @@ tm/m/n/11 pro-duced by $[]$, $[]\OT1/ztmcm/m/n/11 ([](\OML/ztmcm/m/it/11 x[]\OT
 OML/ztmcm/m/it/11 x[]\OT1/ztmcm/m/n/11 )$\OT1/ptm/m/n/11 ,
  []
 
-
-Underfull \vbox (badness 1521) has occurred while \output is active []
-
- [5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6]
+[6] [7] [8]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
 
-[7]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 371.
+(amsmath)                trying to recover with `aligned' on input line 402.
 
-[8]
-<ScenarioA.pdf, id=42, 722.7pt x 469.755pt>
+[9]
+<ScenarioA.pdf, id=44, 722.7pt x 469.755pt>
 File: ScenarioA.pdf Graphic file (type pdf)
 <use ScenarioA.pdf>
-Package pdftex.def Info: ScenarioA.pdf  used on input line 404.
+Package pdftex.def Info: ScenarioA.pdf  used on input line 435.
 (pdftex.def)             Requested size: 195.1316pt x 126.83554pt.
-<ScenarioB.pdf, id=43, 722.7pt x 469.755pt>
+<ScenarioB.pdf, id=45, 722.7pt x 469.755pt>
 File: ScenarioB.pdf Graphic file (type pdf)
 <use ScenarioB.pdf>
-Package pdftex.def Info: ScenarioB.pdf  used on input line 406.
+Package pdftex.def Info: ScenarioB.pdf  used on input line 437.
 (pdftex.def)             Requested size: 195.1316pt x 126.83554pt.
-<ScenarioC.pdf, id=44, 722.7pt x 469.755pt>
+<ScenarioC.pdf, id=46, 722.7pt x 469.755pt>
 File: ScenarioC.pdf Graphic file (type pdf)
 <use ScenarioC.pdf>
-Package pdftex.def Info: ScenarioC.pdf  used on input line 409.
+Package pdftex.def Info: ScenarioC.pdf  used on input line 440.
 (pdftex.def)             Requested size: 195.1316pt x 126.83554pt.
- [9] [10 <./ScenarioA.pdf> <./ScenarioB.pdf> <./ScenarioC.pdf>]
+ [10] [11 <./ScenarioA.pdf> <./ScenarioB.pdf> <./ScenarioC.pdf>]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7.4> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 430.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 461.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 430.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 461.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 430.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 461.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 430.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 461.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 430.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 461.
 
 (prediction.bbl
 Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no “ in font ptmri7t!
- [11] [12]) [13] (prediction.aux
+ [12] [13]) [14] (prediction.aux
 \statsocwidth@a=\dimen182
-)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+) ) 
 Here is how much of TeX's memory you used:
- 15286 strings out of 493303
- 286707 string characters out of 3138691
- 344514 words of memory out of 3000000
- 18455 multiletter control sequences out of 15000+200000
+ 15288 strings out of 493303
+ 286752 string characters out of 3138691
+ 344577 words of memory out of 3000000
+ 18457 multiletter control sequences out of 15000+200000
  56389 words of font info for 131 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,17n,54p,799b,415s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/time
-s/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on prediction.pdf (13 pages, 182287 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/tim
+es/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on prediction.pdf (14 pages, 186650 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
+ 121 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

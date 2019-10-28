@@ -109,6 +109,16 @@ Kuhn, M. (2019).
 \newblock {\em caret: Classification and Regression Training}.
 \newblock R package version 6.0-84.
 
+\bibitem[\protect\citeauthoryear{Kuhn}{Kuhn}{1962}]{kuhn1962structure}
+Kuhn, T.~S. (1962).
+\newblock The structure of scientific revolutions.
+\newblock {\em Chicago and London\/}.
+
+\bibitem[\protect\citeauthoryear{Lakatos}{Lakatos}{1976}]{lakatos1976falsification}
+Lakatos, I. (1976).
+\newblock Falsification and the methodology of scientific research programmes.
+\newblock In {\em Can theories be refuted?}, pp.\  205--259. Springer.
+
 \bibitem[\protect\citeauthoryear{Maher}{Maher}{1988}]{maher1988prediction}
 Maher, P. (1988).
 \newblock Prediction, accommodation, and the logic of discovery.

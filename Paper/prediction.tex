@@ -87,6 +87,37 @@ USA.}
 
 \section{Introduction}
 
+According to many philosophers of science, prediction has a primary role in the progress of science, as motivated by the falsificationism philosophy of Karl Popper 
+\citep{popper1934logic}, which received some criticism, among the others, by Thomas Kuhn \citep{kuhn1962structure} and Imre Lakatos \citep{lakatos1976falsification}. Popper argues 
+that theories, in order to be scientific, must be falsifiable on the ground of their  predictions. Wrong predictions should push the scientists to reject their theories or to 
+re-formulate them, conversely exact predictions should corroborate a scientific theory.  Popper's philosophy is instrumentalist 
+\citep{hitchcock2004prediction} in a strong sense: predictive accuracy is constitutive of scientific success, not only symptomatic of it---it is worth noting that Popper's point of 
+view is oriented towards physics and natural sciences, whereas he is more and more skeptical about prediction in social sciences \citep{popper1944poverty, popper1945poverty}.
+
+The growing ability of data and the development of sophisticated computational 
+tools from the 1950s and 1960s opened the door to the data science revolution: the science itself was not regarded anymore only as a speculative discipline awaiting to be tested on further and future observations and experiments, but it became a testable human activity on the ground of computer simulations and fast real time computations. The 21th century transformed data science in a global oracle, and data scientists got more and more credibility as the availability of new modern machineries grew. Data science methods are 
+scientific by means of tools designed to formulate a theory (model) from some evidence (data) and generalize this hypothesis by induction. 
+
+Over the last decades, statistics and machine learning became the most popular `predictions weapons' for social and natural sciences, comprising weather, Presidential elections, planets' motions, global warming, Gross Domestic Product, etc. However, statistics is usually seen as a discipline which extracts information from the current data, whereas machine learning only is actually designed to predict new events.  Though, many times the right weapons are embraced by the wrong people. The predictive power in statistics is metaphorically expressed by an elegant, small 
+gun, with good properties, high precision and small bullets, whereas the same power in machine learning is expressed by a bazooka, with devastating effectiveness and big bullets.
+
+ As already mentioned, there is much debate about the role of 
+prediction in this scientific process;  many scientists and philosophers of science, with the pioneering work of Popper,  consider prediction as a confirmation theory approach for 
+science. In this paper, we revise this position by considering first the role of prediction in the progress of science from Galileo Galilei to Albert Einstein; then, we analyse the role of prediction in modern statistical learning methods, by drawing an analogy between the steps required to formulate a scientific theory and those required to set up a Bayesian model.
+
+ The main novelty of our work is the \emph{weak instrumentalist} position for prediction, under which predictive accuracy is constitutive of scientific success only when the 
+underlying statistical methods are falsifiable and transparently designed to predict out-of-sample events. Much literature about machine learning methods \citep{breiman2001statistical} is based on their ability to successfully predict test set 
+data, but nothing is said about the technical assumptions required to tune/build the algorithms; conversely, many statistical methods are claimed to be good upon the check of 
+their residuals on the training data, but rarely on the ground of some forecasting abilities for holdout samples.  
+
+Prediction is an unavoidable task for scientists working 
+with data, but it is not all what we need; moreover, prediction should always be associated with a measure of variability, because from variability only we are able to reconstruct and 
+falsify the model/algorithm decisions. Machine learning methods offer many point-predictions,  but they rarely yield some measure of uncertainty, whereas statistical 
+models, when predicting new items, usually do a bad job in communicating the results. Weak instrumentalist philosophy should push the statisticians to embrace more the bazooka when needed, and the machine learners to use a more precise gun when bazooka is unnecessary.
+
+
+
+
 \section{Prediction for science or science for prediction?}
 
 \subsection{It is prediction part of the science design?}
