@@ -90,35 +90,48 @@ USA.}
 According to many philosophers of science, prediction has a primary role in the progress of science, as motivated by the falsificationism philosophy of Karl Popper 
 \citep{popper1934logic}, which received some criticism, among the others, by Thomas Kuhn \citep{kuhn1962structure} and Imre Lakatos \citep{lakatos1976falsification}. Popper argues 
 that theories, in order to be scientific, must be falsifiable on the ground of their  predictions. Wrong predictions should push the scientists to reject their theories or to 
-re-formulate them, conversely exact predictions should corroborate a scientific theory.  Popper's philosophy is instrumentalist 
-\citep{hitchcock2004prediction} in a strong sense: predictive accuracy is constitutive of scientific success, not only symptomatic of it---it is worth noting that Popper's point of 
-view is oriented towards physics and natural sciences, whereas he is more and more skeptical about prediction in social sciences \citep{popper1944poverty, popper1945poverty}.
+re-formulate them, conversely exact predictions should corroborate a scientific theory.  Popper's philosophy for physical and natural sciences is instrumentalist 
+ in a strong sense \citep{hitchcock2004prediction}: predictive accuracy is constitutive of scientific success, not only symptomatic of it, and  prediction works as a confirmation theory tool for science. 
+% it is worth noting that Popper's point of 
+%view is oriented towards physics and natural sciences, whereas he is more and more skeptical about prediction in social sciences \citep{popper1944poverty, popper1945poverty}.
 
-The growing ability of data and the development of sophisticated computational 
-tools from the 1950s and 1960s opened the door to the data science revolution: the science itself was not regarded anymore only as a speculative discipline awaiting to be tested on further and future observations and experiments, but it became a testable human activity on the ground of computer simulations and fast real time computations. The 21th century transformed data science in a global oracle, and data scientists got more and more credibility as the availability of new modern machineries grew. Data science methods are 
-scientific by means of tools designed to formulate a theory (model) from some evidence (data) and generalize this hypothesis by induction. 
+In the 20th century science has expanded its boundaries in many directions, including, among the others, social and computational sciences within its domain. In particular, the birth 
+and the growth of probabilistic and statistical methods have made the `debut of science in society' possible, whereas the growing ability of data and the development of sophisticated computational 
+tools from the 1950s and 1960s opened the door to the data science revolution. The 1990s transformed then data science in a 
+global oracle, and data scientists got more and more credibility as the availability of new modern machineries grew.    For many of us, data science and statistical methods 
+are scientific by means of tools designed to formulate a theory (model) from some evidence (data) and generalize this hypothesis by induction. Since the '50s of the 20th century---think at the Manhattan project in Los Alamos---science itself was not regarded anymore only as a speculative discipline awaiting to be tested on 
+further and future observations and experiments, but it became a testable human activity on the ground of computer simulations and fast real-time computations.  
+ The mathematical and quantitative laws formulated by Galilei and Newton 
+were physical and deterministic laws, by means of which future particular facts could have been predicted with the absolute precision; the probabilistic and statistical laws designed 
+to describe human behaviours and social facts are social and stochastic laws, by means of which future particular events could be predicted with an intrinsic amount of uncertainty. Of course, as statisticians we want to do our best in predicting future social events, but we cannot entirely evaluate a model performance on the ground of its predictive accuracy only. Using Popper's terminology, wrong social sciences predictions should not be the only tool to falsify a theory.
 
-Over the last decades, statistics and machine learning became the most popular `predictions weapons' for social and natural sciences, comprising weather, Presidential elections, planets' motions, global warming, Gross Domestic Product, etc. However, statistics is usually seen as a discipline which extracts information from the current data, whereas machine learning only is actually designed to predict new events.  Though, many times the right weapons are embraced by the wrong people. The predictive power in statistics is metaphorically expressed by an elegant, small 
-gun, with good properties, high precision and small bullets, whereas the same power in machine learning is expressed by a bazooka, with devastating effectiveness and big bullets.
 
- As already mentioned, there is much debate about the role of 
-prediction in this scientific process;  many scientists and philosophers of science, with the pioneering work of Popper,  consider prediction as a confirmation theory approach for 
-science. In this paper, we revise this position by considering first the role of prediction in the progress of science from Galileo Galilei to Albert Einstein; then, we analyse the role of prediction in modern statistical learning methods, by drawing an analogy between the steps required to formulate a scientific theory and those required to set up a Bayesian model.
 
- The main novelty of our work is the \emph{weak instrumentalist} position for prediction, under which predictive accuracy is constitutive of scientific success only when the 
-underlying statistical methods are falsifiable and transparently designed to predict out-of-sample events. Much literature about machine learning methods \citep{breiman2001statistical} is based on their ability to successfully predict test set 
+%As already mentioned, there is much debate about the role of 
+%prediction in the scientific process;  many scientists and philosophers of science, with the pioneering work of Popper,  consider prediction as a confirmation theory approach for 
+%science. 
+%In this paper, we revise this position by considering first the role of prediction in the progress of science from Galileo Galilei to Albert Einstein; then, we analyse the role of prediction in modern statistical learning methods, by drawing an analogy between the steps required to formulate a scientific theory and those required to set up a Bayesian model.
+
+ The main novelty of this paper is the \emph{weak instrumentalist} position for prediction, under which predictive accuracy is constitutive of scientific success only when the 
+underlying statistical methods are falsifiable and transparently designed to predict out-of-sample events. Over the last decades, statistics and machine learning became the most popular `predictions weapons' for social and natural sciences, including frameworks such as weather, Presidential elections, planets' motions, global warming, Gross Domestic Product, etc. However, statistics is usually seen as a discipline which extracts information from the current data, whereas machine learning only is usually designed to predict new events.  Though, many times the right weapons are embraced by the wrong people. The predictive power in statistics is an elegant, small 
+gun, with good properties and small bullets, whereas in machine learning is a bazooka, with devastating effectiveness and big bullets. The statistician perfectly knows the gun's details and how to use it, the machine learner is rarely aware of the bazooka's properties. Much literature about machine learning methods \citep{breiman2001statistical} is based on their ability to successfully predict test set 
 data, but nothing is said about the technical assumptions required to tune/build the algorithms; conversely, many statistical methods are claimed to be good upon the check of 
 their residuals on the training data, but rarely on the ground of some forecasting abilities for holdout samples.  
 
 Prediction is an unavoidable task for scientists working 
-with data, but it is not all what we need; moreover, prediction should always be associated with a measure of variability, because from variability only we are able to reconstruct and 
+with data, but it is not all what we need, especially when framed in social science frameworks; moreover, prediction should always be associated with a measure of variability, because from variability only we are able to reconstruct and 
 falsify the model/algorithm decisions. Machine learning methods offer many point-predictions,  but they rarely yield some measure of uncertainty, whereas statistical 
 models, when predicting new items, usually do a bad job in communicating the results. Weak instrumentalist philosophy should push the statisticians to embrace more the bazooka when needed, and the machine learners to use a more precise gun when bazooka is unnecessary.
+
+In Section~\ref{sec:pred} we state the steps required to formulate a scientific theory and review the role of prediction for natural sciences from Galilei's law of falling bodies to 
+the general relativity of Albert Einstein. Moreover, we analyse the confirmation theory approach, both in natural and social sciences. In Section~\ref{sec:role} we focus on 
+prediction for statistics and machine learning, whereas the weak instrumentalist philosophy is detailed in Section~\ref{sec:instr}. Section~\ref{sec:world} proposes an applied example for the football Russia World Cup 2018, whereas Section~\ref{sec:concl} concludes.
 
 
 
 
 \section{Prediction for science or science for prediction?}
+\label{sec:pred}
 
 \subsection{It is prediction part of the science design?}
 
@@ -205,6 +218,7 @@ Yes, the probability statements are not invalidated by the occurrence of a low-p
 \end{quote}
 
 \section{The role of prediction in statistical learning}
+\label{sec:role}
 
 \subsection{Statistics}
 
@@ -380,16 +394,63 @@ p(\tilde{y}|y) = \frac{p(\tilde{y},y)}{p(y)}= \frac{1}{p(y)}\int p(\tilde{y},y,\
 From Equation~\eqref{eq:ppdist2} we immediately notice that whenever we are interested in predictions, we need to consider a joint model $p(\tilde{y},y,\theta)$ for both the observed data $y$ and the unobserved quantities $\tilde{y},\theta$. This joint model incorporates both the likelihood and the prior, being $p(\tilde{y},y,\theta) = p(\tilde{y}|\theta)p(y|\theta)p(\theta)$. Thus, the joint model for the predictions, the data and the parameters is transparently posed, and open to falsification when the observable $\tilde{y}$ becomes known.
 
 
+\subsection{Weak instrumentalism in points}
+\label{sec:weak}
+
+To summarize the above discussion, we collect in Table 1 the main points which follow from the weak instrumentalist philosophy. We divided them in three categories: the first one collect general considerations about the role of prediction in modern science and data science, whereas the second and the third one propose some tips for statisticians and machine learners, respectively.
+
+\begin{table}
+\caption{Weak instrumentalism summary}
+\framebox[.96\linewidth][l]{\parbox{.92\linewidth}{
+\vspace{0.2cm}
+
+\emph{ General science}
+\begin{enumerate}
+\item[(p1)] Predictive accuracy is not always constitutive of scientific success
+\vspace{-0.2cm}
+\item[(p2)] Scientific falsification on the ground of wrong predictions is sometimes misleading, especially in social sciences (Trump's election, Leicester win, Brexit)
+\vspace{-0.2cm}
+\item[(p3)]  Supposedly valid scientific theories should exist {before} the future data have been revealed
+\vspace{-0.2cm}
+\item[(p4)] Prediction is not explicitly part of the formulation of a 
+scientific hypothesis {at the time the law is posed}, but it becomes relevant and relevant as science advances
+\end{enumerate}
+
+\vspace{0.1cm}
+
+\emph{ Statistics}
+\begin{enumerate}
+\item[(p5)] Take care of variability in the statistical predictions
+\vspace{-0.2cm}
+\item[(p6)] If necessary, go beyond the distinction between inference and prediction, and consider a joint model for data, parameters and future data (falsificationist Bayes)
+\vspace{-0.2cm}
+\item[(p7)] Rather than reasoning in terms of variance and bias, reason more in terms of predictive information criteria and posterior predictive distribution
+\end{enumerate}
+
+\vspace{0.1cm}
+
+\emph{ Machine Learning}
+\begin{enumerate}
+\item[(p8)] `Shaking the training set' to improve predictive accuracy is an obscure step
+\vspace{-0.2cm}
+\item[(p9)] Avoid to tune the algorithm with the only task to improve predictive accuracy
+\vspace{-0.2cm}
+\item[ (p10)] To be falsifiable, ML techniques need to be transparently posed
+\end{enumerate}
+ }}
+\end{table}
+
 
 
 \section{Applied example: football Russia World Cup 2018}
+\label{sec:world}
 
 \color{blue}
 %Mondiali 2018. Scelte di dataset ben diverse portano a risultati ben diversi. Pensare alla relazione con la falsificazione.
 
 \color{black}
 
-In this section we put in evidence the influence of the training set for future predictions by revealing some paradoxical considerations  in ML results from  a small-sample case. We consider here the dataset containing the results of all the 64 tournament's matches (48 of the group stages, and 16 of the knockout stage) for the FIFA World Cup 2018 hosted in Russia and won by France.
+In this section we frame a simple prediction example within the weak instrumentalist philosophy proposed in the previous section and summarized in Section~\ref{sec:weak}. In particular, we put in evidence the influence of the training set for future predictions by revealing some paradoxical considerations  in ML results from  a small-sample case. We consider here the dataset containing the results of all the 64 tournament's matches (48 of the group stages, and 16 of the knockout stage) for the FIFA World Cup 2018 hosted in Russia and won by France.
 
 Let $(y^{H}_{n}, y^{A}_{n})$ denote the observed number of goals scored by the home and the away team in the $n$-th game, respectively. A general bivariate Poisson model allowing for goals' correlation \citep{karlis2003analysis} is the following:
 
@@ -421,11 +482,11 @@ The three different prediction scenarios are:
 
 \begin{enumerate}
 %  \emph{Train set}   \emph{Test set} 
-\item \emph{Train} 75\% of randomly selected group stage matches \\
+\item[A] \emph{Train} 75\% of randomly selected group stage matches \\
 \emph{Test}  Remaining 25\% group stage matches
-\item \emph{Train}  Group stage matches\\
+\item[B] \emph{Train}  Group stage matches\\
  \emph{Test}  Knockout stage 
- \item \emph{Train} Group stage matches for which both the teams have a Fifa ranking greater than 1 \\
+ \item[C] \emph{Train} Group stage matches for which both the teams have a Fifa ranking greater than 1 \\
    \emph{Test}  Knockout stage.
 \end{enumerate}
 
@@ -442,13 +503,24 @@ The three different prediction scenarios are:
 \label{Fig1}
 \end{figure}
 \end{center}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{France-CroatiaHeatmap_bivpois}
+\caption{Posterior prediction distribution of the goals for the final France-Croatia}
+\label{Fig2}
+\end{figure}
 %
 Figure~\ref{Fig1} displays for each scenario the values for the FIFA rankings for the training set matches (blue points) and the test set matches (orange points), along with the 
 line $\text{Rank }1= \text{Rank }2$, implying that the ranking difference is $w=0$. In Scenario A, the test set matches are randomly selected from the group stage, and they do not 
-show any particular pattern around the line $w=0$. In scenarios B and C, test set matches belong to the knockout stage, where the teams are expected to be stronger and 
+show any particular pattern around the line $w=0$ (point (p8)). In scenarios B and C, test set matches belong to the knockout stage, where the teams are expected to be stronger and 
 closer each other in terms of their rankings. In fact, the majority of the orange points (13 out of 16) is displayed towards the bottom right corner---higher rankings--- and closer to the line $w=0$---closer strengths. Scenario B uses more and more data to predict test set results---all the 48 group stage matches---whereas Scenario C only six matches.
 
-Table 1 shows the accuracy in the predictions for the seven methods and the three  scenarios.  As already argued, the choice of the training and the test set can dramatically 
+Figure~\ref{Fig2} depicts the posterior predictive distribution (points (p5) and (p7)) of the number of goals scored by France and Croatia during the final from the bivariate Poisson model. Darker 
+regions are associated with higher probabilities, whereas the red squadre is in correspondence with the observed result, 4-2. From this plot, one could be tempted to 
+conclude that the bivariate Poisson model completely failed to predict the match; however, the global probability of France win within the 90 minutes---obtained summing the single probabilities over the lower triangle of the plot---is about 42\%, against the 29\% for Croatia (points (p1) and (p2)).
+
+Table 2 shows the accuracy in the predictions for the seven methods and the three  scenarios.  As already argued, the choice of the training and the test set can dramatically 
 change the predictive performance of the ML algorithms, which over-perform statistical models only when considering a portion of the group stage to predict the remaining 
 group stage matches. Instead, it is worth noting that statistical models better predict the knockout stage matches (scenario B and C), and seem to be constant across the different scenarios.
 
@@ -488,9 +560,7 @@ seem to learn from the group stage training set in an efficient way. We are not 
 %different performances  is out-of the scope of the current paper and should be definitely considered for future research, also aimed  at defining a strategy for stacking models in this specific application case.
 
 \section{Conclusions}
-
-
-
+\label{sec:concl}
 
 
 \bibliographystyle{chicago}
