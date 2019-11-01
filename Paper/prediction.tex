@@ -81,7 +81,15 @@ USA.}
 \maketitle
 
 \begin{abstract}
+Prediction is an unavoidable task for scientists working 
+with data, but it is not all what we need, especially when framed in social science frameworks; moreover, prediction should always be associated with a measure of variability, because from variability only we are able to reconstruct and 
+falsify the model/algorithm decisions. Machine learning methods offer many point-predictions,  but they rarely yield some measure of uncertainty, whereas statistical 
+models, when predicting new items, usually do a bad job in communicating the results.
 
+According to the Popper's falsificationism theory, natural and physical sciences can be falsified on the ground of wrong predictions, but for social sciences this is not always true.
+We moved then to a weak instrumentalist philosophy: predictive accuracy is not always constitutive of scientific success. Our point of view should push statisticians and data scientists to pose their algorithsm in a transparent way and to assess whether predictive performance is really what they want.\\
+
+\emph{Keywords}: Prediction; Popper's falsificationism philosophy; Weak instrumentalism; Predictive accuracy; Machine learning
 
 \end{abstract}
 
@@ -479,7 +487,7 @@ and actual strengths. To assess predictive performance between statistical model
 Poisson model, fitted by \texttt{rstan} package \citep{rstan}, with five ML procedures: Random Forest, Classification and Regression Trees (CART), Bagged CART, Multivariate 
 Adaptive Regression Splines (MARS) and Neural Network, according to their standard use as provided by the \texttt{caret} package \citep{caret}.
 The three different prediction scenarios are:
-
+%
 \begin{enumerate}
 %  \emph{Train set}   \emph{Test set} 
 \item[A] \emph{Train} 75\% of randomly selected group stage matches \\
@@ -489,7 +497,7 @@ The three different prediction scenarios are:
  \item[C] \emph{Train} Group stage matches for which both the teams have a Fifa ranking greater than 1 \\
    \emph{Test}  Knockout stage.
 \end{enumerate}
-
+%
 \begin{center}
 \begin{figure}
 \subfloat[Scenario A]
@@ -503,7 +511,7 @@ The three different prediction scenarios are:
 \label{Fig1}
 \end{figure}
 \end{center}
-
+%
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{France-CroatiaHeatmap_bivpois}
@@ -564,8 +572,22 @@ falsify our statistical/ML techniques on the ground of future predictions. Howev
 %Obviously it should be noted that the results presented here are only preliminary also considering the small size of the dataset here analysed. A full appreciation of the 
 %different performances  is out-of the scope of the current paper and should be definitely considered for future research, also aimed  at defining a strategy for stacking models in this specific application case.
 
-\section{Conclusions}
+\section{Discussion}
 \label{sec:concl}
+
+Prediction is central in the progress of science and became even more relevant in statistics and data science, as the availability of new 
+computational tools became common to accomodate data and predict new events. The entire field of science changed a lot over the last 
+decades, new disciplines entered in the scientific gotha, and social sciences became new frontiers where predictive accuracy was strongly required. 
+
+Natural and physical sciences progressed by means of Popper's falsificationism philosophy, whose one of the main consequences is the 
+strong predictivism: scientific theories should be falsified in light of wrong predictions. Though, social sciences are not falsifiable in the 
+same way: some social events---Presidential elections, football results, policies effect---are not perfectly predictable due to many reasons, such 
+as data origins and unpredictable human behaviours. In this paper, we relax the assumptions behind strong instrumentalism and we provide a 
+bunch of points---see Table 1---to frame statistical and machine learning techniques within the weak instrumentalist philosophy, whose main 
+proposals regard algorithm's transparency and variability in the predictions.
+
+As statisticians demanded to build good models to accomodate complex data, we feel to warn statistics and data science users about the role of prediction. Predictive accuracy is not always constitutive of scientific success: prediction is not everything, but is vidal, and it is our responsibility to choose between the gun or the bazooka.
+
 
 
 \bibliographystyle{chicago}
