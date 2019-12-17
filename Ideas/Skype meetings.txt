@@ -1,0 +1,12 @@
+NOTES AND STREAM OF CONSCIOUSNESS
+
+Skype: December 13th
+
+- Jonah: cognitive sciences, latent features;
+         importance of prediction, the only tool that links reality and models ("prediction is everything");
+         inference (posterior distribution) alone may be misleading, prediction (posterior predictive distribution) is necessary
+         and relevant: the goal is not the posterior, as many Bayesian think, but the posterior predictive distribution;
+         report uncertainty when making prediction: but marginal posterior distribution of the parameters is not enough.
+         
+
+Skype: December 27th
