@@ -81,13 +81,11 @@ USA.}
 \maketitle
 
 \begin{abstract}
-Prediction is an unavoidable task for scientists working 
-with data, but it is not all what we need, especially when framed in social science frameworks; moreover, prediction should always be associated with a measure of variability, because from variability only we are able to reconstruct and 
+Prediction is an unavoidable task for data scientists, and over the last decades statistics and machine learning became the most popular `prediction weapons' in many fields. However, prediction should always be associated with a measure of uncertainty, because from it only we can reconstruct and 
 falsify the model/algorithm decisions. Machine learning methods offer many point-predictions,  but they rarely yield some measure of uncertainty, whereas statistical 
-models, when predicting new items, usually do a bad job in communicating the results.
-
-According to the Popper's falsificationism theory, natural and physical sciences can be falsified on the ground of wrong predictions, but for social sciences this is not always true.
-We moved then to a weak instrumentalist philosophy: predictive accuracy is not always constitutive of scientific success. Our point of view should push statisticians and data scientists to pose their algorithsm in a transparent way and to assess whether predictive performance is really what they want.\\
+models usually do a bad job in communicating predictive results.
+According to the Popper's falsificationism theory, natural and physical sciences can be falsified on the ground of wrong predictions: though, for social sciences this is not always true.
+We move then to a weak instrumentalist philosophy: predictive accuracy is not always constitutive of scientific success, especially in social sciences.\\
 
 \emph{Keywords}: Prediction; Popper's falsificationism philosophy; Weak instrumentalism; Predictive accuracy; Machine learning
 
@@ -95,47 +93,45 @@ We moved then to a weak instrumentalist philosophy: predictive accuracy is not a
 
 \section{Introduction}
 
-According to many philosophers of science, prediction has a primary role in the progress of science, as motivated by the falsificationism philosophy of Karl Popper 
-\citep{popper1934logic}, which received some criticism, among the others, by Thomas Kuhn \citep{kuhn1962structure} and Imre Lakatos \citep{lakatos1976falsification}. Popper argues 
-that theories, in order to be scientific, must be falsifiable on the ground of their  predictions. Wrong predictions should push the scientists to reject their theories or to 
-re-formulate them, conversely exact predictions should corroborate a scientific theory.  Popper's philosophy for physical and natural sciences is instrumentalist 
- in a strong sense \citep{hitchcock2004prediction}: predictive accuracy is constitutive of scientific success, not only symptomatic of it, and  prediction works as a confirmation theory tool for science. 
+As motivated by the falsificationism approach
+\citep{popper1934logic} and many philosophers of science, prediction has a primary role in the progress of science; however, this is often a controversial argument---see \cite{kuhn1962structure} and \cite{lakatos1976falsification} for some criticisms. Popper argues 
+that theories, in order to be scientific, must be falsifiable on the ground of their  predictions: wrong predictions should perhaps push the scientists to reject their theories or to 
+re-formulate them, conversely exact predictions should corroborate a scientific theory. Popper's philosophy is instrumentalist 
+in a strong sense \citep{hitchcock2004prediction} when applied to physical and natural sciences: predictive accuracy is constitutive of scientific success, not only symptomatic of it, and  prediction works as a confirmation theory tool for science.   
 % it is worth noting that Popper's point of 
 %view is oriented towards physics and natural sciences, whereas he is more and more skeptical about prediction in social sciences \citep{popper1944poverty, popper1945poverty}.
 
-In the 20th century science has expanded its boundaries in many directions, including, among the others, social and computational sciences within its domain. In particular, the birth 
+Since the 1940s, with the growing availability of fast computers and the use of simulation routines, science expanded its boundaries and extended the existing frameworks in new directions; think, for instance, at the Manhattan project in Los Alamos, when the problem of neutron diffusion in fissionable material allowed Stanislaw Ulam and Nicholas Metropolis to invent and develop Markov Chain Monte Carlo Methods through the ENIAC computer. In particular, the birth 
 and the growth of probabilistic and statistical methods have made the `debut of science in society' possible, whereas the growing ability of data and the development of sophisticated computational 
-tools from the 1950s and 1960s opened the door to the data science revolution. The 1990s transformed then data science in a 
-global oracle, and data scientists got more and more credibility as the availability of new modern machineries grew.    For many of us, data science and statistical methods 
-are scientific by means of tools designed to formulate a theory (model) from some evidence (data) and generalize this hypothesis by induction. Since the '50s of the 20th century---think at the Manhattan project in Los Alamos---science itself was not regarded anymore only as a speculative discipline awaiting to be tested on 
-further and future observations and experiments, but it became a testable human activity on the ground of computer simulations and fast real-time computations.  
- The mathematical and quantitative laws formulated by Galilei and Newton 
-were physical and deterministic laws, by means of which future particular facts could have been predicted with the absolute precision; the probabilistic and statistical laws designed 
-to describe human behaviours and social facts are social and stochastic laws, by means of which future particular events could be predicted with an intrinsic amount of uncertainty. Of course, as statisticians we want to do our best in predicting future social events, but we cannot entirely evaluate a model performance on the ground of its predictive accuracy only. Using Popper's terminology, wrong social sciences predictions should not be the only tool to falsify a theory.
+tools starting from the 1950s and 1960s opened the door to the data science revolution; the 1990s transformed then data science in a 
+global oracle, and data scientists got more and more credibility as the availability of new modern machineries grew.
 
-
-
+For many of us, data science and statistical methods 
+are scientific by means of tools designed to formulate a theory (model) from some evidence (data) and generalize this hypothesis by induction.
+Over the last decades, statistics and machine learning became the most popular `prediction weapons' for both social and natural sciences, including frameworks such as weather's forecasting, presidential elections, planets' motions, global warming, Gross Domestic Product, etc. However, there is often a clear separation between these two fields: statistics is usually seen as a discipline which extracts information from the current data, whereas machine learning is usually designed to predict new events.  Though, many times the right weapons are embraced by the wrong people. The predictive power in statistics is an elegant small 
+gun, with good properties and small bullets, whereas in machine learning is a bazooka, with devastating effectiveness and big bullets. The statistician perfectly knows the gun's details and how to use it, the machine learner is rarely aware of the bazooka's properties. Much literature about machine learning methods \citep{breiman2001statistical} is based on their ability to successfully predict test set 
+data, but (almost) nothing is said about the technical assumptions required to tune/build the algorithms; conversely, many statistical methods are claimed to be good upon the check of 
+their residuals on the training data, but rarely on the ground of some forecasting abilities on holdout samples.
+ 
 %As already mentioned, there is much debate about the role of 
 %prediction in the scientific process;  many scientists and philosophers of science, with the pioneering work of Popper,  consider prediction as a confirmation theory approach for 
 %science. 
 %In this paper, we revise this position by considering first the role of prediction in the progress of science from Galileo Galilei to Albert Einstein; then, we analyse the role of prediction in modern statistical learning methods, by drawing an analogy between the steps required to formulate a scientific theory and those required to set up a Bayesian model.
 
- The main novelty of this paper is the \emph{weak instrumentalist} position for prediction, under which predictive accuracy is constitutive of scientific success only when the 
-underlying statistical methods are falsifiable and transparently designed to predict out-of-sample events. Over the last decades, statistics and machine learning became the most popular `predictions weapons' for social and natural sciences, including frameworks such as weather, Presidential elections, planets' motions, global warming, Gross Domestic Product, etc. However, statistics is usually seen as a discipline which extracts information from the current data, whereas machine learning only is usually designed to predict new events.  Though, many times the right weapons are embraced by the wrong people. The predictive power in statistics is an elegant, small 
-gun, with good properties and small bullets, whereas in machine learning is a bazooka, with devastating effectiveness and big bullets. The statistician perfectly knows the gun's details and how to use it, the machine learner is rarely aware of the bazooka's properties. Much literature about machine learning methods \citep{breiman2001statistical} is based on their ability to successfully predict test set 
-data, but nothing is said about the technical assumptions required to tune/build the algorithms; conversely, many statistical methods are claimed to be good upon the check of 
-their residuals on the training data, but rarely on the ground of some forecasting abilities for holdout samples.  
+The main novelty of this paper is the \emph{weak instrumentalist} position for prediction, under which predictive accuracy is constitutive of scientific success only when the 
+underlying statistical methods are falsifiable and transparently designed to predict out-of-sample events.  In other way said, there are many contexts, especially in social sciences, where falsification through the prediction's fallacy should be replaced by a more consistent idea of falsification: we believe this position may be beneficial for the so-called `hard sciences' as well.  From one side, mathematical and quantitative laws formulated by Galilei and Newton 
+were physical and deterministic laws, by means of which future particular facts could have been predicted with the absolute precision; from the other side, probabilistic and statistical laws designed 
+to describe human behaviours and social facts are stochastic laws, by means of which future particular events could be predicted with an intrinsic amount of uncertainty. 
+Of course, as statisticians we want to do our best in predicting future social events, but we cannot entirely evaluate a model performance on the ground of its predictive accuracy only. Using Popper's terminology, wrong social sciences predictions should not be the only tool to falsify a theory.
 
 Prediction is an unavoidable task for scientists working 
 with data, but it is not all what we need, especially when framed in social science frameworks; moreover, prediction should always be associated with a measure of variability, because from variability only we are able to reconstruct and 
 falsify the model/algorithm decisions. Machine learning methods offer many point-predictions,  but they rarely yield some measure of uncertainty, whereas statistical 
 models, when predicting new items, usually do a bad job in communicating the results. Weak instrumentalist philosophy should push the statisticians to embrace more the bazooka when needed, and the machine learners to use a more precise gun when bazooka is unnecessary.
 
-In Section~\ref{sec:pred} we state the steps required to formulate a scientific theory and review the role of prediction for natural sciences from Galilei's law of falling bodies to 
-the general relativity of Albert Einstein. Moreover, we analyse the confirmation theory approach, both in natural and social sciences. In Section~\ref{sec:role} we focus on 
-prediction for statistics and machine learning, whereas the weak instrumentalist philosophy is detailed in Section~\ref{sec:instr}. Section~\ref{sec:world} proposes an applied example for the football Russia World Cup 2018, whereas Section~\ref{sec:concl} concludes.
-
-
+In Section~\ref{sec:pred} we revise the steps required to formulate a scientific theory and review the role of prediction for natural sciences from Galilei's law of falling bodies to 
+the general relativity of Albert Einstein. Moreover, we analyse the confirmation theory approach, both in natural and social sciences. In Section~\ref{sec:role}, we focus on 
+prediction for statistical learning, whereas the weak instrumentalist philosophy is detailed in Section~\ref{sec:instr}. Section~\ref{sec:world} proposes an applied example for the football Russia World Cup 2018, whereas Section~\ref{sec:concl} concludes.
 
 
 \section{Prediction for science or science for prediction?}
@@ -149,8 +145,8 @@ The main stages required to formulate a scientific law are summarized by \cite{r
 (1) observation of some relevant facts;
 (2) formulation of a hypothesis underlying and explaining the facts above;
 (3) deduction of some consequences from this hypothesis.
-Russell argues that to perfectly apply the scientific method, we should collect some facts $A, B, C,D$ and, by induction, formulate a general law, referred to in $A, B, C, D$ are examples. If this general law is true, we should then retrieve the same facts by deduction.  
 In his opinion, the modern scientific method is born with Galileo Galilei, father of the law of falling bodies, and with Johannes Kepler, who discovered the three laws of planetary motion:
+%
  \begin{quote}
 Scientific method, as we understand it, comes into the
 world full-fledged with Galileo (1564-1642), and, to a
@@ -161,29 +157,28 @@ laws, by means of which future particular facts could be
 predicted.
 \end{quote}
 %
-As Russel states, Galilei provided a generalized version of the theory by considering only a few observations---further experiments confirmed the appropriateness of his hypothesis---whereas Kepler had formulated his theory by looking at the planets' motions. Isaac Newton (1642-1726) brought the theories of Galilei and Kepler together in his encompassing 
-law of universal gravitation. When Albert Einstein (1879-1955) generalized the Newton's law in his theory of general relativity, the world was shocked by a sort of \emph{final 
-theory} about the universe. Thus, in the last 500 years, physics---and, more generally, science---advanced by falsification and generalization of the previous theories, by providing new and more exciting theories to predict new natural facts.
+ Then, the law of universal gravitation of Isaac Newton embodied the two previous theories, whereas the theory of the general relativity of Albert Einstein generalized the Newton's theory.
+Thus, in the last 500 years, physics---and, more generally, science---advanced by falsification and generalization of the previous theories, by providing new and more exciting theories to predict new natural facts and highlighting the confirmation nature of prediction. In general,  as \cite{hitchcock2004prediction} argue,   mathematical descriptions of the 
+invariant behaviour of a physical phenomenon are essentially predictive: further experiments and observations can validate these theories. 
 
-However, the link of prediction with the scientific laws is in our opinion more ambiguous than what people are usually inclined to think. Is prediction a central step in science? A naive answer could be: no, prediction is not explicitly part of the formulation of a scientific hypothesis (1)--(3), as drawn by Russell. Is prediction a relevant aim of science? A naive 
-answer could be: yes, scientists formulate quantitative laws, `by means of which future particular facts could be
-predicted', and can then validate the goodness of their assumptions by somehow  measuring the predictive accuracy. 
-
-The first answer could be seen in disagreement with some 
+However, the link of prediction with the scientific laws is in our opinion more ambiguous than what people are usually inclined to think. The following questions arise: is prediction a central step in science? 
+Is prediction a relevant aim of science? 
+A negative answer to the first question could be seen in disagreement with some 
 \emph{instrumentalist} scientists, who would claim that, from an instrumental perspective, predictive success is not merely \emph{symptomatic} of scientific success, but it is also 
 \emph{constitutive} of scientific success \citep{hitchcock2004prediction}. A more sophisticated answer could be:  prediction is not explicitly part of the formulation of a 
-scientific hypothesis (1)--(3) \emph{at the time the law is posed}, but it becomes relevant and relevant as science advances. The chain of events which brought Newton to 
+scientific hypothesis (1)--(3) \emph{at the time the law is posed}, but it becomes relevant and relevant as science advances; the chain of events which brought Newton to 
 generalize the theories of Galilei and Kepler first, and Einstein to revisit the gravitational law of Newton then, was supposedly based on the fallacy of some predictions, and it gained sense 
 only \emph{ex-post}. The fact that the bodies in proximity to the earth surface were revealed by Newton to not fall exactly with a constant acceleration---the acceleration slightly 
-rises as they get closer to the earth---did not make the Galilei's law of constant acceleration for falling bodies less scientific, or totally scientifically wrong. Scientific falsification detected by wrong predictions \citep{popper1934logic} is a powerful and exceptional tool, but we feel to warn about its abuse/misuse. 
+rises as they get closer to the earth---did not make the Galilei's law of constant acceleration for falling bodies less scientific, or totally wrong from a scientific point of view. Scientific falsification detected by wrong predictions \citep{popper1934logic} is a powerful and exceptional tool, but along this paper we feel to warn about its abuse/misuse. 
 
-Over the last decades, scientific predictions became popular not only in the context of physics and natural science, but for social sciences as well. Many algorithms and models 
-have been developed to predict political scenarios, policies effects, sport results, fluctuations of national Gross Domestic Product (GDPs), and many others. The role played by 
-prediction for social sciences is more obscure \citep{popper1944poverty, popper1945poverty} and much controversial than for natural science, though data scientists are every day more and more asked to build 
-`weapons of mass prediction' in many social contexts. The way in which they formulate their theories underlying  some data follows in the majority of the circumstances the scheme 
-outlined by Bertrand Russell and reported at the beginning of this section: the stage of `hypothesis formulation' is vague here, but may be interpreted either in form of the 
-classical statistical testing procedure, or in terms of a model to be checked. Though, the actual outcome may be far away from the predictions: Trump's win in the 2016 US 
-Presidential Elections, Brexit, and Leicester's Premier League's win were very low-probability events, but they occurred. Can all of these rare events falsify the finest algorithms and models designed to not predict their occurrence? Our naive and tentative answer is no, they can't. On the other hand, a statistical procedure that had foreseen Leicester winning the Premier League at the beginning of the season 2015-2016 would have been a very bad model.
+Over the last decades, scientific predictions became popular not only in the context of physics and natural science, but for social sciences as well. Steps (1)--(3) above are widely used by social scientists and statisticians to build consistent theories about human and social behaviours: recently, it emerged clearly the need to build quantitative population's laws with the aim to mimic the physical nature's laws.  However, the role played by 
+prediction in social sciences is even more obscure \citep{popper1944poverty, popper1945poverty} and much more controversial than for natural sciences, though data scientists are every day more and more asked to build 
+`weapons of mass prediction' in many social contexts. 
+ %The way in which they formulate their theories underlying  some data follows in the majority of the circumstances the scheme 
+%outlined by Bertrand Russell and reported at the beginning of this section: the stage of `hypothesis formulation' is vague here, but may be interpreted either in form of the 
+%classical statistical testing procedure, or in terms of a model to be checked.
+Perhaps, the actual outcome may be far away from the predictions: Trump's win in the US 
+Presidential Elections, Brexit, and Leicester's Premier League's win were very low-probability events, but they all occurred during 2016. Can all of these rare events falsify the finest algorithms and models designed to not predict their occurrence? Our naive and tentative answer is no, they can't. We give more intuitions about this in the next section.
 
 
 
@@ -228,18 +223,21 @@ Yes, the probability statements are not invalidated by the occurrence of a low-p
 \section{The role of prediction in statistical learning}
 \label{sec:role}
 
-\subsection{Statistics}
+\subsection{From the observed to the observable}
 
-Statistics has always been thought as the \emph{science of inference}, or \emph{science of estimates}, and inference is always seen as separate from prediction. Inference is based on 
+As statisticians, we are often faced with a double task: first, creating a sound mathematical model to accomodate the data and retrieve useful inferences for our 
+parameters---at the time being, we make no distinction here between classical and Bayesian inference; second, using this model to make predictions, and this is rarely accounted by the statisticians in a transparent way.
+
+However, statistics has always been thought as the \emph{science of inference}, or \emph{science of estimates}, and inference is always seen as separate from prediction. Inference is based on 
 an underlying mathematical model for the data-generating process \citep{bzdok2018points}, its main task is to describe an unknown mechanism working through generalization: the 
 inferential laws should in fact be as broad as possible, ideally valid for the population of interest, and not symptomatic of the observed data (it is out of the scope of this paper to review the distinct inferential 
 approaches). Prediction moves from the observed to the unobserved, being the action designed to forecast future events without requiring a full understanding of the data-
 generation process. Each person is more or less confident with the weather's predictions or with presidential election predictions, but rarely that person is aware of the underlying 
 statistical model required to produce that forecast, unless he is a statistician/data scientist. In such a view, inference seems hard and obscure, and prediction easy and close 
-to the people. This is often a paradoxical argument, since the inference is often associated to the \emph{explanation} of the problem, and should be relevant and available to the majority of the population.
+to the people. This is often a paradoxical argument, since the inference is often associated to the \emph{explanation} of the problem, and should be relevant and available to the majority of the population. However, parameters do not exist in the real life, they are some fictitious and technical devices to explain and approximate the complexity. Rather, only prediction links the observed with the observable and is accessible to the people: it is not a matter of parameters' interpretation, but a check of the discrepancy between observed and future events. This is the reason why we provocatively claim that \emph{prediction is not everything, but (almost) everything, in the real life, could be the object of a predictive action.}
 
-As statisticians, we are often faced with a double task. First, we must create a sound mathematical model to accomodate the data and retrieve useful inferences for our 
-parameters---there is not distinction here between classical and Bayesian statistics, they are both designed to draw inferential conclusions, either in form of point estimates/confidence intervals or in terms of posterior quantiles/credibility intervals. Then, we should use this model to make predictions, but this is rarely accounted by the statisticians in a transparent way.
+%As statisticians, we are often faced with a double task. First, we must create a sound mathematical model to accomodate the data and retrieve useful inferences for our 
+%parameters---there is not distinction here between classical and Bayesian statistics, they are both designed to draw inferential conclusions, either in form of point estimates/confidence intervals or in terms of posterior quantiles/credibility intervals. Then, we should use this model to make predictions, but this is rarely accounted by the statisticians in a transparent way.
 %For illustration purposes only, we consider the classical linear regression model, where $y_n$ denotes the response variable, $X$ is the $n \times p$ predictor matrix, and $\alpha,\beta_1,\beta_2,\ldots,\beta_p$ are the $p+1$ parameters---the intercept $\alpha$ and the $p$ regression parameters, we have
 %
 %\begin{equation}
@@ -251,10 +249,12 @@ parameters---there is not distinction here between classical and Bayesian statis
 %
 %Once the value $y_{n+1}$ is known, the statistician can validate his prediction and check its plausibility. This \emph{ex post} validation is not available when fitting the model, and as such should not represent the plausibility of the model fit itself, since the model construction did not require $y_{n+1}$. In this misalignment between the fitting of the model without the $n+1$-th unit and the forecast validation of $y_{n+1}$ there is space for an infinite debate about the scientific role of prediction.
 %
-First of all, should the statistician use all the $n$ data to build a reasonable/useful model, or could he take only a portion of the 
+Many technical quesions arise, when we are framed in a predictive task. First of all, should we use all the $n$ data to build a reasonable/useful model, or could we take only a portion of the 
 sample to accomodate the model (the training set) and use the remaining values to validate the model (the test set)? This apparently naive question pushed many scholars to debate 
 about the supposed supremacy of prediction over accomodation \citep{maher1988prediction, hitchcock2004prediction, worrall2014prediction}. According to this philosophical point of view, the 
 statistician should ask himself whether he wants models that are true---or  approximately true---or predictively accurate. 
+
+\subsection{Bias, variance and information criteria}
 
 It is well-known that the performance of a statistical method requires low variance as well low bias. Suppose we use a set of observations $(x_1,y_1),(x_2,y_2),\ldots,(x_n,y_n)$ to fit (or train) the statistical model $Y=f(X)+\epsilon$, where the single $x_i$ is the observed value of the predictor/covariate/independent variable $X_i$, the single $y_i$ is the observed value of the  dependent/response variable $Y_i$, $f$ is an unknown mathematical function of $X$, and $\epsilon$ is the random error. Fitting a model means producing an estimate $\hat{f}$ for the unknown $f$: in the univariate linear regression case $f(X)= \beta_0+\beta_1X$, this is translated in estimating the parameters $\beta_0,\beta_1$ by finding $\hat{\beta}_0, \hat{\beta}_1$.
 Let  $(x_{n+1}, y_{n+1})$ be a new observation not used to train the model, we can then define the expected test mean square error as:
@@ -266,14 +266,13 @@ E \left[ y_{n+1}-\hat{f}({x}_{n+1}) \right]^2 = \text{Var}(\hat{f}({x}_{n+1}))+ 
 %
 where $\hat{f}(x_{n+1})$ is the prediction for $y_{n+1}$ produced by $\hat{f}$, $\text{Var}(\hat{f}(x_{n+1}))$ is the variance for $\hat{f}(x_{n+1})$, $\text{Bias}^2(\hat{f}(x_{n+1}))$ is the squared bias, and $\text{Var}(\epsilon)$ is the error variance.
 More complex models, with lower bias, tend to overfit the data, by yielding  poor  predictive results and then higher variance; conversely, too simple models tend to not fit the data adequately and have higher bias. Statistical procedures often incur in the bias-variance 
-trade-off \citep{james2013introduction}, the challenge is to find a compromise by controlling both the bias and the variance.
+trade-off \citep{james2013introduction}: the challenge is to find a compromise by controlling both the bias and the variance.
 
 When building a model for real-life applications to extract information from the data, it is good practice to keep in mind the bias-variance trade-off. Nevertheless, it is often 
 problematic to assess the performance of a statistical model by looking at the elements in Equation~\eqref{eq:exp_MSE}. When $f$ is unobserved, it is even impossible to compute the expected test MSE.
 
 In our practice, prediction should not be assimilated to `take a rabbit out of a hat', but looking at its inherent uncertainty. Splitting the predictions' uncertainty in variance and 
-squared bias can be sometimes bogus, and does not entirely reflect the needs of the statistician. Rather, we intend the unobserved values $\tilde{y}$ to come from a 
-probability distribution, denoted here by $p(\tilde{y}|y)$, such that we could define an expected predictive density (EPD) measure for a new dataset.  In much previous literature 
+squared bias can be sometimes bogus, and does not entirely reflect the needs of the statistician. Rather, if we are framed in a Bayesian context we intend the unobserved values $\tilde{y}$ to come from the posterior predictive distribution, denoted here by $p(\tilde{y}|y)$, which incorporates the intrinsic uncertainty propagating from the parameters---summarized by the posterior distribution---to the observable future values. Through this quantity, we could define an expected predictive density (EPD) measure for a new dataset.  In much previous literature 
 about predictive accuracy, such as the Akaike Information Criterion (AIC) \citep{akaike1973information}, there is not any link to the model's uncertainty, since the 
 measure of model's accuracy is evaluated conditionally on parameters' points estimates. The Deviance Information Criterion (DIC) \citep{spiegelhalter2002bayesian} is a sort of AIC 
 Bayesian version, in which the maximum likelihood estimate is replaced by the posterior mean for the parameters, and the number of parameters is replaced by a measure of effective number of parameters. 
@@ -282,8 +281,8 @@ Recent proposals such as the Watanabe-Akaike Information Criteria (WAIC) \citep{
 for a new dataset (ELPPD). These approaches require the computation of the log-pointwise predictive density $p(\tilde{y}_{i}|y)$ for each new observable value $\tilde{y}_i$. Of course, the true distribution is unknown, and this measure has to be approximated, for instance via leave-one-out cross validation.
 
 Although all the predictive information criteria may fail in some practical situations, LOOIC and WAIC offer the possibility to provide a measure of predictive accuracy based on the single data points, in a computationally efficient way (both the methods are 
-implemented in the {\tt loo} R package \citep{loo}). Despite not conclusive for the predictive accuracy of a statistical model, these techniques allow in many situations to compare distinct models by the acknowledgement of an intrinsic uncertainty propagating from the parameters---summarized by their posterior distribution---to the observable future values---through the posterior predictive distribution.
-In Section~\ref{sec:instr}, we make this point even more clear. A transparent predictive tool should encompass data, parameters and future data all together, in such a way that the falsification of a single piece makes the joint model falsifiable.
+implemented in the {\tt loo} R package \citep{loo}). Despite not conclusive for the predictive accuracy of a statistical model, these techniques allow in many situations to compare distinct models by the acknowledgement of an intrinsic uncertainty propagating from the parameters to the observable future values: in such a viewpoint, \emph{observable values, and not parameters, are really relevant.}
+ A transparent predictive tool should encompass data, parameters and future data all together: in such a way, the falsification of a single piece makes the joint model falsifiable. In Section~\ref{sec:instr}, we make this point even more clear.
 
 
 
@@ -296,7 +295,7 @@ In Section~\ref{sec:instr}, we make this point even more clear. A transparent pr
 \color{black}
 
 
-\subsection{Machine learning}
+\subsection{The two cultures}
 
 As brilliantly argued by \cite{breiman2001statistical}, there are two cultures in the use of statistical modeling to reach conclusions from data: a stochastic data model consisting 
 of predictors, parameters and random noise to explain the response variable $y$ is adopted by the data modeling culture; a function of the predictors to predict the response variable 
@@ -311,7 +310,7 @@ algorithms was predictive accuracy: this is translated in finding an algorithm $
 %\subsection{Training set selection: the tree case}
 
 Data scientists are used to train their procedures on the \emph{training set}, which is chosen at the beginning in many possible ways. A common strategy is to select the first half of a 
-dataset to train the algorithm, and the second half to test it. Another strategy consists of selecting only a percentage---say, the 75\% of the dataset---and use the remaining 25\% to  test the algorithm. However, a small change in the dataset can cause a large change in the final predictions, and some adjustments are often required to increase the algorithm's robustness. 
+dataset to train the algorithm, and the second half to test it; another strategy consists of selecting only a percentage---say, the 75\% of the dataset---and use the remaining 25\% to  test the algorithm. However, a small change in the dataset can cause a large change in the final predictions, and some adjustments are often required to increase the algorithm's robustness. 
 
 In the case of decision trees, it turned out that a tree that is grown very deep tends to suffer from high variance and low bias. This means that the tree is likely to 
 overfit the training data: if we randomly split the training set into two parts, and fit a tree to both halves, the results could be quite different. To alleviate this lack of 
@@ -353,7 +352,7 @@ do `whatever it takes' to improve over the previous methods. From a philosophica
 them the predictive accuracy carried out by their algorithms is constitutive---and not only symptomatic---of the broader scientific success.
 
 Evaluating a model/algorithm in light of its ability to predict future data is not shameful at all; conversely, it turned out to be beneficial in many areas where a parametric 
-stochastic model failed to be really generative and useful. However, in line with Popper, predictions of future data are good tools to falsify a posed theory, but many times ML 
+stochastic model failed to be really generative and useful. However, even if predictions of future data are good tools to falsify a posed theory, many times ML 
 techniques lack of a general and valid theoretical framework. The number of predictors at each split of a random forest is a tuning parameters fixed at $\sqrt{p}$ in most cases, but 
 in practice the best values for these parameters will depend on the problem. Predictions should corroborate or reject an underlying theory, but if the method (the theory) is tuned 
 and selected on the ground of its predictive accuracy, the theory to be falsified is bogus, and not posed in a transparent way.
