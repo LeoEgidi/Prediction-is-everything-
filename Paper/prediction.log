@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.19)  7 MAY 2021 17:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.19)  7 MAY 2021 23:14
 entering extended mode
 **./prediction.tex
 (prediction.tex
@@ -935,14 +935,29 @@ LaTeX Warning: Marginpar on page 6 moved.
 Underfull \vbox (badness 3199) has occurred while \output is active []
 
  [6]
-Overfull \hbox (6.6539pt too wide) in paragraph at lines 276--278
-\OT1/ptm/m/n/11 tor/covariate/independent vari-able $\OML/ztmcm/m/it/11 X[]$\OT
-1/ptm/m/n/11 , the sin-gle $\OML/ztmcm/m/it/11 y[]$ \OT1/ptm/m/n/11 is the ob-s
-erved value of the de-pen-dent/response
+
+LaTeX Warning: Marginpar on page 7 moved.
+
+
+Overfull \hbox (30.2131pt too wide) in paragraph at lines 280--282
+\OT1/ptm/m/n/11 cal model $\OML/ztmcm/m/it/11 Y \OT1/ztmcm/m/n/11 = \OML/ztmcm/
+m/it/11 f\OT1/ztmcm/m/n/11 (\OML/ztmcm/m/it/11 X\OT1/ztmcm/m/n/11 ) + \OML/ztmc
+m/m/it/11 $\OT1/ptm/m/n/11 , where the sin-gle $\OML/ztmcm/m/it/11 x[]$ \OT1/p
+tm/m/n/11 is the ob-served value of the pre-dic-tor/covariate/independent
  []
 
 
-Overfull \hbox (0.38821pt too wide) in paragraph at lines 282--287
+Overfull \hbox (36.02321pt too wide) in paragraph at lines 291--291
+\OT1/ptm/m/n/10 dropped/reformulated. 
+ []
+
+
+Overfull \hbox (36.02321pt too wide) in paragraph at lines 291--291
+\OT1/ptm/m/n/10 dropped/reformulated. 
+ []
+
+
+Overfull \hbox (0.38821pt too wide) in paragraph at lines 286--292
 \OT1/ptm/m/n/11 where $[]\OT1/ztmcm/m/n/11 (\OML/ztmcm/m/it/11 x[]\OT1/ztmcm/m/
 n/11 )$ \OT1/ptm/m/n/11 is the pre-dic-tion for $\OML/ztmcm/m/it/11 y[]$ \OT1/p
 tm/m/n/11 pro-duced by $[]$, $[]\OT1/ztmcm/m/n/11 ([](\OML/ztmcm/m/it/11 x[]\OT
@@ -950,54 +965,55 @@ tm/m/n/11 pro-duced by $[]$, $[]\OT1/ztmcm/m/n/11 ([](\OML/ztmcm/m/it/11 x[]\OT
 OML/ztmcm/m/it/11 x[]\OT1/ztmcm/m/n/11 )$\OT1/ptm/m/n/11 ,
  []
 
-[7] [8] [9]
+[7] [8] [9] [10]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7.4> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 426.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 435.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 426.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 435.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 426.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 435.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 426.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 435.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 426.
- [10]
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 435.
+
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 487.
+(amsmath)                trying to recover with `aligned' on input line 496.
 
 [11]
 <ScenarioA.pdf, id=75, 722.7pt x 469.755pt>
 File: ScenarioA.pdf Graphic file (type pdf)
 <use ScenarioA.pdf>
-Package pdftex.def Info: ScenarioA.pdf  used on input line 520.
+Package pdftex.def Info: ScenarioA.pdf  used on input line 529.
 (pdftex.def)             Requested size: 195.1316pt x 126.83554pt.
 <ScenarioB.pdf, id=76, 722.7pt x 469.755pt>
 File: ScenarioB.pdf Graphic file (type pdf)
 <use ScenarioB.pdf>
-Package pdftex.def Info: ScenarioB.pdf  used on input line 522.
+Package pdftex.def Info: ScenarioB.pdf  used on input line 531.
 (pdftex.def)             Requested size: 195.1316pt x 126.83554pt.
 <ScenarioC.pdf, id=77, 722.7pt x 469.755pt>
 File: ScenarioC.pdf Graphic file (type pdf)
 <use ScenarioC.pdf>
-Package pdftex.def Info: ScenarioC.pdf  used on input line 525.
+Package pdftex.def Info: ScenarioC.pdf  used on input line 534.
 (pdftex.def)             Requested size: 195.1316pt x 126.83554pt.
 <France-CroatiaHeatmap_bivpois.pdf, id=78, 433.62pt x 433.62pt>
 File: France-CroatiaHeatmap_bivpois.pdf Graphic file (type pdf)
 <use France-CroatiaHeatmap_bivpois.pdf>
 Package pdftex.def Info: France-CroatiaHeatmap_bivpois.pdf  used on input line 
-533.
+542.
 (pdftex.def)             Requested size: 216.80946pt x 216.80946pt.
  [12] [13 <./ScenarioA.pdf> <./ScenarioB.pdf> <./ScenarioC.pdf> <./France-Croat
-iaHeatmap_bivpois.pdf>] [14] (prediction.bbl [15]) [16] (prediction.aux
+iaHeatmap_bivpois.pdf>] [14] (prediction.bbl [15] [16]) [17]
+(prediction.aux
 \statsocwidth@a=\dimen185
 \statsocwidth@b=\dimen186
 ) ) 
 Here is how much of TeX's memory you used:
- 16202 strings out of 492970
- 312473 string characters out of 3126593
- 382215 words of memory out of 3000000
- 19659 multiletter control sequences out of 15000+200000
+ 16218 strings out of 492970
+ 312843 string characters out of 3126593
+ 382507 words of memory out of 3000000
+ 19675 multiletter control sequences out of 15000+200000
  56389 words of font info for 131 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,17n,87p,799b,866s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1016,9 +1032,9 @@ ic/uhvr8a.pfb><C:/Users/leoeg/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
 ype1/urw/symbol/usyr.pfb><C:/Users/leoeg/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/urw/times/utmr8a.pfb><C:/Users/leoeg/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on prediction.pdf (16 pages, 211275 bytes).
+Output written on prediction.pdf (17 pages, 212764 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
+ 162 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  129 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -271,9 +271,13 @@ to us), rather they are built to find and display a statistically significant ef
 This is the reason why we provocatively claim that \emph{prediction is not everything, but (almost) everything, in statistics, could be described in predictive terms.}
 \jonah{This paragraph is new, and tries to collect our recent ideas. Edit as you wish}
 
-\subsection{Bias, variance and information criteria}
+\subsection{Bias--variance tradeoff}
+\leo{This section needs to be entirely reformulated, if not dropped. Revise}
 
-It is well-known that the performance of a statistical method requires low variance as well low bias. Suppose we use a set of observations $(x_1,y_1),(x_2,y_2),\ldots,(x_n,y_n)$ to fit (or train) the statistical model $Y=f(X)+\epsilon$, where the single $x_i$ is the observed value of the predictor/covariate/independent variable $X_i$, the single $y_i$ is the observed value of the  dependent/response variable $Y_i$, $f$ is an unknown mathematical function of $X$, and $\epsilon$ is the random error. Fitting a model means producing an estimate $\hat{f}$ for the unknown $f$: in the univariate linear regression case $f(X)= \beta_0+\beta_1X$, this is translated in estimating the parameters $\beta_0,\beta_1$ by finding $\hat{\beta}_0, \hat{\beta}_1$.
+Assessing the generalization performance of a learning method related to the predictive performance on a test set is a central task in modern data-science. In this section we review some well-known approaches and highlight their main merits and weaknesses.
+
+%It is well-known that the performance of a statistical method requires low variance as well low bias. 
+Suppose we use a set of observations $(x_1,y_1),(x_2,y_2),\ldots,(x_n,y_n)$ to fit (or train) the statistical model $Y=f(X)+\epsilon$, where the single $x_i$ is the observed value of the predictor/covariate/independent variable $X_i$, the single $y_i$ is the observed value of the  dependent/response variable $Y_i$, $f$ is an unknown mathematical function of $X$, and $\epsilon$ is the random error. Fitting a model means producing an estimate $\hat{f}$ for the unknown $f$: in the univariate linear regression case $f(X)= \beta_0+\beta_1X$, this is translated in estimating the parameters $\beta_0,\beta_1$ by finding $\hat{\beta}_0, \hat{\beta}_1$.
 Let  $(x_{n+1}, y_{n+1})$ be a new observation not used to train the model, we can then define the expected test mean square error as:
 
 \begin{equation}
@@ -284,10 +288,13 @@ E \left[ y_{n+1}-\hat{f}({x}_{n+1}) \right]^2 = \text{Var}(\hat{f}({x}_{n+1}))+ 
 where $\hat{f}(x_{n+1})$ is the prediction for $y_{n+1}$ produced by $\hat{f}$, $\text{Var}(\hat{f}(x_{n+1}))$ is the variance for $\hat{f}(x_{n+1})$, $\text{Bias}^2(\hat{f}(x_{n+1}))$ is the squared bias, and $\text{Var}(\epsilon)$ is the error variance.
 More complex models, with lower bias, tend to overfit the data, by yielding  poor  predictive results and then higher variance; conversely, too simple models tend to not fit the data adequately and have higher bias. Statistical procedures often incur in the bias-variance 
 trade-off \citep{james2013introduction}: the challenge is to find a compromise by controlling both the bias and the variance.
+\leo{Maybe this part can be dropped/reformulated. Is the expected test MSE relevant here? how is connected with the topics?}
 
 When building a model for real-life applications to extract information from the data, it is good practice to keep in mind the bias-variance trade-off. Nevertheless, it is often 
 problematic to assess the performance of a statistical model by looking at the elements in Equation~\eqref{eq:exp_MSE}. When $f$ is unobserved, it is even impossible to compute the expected test MSE.
 
+
+\subsection{Information criteria}
 In our practice, prediction should not be assimilated to `take a rabbit out of a hat', but looking at its inherent uncertainty. Splitting the predictions' uncertainty in variance and 
 squared bias can be sometimes bogus, and does not entirely reflect the needs of the statistician. Rather, if we are framed in a Bayesian context we intend the unobserved values $\tilde{y}$ to come from the posterior predictive distribution, denoted here by $p(\tilde{y}|y)$, which incorporates the intrinsic uncertainty propagating from the parameters---summarized by the posterior distribution---to the observable future values. Through this quantity, we could define an expected predictive density (EPD) measure for a new dataset.  In much previous literature 
 about predictive accuracy, such as the Akaike Information Criterion (AIC) \citep{akaike1973information}, there is not any link to the model's uncertainty, since the 
@@ -310,6 +317,8 @@ implemented in the {\tt loo} R package \citep{loo}). Despite not conclusive for 
 %Forse questa parte potrebbe andare anche nelle conclusioni e nel testo, e non per forza come sezione a se stante
 
 \color{black}
+
+\subsection{Cross-validation}
 
 
 \subsection{The two cultures}
