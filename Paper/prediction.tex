@@ -56,6 +56,10 @@
 }
 
 
+\usepackage[colorinlistoftodos,textwidth=2.2cm, textsize=tiny]{todonotes}
+\setlength{\marginparwidth}{2.5cm}
+\newcommand{\leo}[1]{\todo[linecolor=orange, size=\footnotesize, backgroundcolor=orange!25,bordercolor=orange]{Leo: #1}}
+\newcommand{\jonah}[1]{\todo[linecolor=blue, size=\footnotesize, backgroundcolor=blue!25,bordercolor=orange]{Jonah: #1}}
 
 
 
@@ -225,16 +229,19 @@ Yes, the probability statements are not invalidated by the occurrence of a low-p
 
 \subsection{From the observed to the observable}
 
-As statisticians, we are often faced with a double task: first, creating a sound mathematical model to accomodate the data and retrieve useful inferences for our 
-parameters---at the time being, we make no distinction here between classical and Bayesian inference; second, using this model to make predictions, and this is rarely accounted by the statisticians in a transparent way.
+As statisticians, we often deal with a double task: first, creating a sound mathematical model to accomodate the data and retrieve useful inferential conclusions from 
+parameters' estimates---in this section, we make no distinction between classical and Bayesian inference; second, using this model to make predictions. From a practical point of view, inference and prediction should act sequentially and appear as `two sides of the same coin'. And both of them should contribute to the statistical workflow by coherently accounting for the intrinsic model uncertainty.
+\leo{I slightly revised this part, I guess now this first paragraph could be ok and could better link the second paragraph}
 
-However, statistics has always been thought as the \emph{science of inference}, or \emph{science of estimates}, and inference is always seen as separate from prediction. Inference is based on 
-an underlying mathematical model for the data-generating process \citep{bzdok2018points}, its main task is to describe an unknown mechanism working through generalization: the 
-inferential laws should in fact be as broad as possible, ideally valid for the population of interest, and not symptomatic of the observed data (it is out of the scope of this paper to review the distinct inferential 
-approaches). Prediction moves from the observed to the unobserved, being the action designed to forecast future events without requiring a full understanding of the data-
-generation process. Each person is more or less confident with the weather's predictions or with presidential election predictions, but rarely that person is aware of the underlying 
-statistical model required to produce that forecast, unless he is a statistician/data scientist. In such a view, inference seems hard and obscure, and prediction easy and close 
-to the people. This is often a paradoxical argument, since the inference is often associated to the \emph{explanation} of the problem, and should be relevant and available to the majority of the population. However, parameters do not exist in the real life, they are some fictitious and technical devices to explain and approximate the complexity. Rather, only prediction links the observed with the observable and is accessible to the people: it is not a matter of parameters' interpretation, but a check of the discrepancy between observed and future events. This is the reason why we provocatively claim that \emph{prediction is not everything, but (almost) everything, in the real life, could be the object of a predictive action.}
+
+However, the widespread feeling is that statistics has always been thought as the \emph{science of inference}, or \emph{science of estimates}, and inference is most of the time considered as the dominating side and seen as separate from prediction \textcolor{orange}{(adding reference?)}. \jonah{I guess you agree with this viewpoint. Maybe adding a reference?} Inference creates 
+an underlying mathematical model of the data-generating process \citep{bzdok2018points}, its main task is to formulate a theory that adequately captures an unknown mechanism connecting potentially influential predictors with a response variable; the 
+inferential laws should be as general as possible, ideally valid for the population of interest, and not symptomatic of the observed data (it is out of the scope of this paper to review the distinct inferential 
+approaches). Prediction instead moves from the observed to the unobserved (though observable in the future), being the action designed to forecast future events without requiring a full understanding of the underlying data-generation process. Predictive actions can be daily shared and accepted from the human common sense: each person is in fact more or less confident with weather's predictions or with presidential election predictions, but rarely that person is aware of the underlying 
+statistical model required to produce that forecast, unless he is a statistician/data scientist. In such a view, inference seems hard and obscure, and prediction easy and transparent 
+to the people. \leo{Second paragraph: slightly revised}
+
+This is a paradoxical argument, since inference is often associated to the action of \emph{explaining} a given problem, and its results should be relevant and available to the majority of the population. However, statisticians look like those magicians who resemble their decks of cards by fictitiously adding/removing some extra cards, not available to the audience. To continue with the metaphor,  model parameters behave like these fake cards, which are incredibly relevant to build the trick (aka statistical theories), but do not exist in the real life; in brief, parameters are just some fictitious and technical devices to explain and approximate the complexity. \jonah{Do you like the magician metaphor? Edit as you wish} Rather, only prediction links the observed with the observable and is accessible to the people: it is never a matter of parameters' interpretation, but only requires a check of the discrepancy between observed and future events, and can doubtless be done by anyone. This is the reason why we provocatively claim that \emph{prediction is not everything, but (almost) everything, in the real life, could be the object of a predictive action.} \leo{Third paragraph: revised}
 
 %As statisticians, we are often faced with a double task. First, we must create a sound mathematical model to accomodate the data and retrieve useful inferences for our 
 %parameters---there is not distinction here between classical and Bayesian statistics, they are both designed to draw inferential conclusions, either in form of point estimates/confidence intervals or in terms of posterior quantiles/credibility intervals. Then, we should use this model to make predictions, but this is rarely accounted by the statisticians in a transparent way.
@@ -249,10 +256,10 @@ to the people. This is often a paradoxical argument, since the inference is ofte
 %
 %Once the value $y_{n+1}$ is known, the statistician can validate his prediction and check its plausibility. This \emph{ex post} validation is not available when fitting the model, and as such should not represent the plausibility of the model fit itself, since the model construction did not require $y_{n+1}$. In this misalignment between the fitting of the model without the $n+1$-th unit and the forecast validation of $y_{n+1}$ there is space for an infinite debate about the scientific role of prediction.
 %
-Many technical quesions arise, when we are framed in a predictive task. First of all, should we use all the $n$ data to build a reasonable/useful model, or could we take only a portion of the 
-sample to accomodate the model (the training set) and use the remaining values to validate the model (the test set)? This apparently naive question pushed many scholars to debate 
+Many technical questions arise, when we are framed in a predictive task. First of all, should we use all the data to build a reasonable/useful model, or could we take only a portion of the 
+sample to accomodate the model (the training set) and use the remaining values to validate and test the model (the validation and test sets)? This apparently naive question pushed many scholars to debate 
 about the supposed supremacy of prediction over accomodation \citep{maher1988prediction, hitchcock2004prediction, worrall2014prediction}. According to this philosophical point of view, the 
-statistician should ask himself whether he wants models that are true---or  approximately true---or predictively accurate. 
+statistician should ask himself whether he wants models that are true---or  approximately true---or predictively accurate. In our opinion there is not  a clear domain of one approach over the other: inference and predictions are not enemies, but could be strong allies to reveal the truth. \leo{Fourth paragraph: slightly revised}
 
 \subsection{Bias, variance and information criteria}
 
