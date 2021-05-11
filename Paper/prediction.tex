@@ -370,6 +370,9 @@ Data scientists are used to train their procedures on the \emph{training set}, w
 dataset to train the algorithm, and the second half to test it; another strategy consists of selecting only a percentage---say, the 75\% of the dataset---and use the remaining 25\% to  test the algorithm. However, a small change in the dataset can cause a large change in the final predictions, and some adjustments are often required to increase the algorithm's robustness.  This `training shaking' is popular despite controversial, and gives us the possibility to discuss about the eventual supremacy of the prediction over model construction and interpretation.
 \leo{Slightly edited and shortened}
 
+In what follows, we feel to relax these boundaries and merge the two cultures, by referring to this fusion as the field of statistical learning. The list of considerations contained in the next section is valid for both algorithmic and stochastic modelers.
+\jonah{what do you think?}
+
 %In the case of decision trees, it turned out that a tree that is grown very deep tends to suffer from high variance and low bias. This means that the tree is likely to 
 %overfit the training data: if we randomly split the training set into two parts, and fit a tree to both halves, the results could be quite different. To alleviate this lack of 
 %robustness, in the mid-1990s some data scientists argued that by aggregating many trees and perturbing the training set, using bagging \citep{breiman1996bagging}, boosting 
@@ -403,21 +406,22 @@ dataset to train the algorithm, and the second half to test it; another strategy
 \label{sec:instr}
 
 \subsection{ML scientists are strong instrumentalist, statisticians are weak instrumentalist}
+\jonah{Maybe we could relax the distinction between ML and statistics, and talk more generally about statistical learning}
 
-As emerges from the quick overview of the well-known decision tree methods in the previous section, the only rationale to evaluate the goodness of an algorithmic modeling procedure is to look at its 
-predictive accuracy on out-of-sample/future data. `Shaking the training set' became popular to ensure lower variance and higher accuracy, with the data scientist apparently ready to 
-do `whatever it takes' to improve over the previous methods. From a philosophical and scientific point of view, algorithmic modelers are \emph{strong instrumentalist}, since for 
-them the predictive accuracy carried out by their algorithms is constitutive---and not only symptomatic---of the broader scientific success.
+As statisticians and (data) scientists, demanded to build models for social and physical sciences, our efforts should be addressed to produce good, transparent and well posed algorithms/models, and make them falsifiable upon a strong check \citep{gelman2013philosophy}. Our skepticism regards the role of prediction in falsifying our models, for such a reason we would claim to be \emph{weak instrumentalists}: predictions and predictive accuracy are a central task of science, but only sometimes they are constitutive of scientific success. However, 
+%As emerges from the quick overview of the well-known decision tree methods in the previous section,
+the only rationale to evaluate the goodness of an algorithmic modeling procedure is often to look at its 
+predictive accuracy on out-of-sample/future data; `shaking the training set'---along with other procedures---became popular to ensure lower variance and higher accuracy, with the data scientist apparently ready to 
+do `whatever it takes' to improve over the previous methods. 
 
 Evaluating a model/algorithm in light of its ability to predict future data is not shameful at all; conversely, it turned out to be beneficial in many areas where a parametric 
-stochastic model failed to be really generative and useful. However, even if predictions of future data are good tools to falsify a posed theory, many times ML 
-techniques lack of a general and valid theoretical framework. The number of predictors at each split of a random forest is a tuning parameters fixed at $\sqrt{p}$ in most cases, but 
+stochastic model failed to be really generative and useful. However, even if predictions of future data are good tools to falsify a posed theory, many times some ML 
+techniques lack of a general and valid theoretical framework; as an illustrative example, the number of predictors at each split of a random forest is a tuning parameter fixed at $\sqrt{p}$ in most cases, but 
 in practice the best values for these parameters will depend on the problem. Predictions should corroborate or reject an underlying theory, but if the method (the theory) is tuned 
-and selected on the ground of its predictive accuracy, the theory to be falsified is bogus, and not posed in a transparent way.
+and selected on the ground of its predictive accuracy, the theory to be falsified is bogus, and not posed in a transparent way. For such reason, from a philosophical and scientific point of view, algorithmic modelers are \emph{strong instrumentalist}, since for them the predictive accuracy carried out by their algorithms is constitutive---and not only symptomatic---of the broader scientific success.
+\leo{Slight revision and cut}
 
-As statisticians and (data) scientists, demanded to build models for social and physical sciences, our efforts should be addressed to produce good, transparent and well posed algorithms/models, and make them falsifiable upon a strong check \citep{gelman2013philosophy}. Our skepticism regards the role of prediction in falsifying our models, for such a reason we would claim to be \emph{weak instrumentalists}: predictions and predictive accuracy are a central task of science, but only sometimes they are constitutive of scientific success.
-
-In other way said, a supposedly valid scientific theory should exist \emph{before} the future data have been revealed, and produce some immediate benefits to the scientific community, similarly as the falling bodies theory of Galilei first, and the law of universal gravitation of Newton then: corroborating or rejecting a model/algorithm on the basis of observable future values only is often far from the scientists' requirements and economic funds of the current project.
+%In other way said, a supposedly valid scientific theory should exist \emph{before} the future data have been revealed, and produce some immediate benefits to the scientific community, similarly as the falling bodies theory of Galilei first, and the law of universal gravitation of Newton then: corroborating or rejecting a model/algorithm on the basis of observable future values only is often far from the scientists' requirements and economic funds of the current project.
 
 \subsection{The falsificationist Bayesianism framework: going beyond inference and prediction}
 
