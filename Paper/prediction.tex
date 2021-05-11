@@ -224,7 +224,7 @@ In November 2016, many modelers, included Nate Silver, the founder of the well-k
 Yes, the probability statements are not invalidated by the occurrence of a low-probability event. But we can learn from these low-probability outcomes. In the polling example, yes an error of 2\% is within what one might expect from nonsampling error in national poll aggregates, but the point is that nonsampling error has a reason: it’s not just random. In this case it seems to have arisen from a combination of differential nonresponse, unexpected changes in turnout, and some sloppy modeling choices. It makes sense to try to understand this, not to just say that random things happen and leave it at that.
 \end{quote}
 
-\section{The role of prediction in statistical learning}
+\section{The role of prediction in statistical learning: what we usually do, what we no not do, what we should do}
 \label{sec:role}
 
 \subsection{From the observed to the observable}
@@ -271,42 +271,70 @@ to us), rather they are built to find and display a statistically significant ef
 This is the reason why we provocatively claim that \emph{prediction is not everything, but (almost) everything, in statistics, could be described in predictive terms.}
 \jonah{This paragraph is new, and tries to collect our recent ideas. Edit as you wish}
 
-\subsection{Bias--variance tradeoff}
-\leo{This section needs to be entirely reformulated, if not dropped. Revise}
+\subsection{Generalization performance of a statistical model}
+\leo{I revised a bit this section and I change its title. I guess now is more clean}
 
 Assessing the generalization performance of a learning method related to the predictive performance on a test set is a central task in modern data-science. In this section we review some well-known approaches and highlight their main merits and weaknesses.
 
 %It is well-known that the performance of a statistical method requires low variance as well low bias. 
-Suppose we use a set of observations $(x_1,y_1),(x_2,y_2),\ldots,(x_n,y_n)$ to fit (or train) the statistical model $Y=f(X)+\epsilon$, where the single $x_i$ is the observed value of the predictor/covariate/independent variable $X_i$, the single $y_i$ is the observed value of the  dependent/response variable $Y_i$, $f$ is an unknown mathematical function of $X$, and $\epsilon$ is the random error. Fitting a model means producing an estimate $\hat{f}$ for the unknown $f$: in the univariate linear regression case $f(X)= \beta_0+\beta_1X$, this is translated in estimating the parameters $\beta_0,\beta_1$ by finding $\hat{\beta}_0, \hat{\beta}_1$.
-Let  $(x_{n+1}, y_{n+1})$ be a new observation not used to train the model, we can then define the expected test mean square error as:
+Suppose we use a set of observations $\tau=(x_1,y_1),(x_2,y_2),\ldots,(x_n,y_n)$ to fit (or train) the statistical model $Y=f(X)+\epsilon$, where the single $x_i$ is the observed value of the predictor/covariate $X_i$, the single $y_i$ is the observed value of the  dependent/response variable $Y_i$, $f$ is an unknown mathematical function of $X$, and $\epsilon$ is the random error. Fitting a model means producing an estimate $\hat{f}$ for the unknown $f$: in the univariate linear regression case $f(X)= \beta_0+\beta_1X$, this is translated in estimating the parameters $\beta_0,\beta_1$ by finding $\hat{\beta}_0, \hat{\beta}_1$.
+Let  $(x_{n+1}, y_{n+1})$ be a new observation not used to train the model, we then would like to take the expectation across all such new values and define the \emph{test mean square error (MSE)}, or \emph{generalization error}:
 
 \begin{equation}
-E \left[ y_{n+1}-\hat{f}({x}_{n+1}) \right]^2 = \text{Var}(\hat{f}({x}_{n+1}))+ \text{Bias}^2(\hat{f}({x}_{n+1}))+\text{Var}(\epsilon),
-\label{eq:exp_MSE}
+\text{Test MSE} \equiv \textrm{E} \left[ (y_{n+1}-\hat{f}({x}_{n+1}))^2 |\tau \right],
+\label{eq:test_MSE}
 \end{equation}
 %
-where $\hat{f}(x_{n+1})$ is the prediction for $y_{n+1}$ produced by $\hat{f}$, $\text{Var}(\hat{f}(x_{n+1}))$ is the variance for $\hat{f}(x_{n+1})$, $\text{Bias}^2(\hat{f}(x_{n+1}))$ is the squared bias, and $\text{Var}(\epsilon)$ is the error variance.
-More complex models, with lower bias, tend to overfit the data, by yielding  poor  predictive results and then higher variance; conversely, too simple models tend to not fit the data adequately and have higher bias. Statistical procedures often incur in the bias-variance 
-trade-off \citep{james2013introduction}: the challenge is to find a compromise by controlling both the bias and the variance.
+where $\hat{f}(x_{n+1})$ is the prediction for $y_{n+1}$ produced by $\hat{f}$, the expectation is taken across all new unseen predictor-response pairs $(x_{n+1}, y_{n+1})$ and the training set $\tau$ is consdidered to be fixed. 
+Unfortunately, it is commonly unfeasible to calculate the test MSE, because we are often in a situation where we do not have any test data available. As suggested by \cite{hastie2009elements}, it does not seem possible to estimate the conditional error in \eqref{eq:test_MSE} appropriately, given only the information in the same training set $\tau$.  For such reasons, we may introduce a related quantity, the \emph{expected test MSE}, or \emph{expected generalization error}, which is usually estimated by cross-validation \citep{hastie2009elements} and related statistical methods:
+\begin{equation}
+\text{exp Test MSE}\equiv \textrm{E}[\text{Test MSE}] = 
+%\textrm{E} \left[ y_{n+1}-\hat{f}({x}_{n+1}) \right]^2 
+ \text{Var}(\hat{f}({x}_{n+1}))+ \text{Bias}^2(\hat{f}({x}_{n+1}))+\text{Var}(\epsilon),
+\label{eq:exp_test_MSE}
+\end{equation}
+%
+where the expectation is taken across many training sets, $\text{Var}(\hat{f}(x_{n+1}))$ is the variance for $\hat{f}(x_{n+1})$, $\text{Bias}^2(\hat{f}(x_{n+1}))$ is the squared bias,  $\text{Var}(\epsilon)$ is the error variance.  This final term is known as the irreducible error, is the minimum lower bound for the test MSE. Since we only ever have access to the training data points (including the randomness associated with the  $\epsilon$ values) we can't ever hope to get a ``more accurate" fit than what the variance of the residuals offer.
+
+ The predictive goal is to select the model where the expected test MSE is lowest: the statisticians should try to minimize the exp Test MSE by choosing the model that simultaneously has low variance and low bias.
+However, this is a relevant and dificult challenge, much debated within the statistical community: more complex models, with lower bias, tend to overfit the data, by yielding  poor  predictive results and then higher variance; conversely, too simple models tend to not fit the data adequately and have higher bias. Statistical procedures often incur in the \emph{bias-variance 
+trade-off} \citep{james2013introduction}, the challenge is to find a compromise by controlling both the bias and the variance.
 \leo{Maybe this part can be dropped/reformulated. Is the expected test MSE relevant here? how is connected with the topics?}
 
-When building a model for real-life applications to extract information from the data, it is good practice to keep in mind the bias-variance trade-off. Nevertheless, it is often 
-problematic to assess the performance of a statistical model by looking at the elements in Equation~\eqref{eq:exp_MSE}. When $f$ is unobserved, it is even impossible to compute the expected test MSE.
+When building a model for real-life applications to extract information from the data, it is good practice to keep in mind this bias-variance trade-off. Nevertheless, it is often 
+problematic to assess the performance of a statistical model by looking directly at the elements in Equation~\eqref{eq:exp_test_MSE}. For such a 
+reason many statistical methods such as cross-validation, bootstrap, AIC, BIC have been proposed to provide reasonable estimates of the expected 
+generalization error and then help modellers in choosing among candidate models. However, not all of these methods are (always) effective in 
+estimating the prediction error on out-of-sample datasets: AIC and DIC suffer from the conditioning on a point estimate, by estimating the performance of the plugin
+predictive density, as claimed by \cite{gelman2014understanding}, whereas cross-validation is appealing
+but can be computationally expensive and also is not always
+well defined in dependent data settings. 
+\jonah{This last conclusion could be revised}
+%When $f$ is unobserved, it is even impossible to compute the expected test MSE.
 
 
 \subsection{Information criteria}
 In our practice, prediction should not be assimilated to `take a rabbit out of a hat', but looking at its inherent uncertainty. Splitting the predictions' uncertainty in variance and 
-squared bias can be sometimes bogus, and does not entirely reflect the needs of the statistician. Rather, if we are framed in a Bayesian context we intend the unobserved values $\tilde{y}$ to come from the posterior predictive distribution, denoted here by $p(\tilde{y}|y)$, which incorporates the intrinsic uncertainty propagating from the parameters---summarized by the posterior distribution---to the observable future values. Through this quantity, we could define an expected predictive density (EPD) measure for a new dataset.  In much previous literature 
-about predictive accuracy, such as the Akaike Information Criterion (AIC) \citep{akaike1973information}, there is not any link to the model's uncertainty, since the 
-measure of model's accuracy is evaluated conditionally on parameters' points estimates. The Deviance Information Criterion (DIC) \citep{spiegelhalter2002bayesian} is a sort of AIC 
-Bayesian version, in which the maximum likelihood estimate is replaced by the posterior mean for the parameters, and the number of parameters is replaced by a measure of effective number of parameters. 
+squared bias has been proved to be useful from a theoretical point of view, however it can appear bogus and artificial when framed in practical data analysis: how long does it take controlling and lowering the bias and the variance of a learning method? How much should the statistician stretch his model to avoid problematic bias-variance tradeoffs?
+\jonah{What do you think? I've edited slightly this paragraph}
 
+In much previous literature 
+about predictive accuracy, as for the Akaike Information Criterion (AIC) \citep{akaike1973information}, there is not any role played by model's uncertainty, since the 
+measure of model's accuracy is evaluated conditionally on parameters' points estimates, the maximum likelihood point estimate. Even the Deviance Information Criterion (DIC) \citep{spiegelhalter2002bayesian}, for many years a milestone for Bayesian model comparisons, is conditioned on a plug-in estimate, the posterior mean, with the number of parameters of AIC replaced by a measure of effective number of parameters. 
+\leo{Slightly revised}
+
+Rather, if we are framed in a Bayesian context we intend the unobserved and future values $\tilde{y}$ to come from the posterior predictive distribution, denoted here by $p(\tilde{y}|y)$, which incorporates the intrinsic uncertainty propagating from the parameters---summarized by the posterior distribution---to the observable future values. 
+%Through this quantity, we could define an expected predictive density (EPD) measure for a new dataset.  
 Recent proposals such as the Watanabe-Akaike Information Criteria (WAIC) \citep{watanabe2010asymptotic} and Leave-One-Out cross validation Information Criteria (LOOIC) \citep{vehtari2017practical} go in the direction of data granularity, by definition of the expected log pointwise predictive density
-for a new dataset (ELPPD). These approaches require the computation of the log-pointwise predictive density $p(\tilde{y}_{i}|y)$ for each new observable value $\tilde{y}_i$. Of course, the true distribution is unknown, and this measure has to be approximated, for instance via leave-one-out cross validation.
+for a new dataset (ELPPD). These approaches require the computation of the log-pointwise predictive density $p(\tilde{y}_{i}|y)$ for each new observable value $\tilde{y}_i$ and have the desirable property
+of averaging over the posterior distribution. 
+%Of course, the true distribution is unknown, and this measure has to be approximated, for instance via leave-one-out cross validation.
+\jonah{You are the expert here, dom you like it?}
 
 Although all the predictive information criteria may fail in some practical situations, LOOIC and WAIC offer the possibility to provide a measure of predictive accuracy based on the single data points, in a computationally efficient way (both the methods are 
 implemented in the {\tt loo} R package \citep{loo}). Despite not conclusive for the predictive accuracy of a statistical model, these techniques allow in many situations to compare distinct models by the acknowledgement of an intrinsic uncertainty propagating from the parameters to the observable future values: in such a viewpoint, \emph{observable values, and not parameters, are really relevant.}
- A transparent predictive tool should encompass data, parameters and future data all together: in such a way, the falsification of a single piece makes the joint model falsifiable. In Section~\ref{sec:instr}, we make this point even more clear.
+ A transparent predictive tool should encompass data, parameters and future data all together, not focusing on parameters estimates/plug-in predictive densities alone: in such a way, the falsification of a single piece makes the joint model falsifiable. In Section~\ref{sec:instr}, we make this point even more clear.
+\jonah{What do you think?}
 
 
 
@@ -318,10 +346,11 @@ implemented in the {\tt loo} R package \citep{loo}). Despite not conclusive for 
 
 \color{black}
 
-\subsection{Cross-validation}
+%\subsection{Cross-validation}
 
 
 \subsection{The two cultures}
+\leo{I am not sure this is the right place for this section...maybe moving at the beginning of section 3?}
 
 As brilliantly argued by \cite{breiman2001statistical}, there are two cultures in the use of statistical modeling to reach conclusions from data: a stochastic data model consisting 
 of predictors, parameters and random noise to explain the response variable $y$ is adopted by the data modeling culture; a function of the predictors to predict the response variable 
@@ -329,26 +358,29 @@ $y$ is assumed by the algorithmic modeling culture, also named machine learning 
 predictive accuracy on out-of-sample data.  It is evident that the data modeling culture---linear regression, generalized linear models, Cox model, etc.---is aimed at extracting some information about how nature is associating the response variable to the dependent variable, whereas the algorithmic culture---decision and classification trees, neural nets---is more oriented to predict future values of the response variable given the values of the predictors.
 %It is out of the scope of this paper to cover in more detail the two modeling classes, it is enough to be aware of the differences.
 
-In the mid-1980s neural nets and decision trees became incredibly popular \citep{breiman1984classification} in areas where parametric data models were not applicable, such as 
+The historical appeal of the ML field dates back the mid-1980s, when neural nets and decision trees became incredibly popular \citep{breiman1984classification} in areas where parametric data models were not applicable, such as 
 speech recognition, image recognition, handwriting recognition, and prediction in financial markets. In analysing real data from these fields, the only criterion to evaluate these 
-algorithms was predictive accuracy: this is translated in finding an algorithm $f(x)$ able to be a good predictor for $y$ for future values of $x$, the so called \emph{test set}. 
+algorithms was predictive accuracy: this is translated in finding an algorithm $f(x)$ able to be a good predictor for $y$ for future values of $x$, the so called \emph{test set}. To alleviate the degree of overfitting and the lack of 
+predictive robustness in decision trees, in the mid-1990s some data scientists argued that by aggregating many trees and perturbing the training set, using bagging \citep{breiman1996bagging}, boosting 
+\citep{freund1996experiments} or random forests \citep{ho1995random}, dramatically increased the predictive accuracy of the trees, by decreasing the variance.
 
 %\subsection{Training set selection: the tree case}
 
 Data scientists are used to train their procedures on the \emph{training set}, which is chosen at the beginning in many possible ways. A common strategy is to select the first half of a 
-dataset to train the algorithm, and the second half to test it; another strategy consists of selecting only a percentage---say, the 75\% of the dataset---and use the remaining 25\% to  test the algorithm. However, a small change in the dataset can cause a large change in the final predictions, and some adjustments are often required to increase the algorithm's robustness. 
+dataset to train the algorithm, and the second half to test it; another strategy consists of selecting only a percentage---say, the 75\% of the dataset---and use the remaining 25\% to  test the algorithm. However, a small change in the dataset can cause a large change in the final predictions, and some adjustments are often required to increase the algorithm's robustness.  This `training shaking' is popular despite controversial, and gives us the possibility to discuss about the eventual supremacy of the prediction over model construction and interpretation.
+\leo{Slightly edited and shortened}
 
-In the case of decision trees, it turned out that a tree that is grown very deep tends to suffer from high variance and low bias. This means that the tree is likely to 
-overfit the training data: if we randomly split the training set into two parts, and fit a tree to both halves, the results could be quite different. To alleviate this lack of 
-robustness, in the mid-1990s some data scientists argued that by aggregating many trees and perturbing the training set, using bagging \citep{breiman1996bagging}, boosting 
-\citep{freund1996experiments} or random forests \citep{ho1995random}, dramatically increased the predictive accuracy of the trees, by decreasing the variance. Bootstrap 
-aggregating, or bagging, repeatedly ($B$ times) selects a random sample with replacement of the training set and fits trees to these samples. After training, predictions are averaged 
-over the $B$ samples: the method leads to better predictions  because it decreases the variance of the model, without increasing the bias. Random forests improve over the bagged 
-trees by using a modified tree learning algorithm that selects, at each candidate split in the learning process, a random subset of the predictors. The reason is that if one or a few 
-predictors are very strong predictive for the response variable, these features will be selected in many of the $B$ trees, causing them to become correlated. A new sample of 
-approximately $\sqrt{p}$ predictors is taken at each split, by decorrelating the trees; predictions are then obtained as in bagging, by averaging over the $B$ samples. Boosting 
-works in a similar way to bagging and random forests, but the trees are grown sequentially, thus each tree is grown using information from the previous grown tree. This procedure does 
-not rely on bootstrap sampling, instead each tree is fit on a modified version of the original dataset.
+%In the case of decision trees, it turned out that a tree that is grown very deep tends to suffer from high variance and low bias. This means that the tree is likely to 
+%overfit the training data: if we randomly split the training set into two parts, and fit a tree to both halves, the results could be quite different. To alleviate this lack of 
+%robustness, in the mid-1990s some data scientists argued that by aggregating many trees and perturbing the training set, using bagging \citep{breiman1996bagging}, boosting 
+%\citep{freund1996experiments} or random forests \citep{ho1995random}, dramatically increased the predictive accuracy of the trees, by decreasing the variance. Bootstrap 
+%aggregating, or bagging, repeatedly ($B$ times) selects a random sample with replacement of the training set and fits trees to these samples. After training, predictions are averaged 
+%over the $B$ samples: the method leads to better predictions  because it decreases the variance of the model, without increasing the bias. Random forests improve over the bagged 
+%trees by using a modified tree learning algorithm that selects, at each candidate split in the learning process, a random subset of the predictors. The reason is that if one or a few 
+%predictors are very strong predictive for the response variable, these features will be selected in many of the $B$ trees, causing them to become correlated. A new sample of 
+%approximately $\sqrt{p}$ predictors is taken at each split, by decorrelating the trees; predictions are then obtained as in bagging, by averaging over the $B$ samples. Boosting 
+%works in a similar way to bagging and random forests, but the trees are grown sequentially, thus each tree is grown using information from the previous grown tree. This procedure does 
+%not rely on bootstrap sampling, instead each tree is fit on a modified version of the original dataset.
 
 
 \color{blue}
