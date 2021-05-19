@@ -370,7 +370,7 @@ Data scientists are used to train their procedures on the \emph{training set}, w
 dataset to train the algorithm, and the second half to test it; another strategy consists of selecting only a percentage---say, the 75\% of the dataset---and use the remaining 25\% to  test the algorithm. However, a small change in the dataset can cause a large change in the final predictions, and some adjustments are often required to increase the algorithm's robustness.  This `training shaking' is popular despite controversial, and gives us the possibility to discuss about the eventual supremacy of the prediction over model construction and interpretation.
 \leo{Slightly edited and shortened}
 
-In what follows, we feel to relax these boundaries and merge the two cultures, by referring to this fusion as the field of statistical learning. The list of considerations contained in the next section is valid for both algorithmic and stochastic modelers.
+In what follows, we feel to relax these boundaries and merge the two cultures, by referring to this fusion as the field of statistical learning. The list of considerations contained in the next section is valid for both algorithmic and stochastic modelers aimed at predictive purposes.
 \jonah{what do you think?}
 
 %In the case of decision trees, it turned out that a tree that is grown very deep tends to suffer from high variance and low bias. This means that the tree is likely to 
@@ -405,21 +405,72 @@ In what follows, we feel to relax these boundaries and merge the two cultures, b
 \section{Predictive instrumentalism and  how to make predictive models transparent and falsifiable}
 \label{sec:instr}
 
-\subsection{ML scientists are strong instrumentalist, statisticians are weak instrumentalist}
-\jonah{Maybe we could relax the distinction between ML and statistics, and talk more generally about statistical learning}
+\subsection{Weak instrumentalism philosophy}
+\jonah{I relaxed the distinction between ML and statistics, and talk more generally in terms of statistical learning}
 
-As statisticians and (data) scientists, demanded to build models for social and physical sciences, our efforts should be addressed to produce good, transparent and well posed algorithms/models, and make them falsifiable upon a strong check \citep{gelman2013philosophy}. Our skepticism regards the role of prediction in falsifying our models, for such a reason we would claim to be \emph{weak instrumentalists}: predictions and predictive accuracy are a central task of science, but only sometimes they are constitutive of scientific success. However, 
-%As emerges from the quick overview of the well-known decision tree methods in the previous section,
-the only rationale to evaluate the goodness of an algorithmic modeling procedure is often to look at its 
-predictive accuracy on out-of-sample/future data; `shaking the training set'---along with other procedures---became popular to ensure lower variance and higher accuracy, with the data scientist apparently ready to 
-do `whatever it takes' to improve over the previous methods. 
+As statisticians and (data) scientists, demanded to build models for social and physical sciences, our efforts should be addressed to produce good, transparent and well posed algorithms/models, and make them falsifiable upon a strong check \citep{gelman2013philosophy}.
 
-Evaluating a model/algorithm in light of its ability to predict future data is not shameful at all; conversely, it turned out to be beneficial in many areas where a parametric 
-stochastic model failed to be really generative and useful. However, even if predictions of future data are good tools to falsify a posed theory, many times some ML 
-techniques lack of a general and valid theoretical framework; as an illustrative example, the number of predictors at each split of a random forest is a tuning parameter fixed at $\sqrt{p}$ in most cases, but 
-in practice the best values for these parameters will depend on the problem. Predictions should corroborate or reject an underlying theory, but if the method (the theory) is tuned 
-and selected on the ground of its predictive accuracy, the theory to be falsified is bogus, and not posed in a transparent way. For such reason, from a philosophical and scientific point of view, algorithmic modelers are \emph{strong instrumentalist}, since for them the predictive accuracy carried out by their algorithms is constitutive---and not only symptomatic---of the broader scientific success.
+However, lately the need for powerful prediction weapons emerged, especially in the machine learning field, and the goodness of a modeling 
+procedure is often associated with its predictive ability on out-of-samole scenarios. As a consequence, only good predictive models are 
+retained, whereas the others, even when sophisticated and well built, are discarded; predictive accuracy became the only discrimination's tool to 
+decide between good and bad statistical models/algorithms. We refer to this philosophical position as \emph{strong instrumentalism}, for which 
+the predictive accuracy carried out by the algorithms is constitutive---and not only symptomatic---of the broader scientific success. 
+%In the 
+%recent yers,  the only rationale to evaluate the goodness of an algorithmic modeling procedure is to look at its 
+%predictive accuracy on out-of-sample/future data;
+People strictly adhering to this philosophical perspective are usually inclined towards some `munging' procedures, such as `shaking the training set', or `over-tuning' some tuning parameters to ensure lower variance and higher accuracy; for the most of the time, these data scientists seem apparently ready to do `whatever it takes' to improve over the previous methods. 
+
+It is worth to stress that evaluating a model/algorithm in light of its ability to predict future data is not shameful at all; conversely, it turned out to be beneficial in many areas, for instance where a parametric 
+stochastic model failed to be really generative and useful. However, even if predictions of future data were good tools to falsify a posed theory, many times some strong instrumentalist 
+techniques lack of a general and valid theoretical framework. As an illustrative example, the number of predictors at each split of a random forest is a tuning parameter fixed at $\sqrt{p}$ in most cases, but 
+in practice the best values for these parameters will depend on the problem;  if the method (the theory) is tuned 
+and selected on the ground of its predictive accuracy, the underlying theory to be falsified is bogus, and not posed in a transparent way. 
 \leo{Slight revision and cut}
+\leo{Slight revised}
+
+As mentioned above, our skepticism regards the recently dominant role of prediction in falsifying our models, for such a reason we would claim to adhere to the \emph{weak instrumentalism} position: in brief, predictions and predictive accuracy are a central task of science, but only sometimes they are constitutive of scientific success. 
+
+
+\begin{table}
+\caption{Weak instrumentalism summary}
+\framebox[.96\linewidth][l]{\parbox{.92\linewidth}{
+\vspace{0.2cm}
+
+\emph{ General science}
+\begin{enumerate}
+\item[p1] Predictive accuracy is not always constitutive of scientific success
+\vspace{-0.2cm}
+\item[p2] Scientific falsification on the ground of wrong predictions is sometimes misleading, especially in social sciences (Trump's election, Leicester win, Brexit)
+\vspace{-0.2cm}
+\item[p3]  Supposedly valid scientific theories should exist {before} the future data have been revealed
+\vspace{-0.2cm}
+\item[p4] Prediction is not explicitly part of the formulation of a 
+scientific hypothesis {at the time the law is posed}, but it becomes relevant and relevant as science advances
+\end{enumerate}
+
+\vspace{0.1cm}
+
+\emph{ Statistics}
+\begin{enumerate}
+\item[p5] Take care of variability in the statistical predictions
+\vspace{-0.2cm}
+\item[p6] If necessary, go beyond the distinction between inference and prediction, and consider a joint model for data, parameters and future data (falsificationist Bayes)
+\vspace{-0.2cm}
+\item[p7] Rather than reasoning in terms of variance and bias, reason more in terms of predictive information criteria and posterior predictive distribution
+\end{enumerate}
+
+\vspace{0.1cm}
+
+\emph{ Machine Learning}
+\begin{enumerate}
+\item[p8] `Shaking the training set' to improve predictive accuracy is an obscure step
+\vspace{-0.2cm}
+\item[p9] Avoid to tune the algorithm with the only task to improve predictive accuracy
+\vspace{-0.2cm}
+\item[ p10] To be falsifiable, ML techniques need to be transparently posed
+\end{enumerate}
+ }}
+\end{table}
 
 %In other way said, a supposedly valid scientific theory should exist \emph{before} the future data have been revealed, and produce some immediate benefits to the scientific community, similarly as the falling bodies theory of Galilei first, and the law of universal gravitation of Newton then: corroborating or rejecting a model/algorithm on the basis of observable future values only is often far from the scientists' requirements and economic funds of the current project.
 
@@ -463,51 +514,10 @@ p(\tilde{y}|y) = \frac{p(\tilde{y},y)}{p(y)}= \frac{1}{p(y)}\int p(\tilde{y},y,\
 From Equation~\eqref{eq:ppdist2} we immediately notice that whenever we are interested in predictions, we need to consider a joint model $p(\tilde{y},y,\theta)$ for both the observed data $y$ and the unobserved quantities $\tilde{y},\theta$. This joint model incorporates both the likelihood and the prior, being $p(\tilde{y},y,\theta) = p(\tilde{y}|\theta)p(y|\theta)p(\theta)$. Thus, the joint model for the predictions, the data and the parameters is transparently posed, and open to falsification when the observable $\tilde{y}$ becomes known.
 
 
-\subsection{Weak instrumentalism in points}
-\label{sec:weak}
+To summarize the above discussion, we collect in Table 1 the main points which follow from the weak instrumentalist philosophy. We divided them in three categories: the first one collects general considerations about the role of prediction in modern science and data science, whereas the second and the third one propose some tips for statisticians and machine learners, respectively.
+\jonah{I moved here the table, what do you think?}
 
-To summarize the above discussion, we collect in Table 1 the main points which follow from the weak instrumentalist philosophy. We divided them in three categories: the first one collect general considerations about the role of prediction in modern science and data science, whereas the second and the third one propose some tips for statisticians and machine learners, respectively.
 
-\begin{table}
-\caption{Weak instrumentalism summary}
-\framebox[.96\linewidth][l]{\parbox{.92\linewidth}{
-\vspace{0.2cm}
-
-\emph{ General science}
-\begin{enumerate}
-\item[p1] Predictive accuracy is not always constitutive of scientific success
-\vspace{-0.2cm}
-\item[p2] Scientific falsification on the ground of wrong predictions is sometimes misleading, especially in social sciences (Trump's election, Leicester win, Brexit)
-\vspace{-0.2cm}
-\item[p3]  Supposedly valid scientific theories should exist {before} the future data have been revealed
-\vspace{-0.2cm}
-\item[p4] Prediction is not explicitly part of the formulation of a 
-scientific hypothesis {at the time the law is posed}, but it becomes relevant and relevant as science advances
-\end{enumerate}
-
-\vspace{0.1cm}
-
-\emph{ Statistics}
-\begin{enumerate}
-\item[p5] Take care of variability in the statistical predictions
-\vspace{-0.2cm}
-\item[p6] If necessary, go beyond the distinction between inference and prediction, and consider a joint model for data, parameters and future data (falsificationist Bayes)
-\vspace{-0.2cm}
-\item[p7] Rather than reasoning in terms of variance and bias, reason more in terms of predictive information criteria and posterior predictive distribution
-\end{enumerate}
-
-\vspace{0.1cm}
-
-\emph{ Machine Learning}
-\begin{enumerate}
-\item[p8] `Shaking the training set' to improve predictive accuracy is an obscure step
-\vspace{-0.2cm}
-\item[p9] Avoid to tune the algorithm with the only task to improve predictive accuracy
-\vspace{-0.2cm}
-\item[ p10] To be falsifiable, ML techniques need to be transparently posed
-\end{enumerate}
- }}
-\end{table}
 
 
 
