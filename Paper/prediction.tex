@@ -229,7 +229,7 @@ Yes, the probability statements are not invalidated by the occurrence of a low-p
 }
 \end{quote}
 
-\section{The role of prediction in statistical learning: what we usually do, what we no not do, what we should do}
+\section{The role of prediction in statistical learning: what we usually do, what we do not do, what we should do}
 \label{sec:role}
 
 \subsection{From the observed to the observable}
@@ -242,7 +242,7 @@ parameters' estimates---in this section, we make no distinction between classica
 However, the widespread feeling is that statistics has always been considered the \emph{science of inference}, or \emph{science of estimates}, and inference often considered the dominant side and seen as separate from prediction \citep{shmueli2010explain}.  Inference creates 
 an underlying mathematical model of the data-generating process \citep{bzdok2018points}, its main task is to formulate a theory that adequately captures an unknown mechanism connecting potentially influential predictors with a response variable, by \emph{explaining a theoretical causal relationship}; the 
 inferential laws should be as general as possible, ideally valid for the population of interest, and not symptomatic of the observed data (it is out of the scope of this paper to review the distinct inferential 
-approaches). Prediction instead moves from the observed to the unobserved (though observable in the future), being the action designed to forecast future events without requiring a full understanding of the underlying data-generation process. Predictive actions can be daily shared and accepted from the human common sense: each person is in fact more or less confident with weather's predictions or with presidential election predictions, but rarely that person is aware of the underlying 
+approaches). Prediction instead moves from the observed to the unobserved (though observable in the future), being the action designed to forecast future or new events without requiring a full understanding of the underlying data-generation process. Predictive actions can be daily shared and accepted from the human common sense: each person is in fact more or less confident with weather's predictions or with presidential election predictions, but rarely that person is aware of the underlying 
 statistical model required to produce that forecast, unless he is a statistician/data scientist. In such a view, inference seems difficult and obscure, and prediction simple and transparent 
 to the people. 
 
@@ -261,7 +261,7 @@ about the supposed supremacy of prediction over accommodation \citep{maher1988pr
 statistician should ask himself whether he wants models that are true---or  approximately true---or predictively accurate. 
 
 There is not a clear domain of one approach over the other: inference and prediction are not enemies, but could be strong 
-allies to reveal the truth.  Moreover, even more importantly, we strongly believe that (almost) everything in statistics is predictive, or, at 
+allies to reveal the truth.  Moreover, even more importantly, we strongly believe that \emph{(almost) everything in statistics is predictive}, or, at 
 least, may be read from a predictive point of view. Even though many statisticians seek to mask their theories/models only by claiming the 
 relevance of their estimation/inferential process, they are rarely aware of the predictive essence underlying their procedures. For illustrations 
 purposes, consider a logistic/probit regression model for diagnosing diabetes testing positive probabilities using biochemical variables (such as glucose, insulin, mass, etc.) as predictors. A summary for these kinds of models 
@@ -275,7 +275,6 @@ This is the reason why we provocatively claim that \emph{prediction is not every
 
 
 \subsection{Generalization performance of a statistical model}
-\leo{I revised a bit this section and I change its title. I guess now is more clean}
 
 Assessing the generalization performance of a learning method related to the predictive performance on a test set is a central task in modern data-science. In this section we review some well-known approaches and highlight their main merits and weaknesses.
 
@@ -319,11 +318,11 @@ well defined in dependent data settings.
 \subsection{Information criteria}
 In our practice, prediction should not be assimilated to ``take a rabbit out of a hat'', but look at its inherent uncertainty. Splitting the predictions' uncertainty in variance and 
 squared bias has been proved to be useful from a theoretical point of view, however it can appear bogus and artificial when framed in practical data analysis: how long does it take control and lower the bias and the variance of a learning method? How much should the statistician stretch his model to avoid problematic bias-variance tradeoffs?
-\jonah{What do you think? I've edited slightly this paragraph}
+
 
 In the literature on predictive accuracy, as for the AIC \citep{akaike1973information}, there is no role played by model's uncertainty, since the 
 measure of the model's accuracy is evaluated conditionally on parameters' points estimates, the maximum likelihood point estimate. Even the DIC \citep{spiegelhalter2002bayesian}, for many years a milestone for Bayesian model comparisons, is conditioned on a plugin estimate, the posterior mean, with the number of parameters of AIC replaced by a measure of effective number of parameters. 
-\leo{Slightly revised}
+
 
 Rather, if we are framed in a Bayesian context we intend the unobserved and future values $\tilde{y}$ to come from the posterior predictive distribution, denoted here by $p(\tilde{y}|y)$, which incorporates the intrinsic uncertainty propagating from the parameters---summarized by the posterior distribution---to the observable future values. 
 %Through this quantity, we could define an expected predictive density (EPD) measure for a new dataset.  
@@ -331,13 +330,10 @@ Recent proposals such as the Watanabe-Akaike Information Criteria (WAIC) \citep{
 for a new dataset (ELPPD). These approaches require the computation of the log-pointwise predictive density $p(\tilde{y}_{i}|y)$ for each new observable value $\tilde{y}_i$ and have the desirable property
 of averaging over the posterior distribution. 
 %Of course, the true distribution is unknown, and this measure has to be approximated, for instance via leave-one-out cross validation.
-\jonah{You are the expert here, dom you like it?}
 
 Although all the predictive information criteria may fail in some practical situations, LOOIC and WAIC offer the possibility of providing a measure of predictive accuracy based on single data points, in a computationally efficient way (both the methods are 
 implemented in the {\tt loo} R package \citep{loo}). Despite not conclusive for the predictive accuracy of a statistical model, these techniques allow in many situations to compare distinct models by acknowledging an intrinsic uncertainty propagating from the parameters to the observable future values: in such a viewpoint, \emph{observable values, and not parameters, are really relevant.}
  A transparent predictive tool should encompass data, parameters and future data not focusing on parameters estimates/plugin predictive densities alone; in such a way, the falsification of a single piece makes the joint model falsifiable. In Section~\ref{sec:instr}, we make this point even more clear.
-\jonah{What do you think?}
-
 
 
 
@@ -370,10 +366,10 @@ predictive robustness in decision trees, in the mid-1990s some data scientists a
 
 Data scientists are used to training their procedures on the \emph{training set}, which is chosen at the beginning. A common strategy is to select the first half of a 
 dataset to train the algorithm, and the second half to test it; another strategy consists of selecting only a percentage---say,75\% of the dataset---and using the remaining 25\% to  test the algorithm. However, a small change in the dataset can cause a large change in the final predictions, and some adjustments are often required to increase the algorithm's robustness.  This ``training shaking'' is popular despite controversy, and allows us to discuss the eventual supremacy of the prediction over model construction and interpretation.
-\leo{Slightly edited and shortened}
+
 
 In what follows, we relax these boundaries and merge the two cultures, by referring to this fusion as the field of statistical learning. The list of considerations contained in the next section is valid for algorithmic and stochastic modelers aimed at predictive purposes.
-\jonah{what do you think?}
+
 
 %In the case of decision trees, it turned out that a tree that is grown very deep tends to suffer from high variance and low bias. This means that the tree is likely to 
 %overfit the training data: if we randomly split the training set into two parts, and fit a tree to both halves, the results could be quite different. To alleviate this lack of 
@@ -427,8 +423,6 @@ stochastic model failed to be really generative and useful. However, even if pre
 techniques lack a general and valid theoretical framework. As an illustrative example, the number of predictors at each split of a random forest is a tuning parameter fixed at $\sqrt{p}$ in most cases, but 
 in practice the best values for these parameters will depend on the problem;  if the method (the theory) is tuned 
 and selected on the ground of its predictive accuracy, the underlying theory to be falsified is bogus, and not posed in a transparent way. 
-\leo{Slight revision and cut}
-\leo{Slight revised}
 
 As mentioned above, our skepticism considers the recently dominant role of prediction in falsifying our models, for such a reason we adhere to the \emph{weak instrumentalism} position: in brief, predictions and predictive accuracy are a central task of science, but only sometimes do they constitute scientific success. 
 
