@@ -15,6 +15,16 @@ Baio, G. and M.~Blangiardo (2010).
 \newblock Bayesian hierarchical model for the prediction of football results.
 \newblock {\em Journal of Applied Statistics\/}~{\em 37\/}(2), 253--264.
 
+\bibitem[\protect\citeauthoryear{Billheimer}{Billheimer}{2019}]{billheimer2019predictive}
+Billheimer, D. (2019).
+\newblock Predictive inference and scientific reproducibility.
+\newblock {\em The American Statistician\/}~{\em 73\/}(sup1), 291--295.
+
+\bibitem[\protect\citeauthoryear{Bjornstad}{Bjornstad}{1990}]{bjornstad1990predictive}
+Bjornstad, J.~F. (1990).
+\newblock Predictive likelihood: A review.
+\newblock {\em Statistical Science\/}, 242--254.
+
 \bibitem[\protect\citeauthoryear{Breiman}{Breiman}{1996}]{breiman1996bagging}
 Breiman, L. (1996).
 \newblock Bagging predictors.
@@ -37,6 +47,18 @@ Breiman, L., J.~Friedman, R.~Olshen, and C.~Stone (1984).
   et~al.}{2018}]{bzdok2018points}
 Bzdok, D., N.~Altman, and M.~Krzywinski (2018).
 \newblock Points of significance: statistics versus machine learning.
+
+\bibitem[\protect\citeauthoryear{Dawid}{Dawid}{1984}]{dawid1984present}
+Dawid, A.~P. (1984).
+\newblock Present position and potential developments: Some personal views
+  statistical theory the prequential approach.
+\newblock {\em Journal of the Royal Statistical Society: Series A
+  (General)\/}~{\em 147\/}(2), 278--290.
+
+\bibitem[\protect\citeauthoryear{Forster}{Forster}{2002}]{forster2002predictive}
+Forster, M.~R. (2002).
+\newblock Predictive accuracy as an achievable goal of science.
+\newblock {\em Philosophy of science\/}~{\em 69\/}(S3), S124--S134.
 
 \bibitem[\protect\citeauthoryear{Freund, Schapire, et~al.}{Freund
   et~al.}{1996}]{freund1996experiments}
@@ -83,6 +105,11 @@ Gelman, A. and C.~R. Shalizi (2013).
 \newblock Philosophy and the practice of bayesian statistics.
 \newblock {\em British Journal of Mathematical and Statistical
   Psychology\/}~{\em 66\/}(1), 8--38.
+
+\bibitem[\protect\citeauthoryear{Gkisser}{Gkisser}{2017}]{geisser2017predictive}
+Gkisser, S. (2017).
+\newblock {\em Predictive inference: an introduction}.
+\newblock Chapman and Hall/CRC.
 
 \bibitem[\protect\citeauthoryear{Hastie, Tibshirani, and Friedman}{Hastie
   et~al.}{2009}]{hastie2009elements}
@@ -169,6 +196,11 @@ Sarewitz, D. and R.~Pielke~Jr (1999).
 Shmueli, G. (2010).
 \newblock To explain or to predict?
 \newblock {\em Statistical science\/}~{\em 25\/}(3), 289--310.
+
+\bibitem[\protect\citeauthoryear{Sober}{Sober}{2002}]{sober2002instrumentalism}
+Sober, E. (2002).
+\newblock Instrumentalism, parsimony, and the akaike framework.
+\newblock {\em Philosophy of Science\/}~{\em 69\/}(S3), S112--S123.
 
 \bibitem[\protect\citeauthoryear{Spiegelhalter, Best, Carlin, and Van
   Der~Linde}{Spiegelhalter et~al.}{2002}]{spiegelhalter2002bayesian}
