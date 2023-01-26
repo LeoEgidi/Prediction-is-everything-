@@ -9,12 +9,6 @@ Akaike, H. (1973).
   Kiado, Budapest (1973). Reprinted in: Breakthroughs in Statistics}, pp.\
   610--624. Springer, New York (1992).
 
-\bibitem[\protect\citeauthoryear{Baio and Blangiardo}{Baio and
-  Blangiardo}{2010}]{baio2010bayesian}
-Baio, G. and M.~Blangiardo (2010).
-\newblock Bayesian hierarchical model for the prediction of football results.
-\newblock {\em Journal of Applied Statistics\/}~{\em 37\/}(2), 253--264.
-
 \bibitem[\protect\citeauthoryear{Billheimer}{Billheimer}{2019}]{billheimer2019predictive}
 Billheimer, D. (2019).
 \newblock Predictive inference and scientific reproducibility.
@@ -42,11 +36,6 @@ Breiman, L. et~al. (2001).
 Breiman, L., J.~Friedman, R.~Olshen, and C.~Stone (1984).
 \newblock {\em Classification and regression trees}.
 \newblock Wadsworth.
-
-\bibitem[\protect\citeauthoryear{Bzdok, Altman, and Krzywinski}{Bzdok
-  et~al.}{2018}]{bzdok2018points}
-Bzdok, D., N.~Altman, and M.~Krzywinski (2018).
-\newblock Points of significance: statistics versus machine learning.
 
 \bibitem[\protect\citeauthoryear{Dawid}{Dawid}{1984}]{dawid1984present}
 Dawid, A.~P. (1984).
@@ -91,20 +80,6 @@ Gelman, A. (2016c).
 Gelman, A. (2016d).
 \newblock The problems with p-values are not just with p-values.
 \newblock {\em The American Statistician\/}~{\em 70\/}(10).
-
-\bibitem[\protect\citeauthoryear{Gelman, Carlin, Stern, Dunson, Vehtari, and
-  Rubin}{Gelman et~al.}{2013}]{gelman2013bayesian}
-Gelman, A., J.~B. Carlin, H.~S. Stern, D.~B. Dunson, A.~Vehtari, and D.~B.
-  Rubin (2013).
-\newblock {\em Bayesian data analysis}.
-\newblock Chapman and Hall/CRC.
-
-\bibitem[\protect\citeauthoryear{Gelman and Hennig}{Gelman and
-  Hennig}{2017}]{gelman2017beyond}
-Gelman, A. and C.~Hennig (2017).
-\newblock Beyond subjective and objective in statistics.
-\newblock {\em Journal of the Royal Statistical Society: Series A (Statistics
-  in Society)\/}~{\em 180\/}(4), 967--1033.
 
 \bibitem[\protect\citeauthoryear{Gelman, Hwang, and Vehtari}{Gelman
   et~al.}{2014}]{gelman2014understanding}
@@ -153,18 +128,6 @@ James, G., D.~Witten, T.~Hastie, and R.~Tibshirani (2013).
 \newblock {\em An introduction to statistical learning}, Volume 112.
 \newblock Springer.
 
-\bibitem[\protect\citeauthoryear{Karlis and Ntzoufras}{Karlis and
-  Ntzoufras}{2003}]{karlis2003analysis}
-Karlis, D. and I.~Ntzoufras (2003).
-\newblock Analysis of sports data by using bivariate poisson models.
-\newblock {\em Journal of the Royal Statistical Society: Series D (The
-  Statistician)\/}~{\em 52\/}(3), 381--393.
-
-\bibitem[\protect\citeauthoryear{Kuhn}{Kuhn}{2019}]{caret}
-Kuhn, M. (2019).
-\newblock {\em caret: Classification and Regression Training}.
-\newblock R package version 6.0-84.
-
 \bibitem[\protect\citeauthoryear{Kuhn}{Kuhn}{1962}]{kuhn1962structure}
 Kuhn, T.~S. (1962).
 \newblock The structure of scientific revolutions.
@@ -174,13 +137,6 @@ Kuhn, T.~S. (1962).
 Lakatos, I. (1976).
 \newblock Falsification and the methodology of scientific research programmes.
 \newblock In {\em Can theories be refuted?}, pp.\  205--259. Springer.
-
-\bibitem[\protect\citeauthoryear{Maher}{Maher}{1988}]{maher1988prediction}
-Maher, P. (1988).
-\newblock Prediction, accommodation, and the logic of discovery.
-\newblock In {\em PSA: Proceedings of the Biennial meeting of the philosophy of
-  science association}, Volume 1988, pp.\  273--285. Philosophy of Science
-  Association.
 
 \bibitem[\protect\citeauthoryear{Popper}{Popper}{1934}]{popper1934logic}
 Popper, K. (1934).
@@ -225,19 +181,6 @@ Spiegelhalter, D.~J., N.~G. Best, B.~P. Carlin, and A.~Van Der~Linde (2002).
 \newblock {\em Journal of the royal statistical society: Series b (statistical
   methodology)\/}~{\em 64\/}(4), 583--639.
 
-\bibitem[\protect\citeauthoryear{{Stan Development Team}}{{Stan Development
-  Team}}{2018}]{rstan}
-{Stan Development Team} (2018).
-\newblock {RStan}: the {R} interface to {Stan}.
-\newblock R package version 2.18.2.
-
-\bibitem[\protect\citeauthoryear{Vehtari, Gabry, Yao, and Gelman}{Vehtari
-  et~al.}{2019}]{loo}
-Vehtari, A., J.~Gabry, Y.~Yao, and A.~Gelman (2019).
-\newblock loo: Efficient leave-one-out cross-validation and waic for bayesian
-  models.
-\newblock R package version 2.1.0.
-
 \bibitem[\protect\citeauthoryear{Vehtari, Gelman, and Gabry}{Vehtari
   et~al.}{2017}]{vehtari2017practical}
 Vehtari, A., A.~Gelman, and J.~Gabry (2017).
@@ -251,11 +194,5 @@ Watanabe, S. (2010).
   applicable information criterion in singular learning theory.
 \newblock {\em Journal of Machine Learning Research\/}~{\em 11\/}(Dec),
   3571--3594.
-
-\bibitem[\protect\citeauthoryear{Worrall}{Worrall}{2014}]{worrall2014prediction}
-Worrall, J. (2014).
-\newblock Prediction and accommodation revisited.
-\newblock {\em Studies in History and Philosophy of Science Part A\/}~{\em 45},
-  54--61.
 
 \end{thebibliography}
