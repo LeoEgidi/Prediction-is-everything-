@@ -76,16 +76,19 @@ Geisser, S. (2017).
 \newblock {\em Predictive inference: an introduction}.
 \newblock Chapman and Hall/CRC.
 
-\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016a}]{gelman2016elections2}
+\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016a}]{gelman2016trumpleicester}
 Gelman, A. (2016a).
+
+\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016b}]{gelman2016elections2}
+Gelman, A. (2016b).
 \newblock Election surprise, and three ways of thinking about probability.
 
-\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016b}]{gelman2016elections}
-Gelman, A. (2016b).
+\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016c}]{gelman2016elections}
+Gelman, A. (2016c).
 \newblock Explanations for that shocking 2\% shift.
 
-\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016c}]{gelman2016problems}
-Gelman, A. (2016c).
+\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016d}]{gelman2016problems}
+Gelman, A. (2016d).
 \newblock The problems with p-values are not just with p-values.
 \newblock {\em The American Statistician\/}~{\em 70\/}(10).
 
@@ -108,6 +111,14 @@ Gelman, A. and C.~Hennig (2017).
 Gelman, A., J.~Hwang, and A.~Vehtari (2014).
 \newblock Understanding predictive information criteria for bayesian models.
 \newblock {\em Statistics and computing\/}~{\em 24\/}(6), 997--1016.
+
+\bibitem[\protect\citeauthoryear{Gelman, King, and Boscardin}{Gelman
+  et~al.}{1998}]{gelman1998estimating}
+Gelman, A., G.~King, and W.~J. Boscardin (1998).
+\newblock Estimating the probability of events that have never occurred: when
+  is your vote decisive?
+\newblock {\em Journal of the American Statistical Association\/}~{\em
+  93\/}(441), 1--9.
 
 \bibitem[\protect\citeauthoryear{Gelman and Shalizi}{Gelman and
   Shalizi}{2013}]{gelman2013philosophy}

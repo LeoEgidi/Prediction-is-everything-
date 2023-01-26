@@ -160,25 +160,17 @@ The remainder of this paper is organized as follows.
 %predictions for statistical learning, while a weak instrumentalist philosophy is detailed in Section~\ref{sec:instr}. Section~\ref{sec:world} proposes an applied example for the football Russia World Cup 2018, and Section~\ref{sec:concl} concludes.
 
 
-\section{Prediction for science or science for prediction?}
+\section{The role of prediction in hard and social sciences: a brief overview}
 \label{sec:pred}
 
 
-\color{blue}
-- sezione 2.1: da levare, in ogni caso da accorciare, magari usando qualche argomento lungo il paper. Al momento non ha molta ragione di esistere, e' un di piu. Si puo anche ricomprendere un po' nell' Introduzione.
-
-- sezione 2.2: questa anche da levare, riutilizzando qualcosa. Forse la parte sul voto nel 2016 puo essere usata come esempio alla fine del paper.
 \color{black}
 
-\subsection{Is prediction part of science design?}
-
-\color{black}
-
-The main stages required to formulate a scientific law are summarized by \cite{russell2017scientific} as follows:
+In a very popular and well-known essay, \cite{russell2017scientific} summarized the three main stages required to formulate a scientific law  as follows:
 (1) observation of some relevant facts,
 (2) formulation of a hypothesis underlying and explaining the previously mentioned facts, and
 (3) deduction of some consequences from this hypothesis.
-As suggested by \cite{russell2017scientific}, the modern scientific method was born with Galileo Galilei, father of the law of falling bodies, and with Johannes Kepler, who discovered the three laws of planetary motion:
+As suggested by the same Russell, the modern scientific method was born with Galileo Galilei, father of the law of falling bodies, and with Johannes Kepler, who discovered the three laws of planetary motion (from \cite{russell2017scientific}):
 %
  \begin{quote}
  \emph{
@@ -192,77 +184,69 @@ predicted.
 }
 \end{quote}
 %
- Then, the law of universal gravitation of Isaac Newton embodied the two previous theories, whereas the theory of the general relativity of Albert Einstein generalized  Newton's theory.
-Thus, in the last 500 years, physics---and, more generally, science---advanced by falsification and generalization of previous theories, by providing new and more exciting theories to predict new natural facts and highlighting the confirmation nature of prediction. In general,  as \cite{hitchcock2004prediction} argue,   mathematical descriptions of the 
+It is easy to see how the sequence of events that occurred over the next 250 years told us much about how scientific inference proceeds, with the law of universal gravitation of Isaac Newton embodying the two previous theories (18th century), and the theory of the general relativity of Albert Einstein (20th century) generalizing itself  Newton's theory.
+It is then clear how in the last 500 years, physics---and, more generally, science---advanced by falsification and generalization of previous theories, by providing new and more exciting theories to predict new natural facts and highlighting the confirmation nature of prediction.   Perhaps, as \cite{hitchcock2004prediction} argue,   mathematical descriptions of the 
 invariant behaviour of a physical phenomenon are essentially predictive: further experiments and observations can validate these theories. 
 
-However, prediction's link with scientific laws is  more ambiguous than what people are usually inclined to think. The following questions arise: Is prediction a central step in science? 
-Is prediction a relevant aim of science? 
-A negative answer to the first question could be seen in disagreement with some 
-\emph{instrumentalist} scientists, who would claim that, from an instrumental perspective, predictive success is not merely \emph{symptomatic} of scientific success, is also 
-\emph{constitutive} of scientific success \citep{hitchcock2004prediction}. A more sophisticated answer could be  that prediction is not explicitly part of the formulation of a 
-scientific hypothesis (1)--(3) \emph{at the time the law is posed}, but it becomes relevant and relevant as science advances; the chain of events that brought Newton to 
-generalize the theories of Galilei and Kepler first, and Einstein to revisit the gravitational law of Newton then, was supposedly based on the fallacy of some predictions, and it gained sense 
-only \emph{ex-post}. The fact that the bodies in proximity to the earth surface were revealed by Newton to not fall exactly with a constant acceleration---the acceleration slightly 
-rises as they get closer to the earth---did not make Galilei's law of constant acceleration for falling bodies less scientific, or totally wrong from a scientific point of view. Scientific falsification detected by wrong predictions \citep{popper1934logic} is a powerful and exceptional tool, but in this paper we caution  its abuse/misuse. 
+\color{blue}
+Aggiungere esempio su chimica e Mendeleev?
 
-Scientific predictions has recently become popular not only in the context of physics and natural science, but for the social sciences as well. Steps (1)--(3) above are widely used by social scientists and statisticians to build consistent theories about human and social behaviurs: Recently, the need to build a quantitative population's laws with the aim to mimic physical nature's laws emerged.  However, the role played by 
-prediction in social sciences is even more obscure \citep{popper1944poverty, popper1945poverty} and much more controversial than for the natural sciences, though data scientists are increasingly asked to build 
-`weapons of mass prediction' in varying social contexts. 
- %The way in which they formulate their theories underlying  some data follows in the majority of the circumstances the scheme 
-%outlined by Bertrand Russell and reported at the beginning of this section: the stage of `hypothesis formulation' is vague here, but may be interpreted either in form of the 
-%classical statistical testing procedure, or in terms of a model to be checked.
-Perhaps, the actual outcome may be far away from the predictions: Trump's win in the US 
-presidential elections, Brexit, and the Leicester's Premier League's win were very low-probability events, but they all occurred in 2016. Can all of these rare events falsify the finest algorithms and models designed to not predict their occurrence? Our naive and tentative answer is no, they cannot. We give more details on this in the next section.
+\color{black}
 
 
-
-%,: (out-of-sample) predictions are a task of science, but only (in-sample) predictions are constitutive of scientific success.
-
-\subsection{Prediction as a confirmation theory approach}
-
-%\textcolor{blue}{Popper, Kuhn, Mayo}
-
-For \cite{popper1934logic}, a theory is scientific only if it is falsifiable, where the falsification of a theory is meant to be the possibility of comparing its predictions 
+However, the role of prediction with regard to scientific progress is more ambiguous than what people are usually inclined to think. In general, is prediction a central step in science, or even, in the words of \cite{forster2002predictive}, is prediction the ultimate goal of science, according to the instrumentalist position \citep{sober2002instrumentalism, hitchcock2004prediction}?  
+From an instrumental perspective, predictive success is not merely \emph{symptomatic} of scientific success, is also 
+\emph{constitutive} of scientific success \citep{hitchcock2004prediction}.
+%A more sophisticated answer could be  that prediction is not explicitly part of the formulation of a 
+%scientific hypothesis (1)--(3) \emph{at the time the law is posed}, but it becomes relevant and relevant as science advances; the chain of events that brought Newton to 
+%generalize the theories of Galilei and Kepler first, and Einstein to revisit the gravitational law of Newton then, was supposedly based on the fallacy of some predictions, and it gained sense 
+%only \emph{ex-post}. The fact that the bodies in proximity to the earth surface were revealed by Newton to not fall exactly with a constant acceleration---the acceleration slightly 
+%rises as they get closer to the earth---did not make Galilei's law of constant acceleration for falling bodies less scientific, or totally wrong from a scientific point of view. 
+On the other hand,  for \cite{popper1934logic}, a theory is scientific only if it is falsifiable, where the falsification of a theory is meant to be the possibility of comparing its predictions 
 with the observed data. In his view, theories whose predictions conflict with any observed evidence must be rejected: prediction corroborates (or confirms) a theory when it survives 
 an attempt at falsification; prediction delegitimizes a theory when it does not pass the falsification test.
 
-The confirmation nature of prediction is crucial in the natural sciences, such as physics. In general,  as \cite{hitchcock2004prediction} argue,   mathematical descriptions of the 
-invariant behavior of a physical phenomenon---such as Newton's and Keplero's laws, or Maxwell's equations---are essentially predictive, further experiments and observations can validate these theories. 
+To complicate the debate, over the last decades scientific predictions has become popular not only in the context of physics and natural science, but for the social sciences as well. 
+%Steps (1)--(3) above are widely used by social scientists and statisticians to build consistent theories about human and social behaviurs:  
+As argued by \cite{popper1944poverty, popper1945poverty} and \cite{sarewitz1999prediction}, the social sciences 
+have long tried to emulate physical sciences in developing invariant mathematical laws of human behavior and interaction to predict economics quantities, elections, policies, etc., being the modern data-scientists increasingly asked to build 
+\emph{`weapons of mass prediction'} in varying social contexts.
+Even though many scholars agree that a social theory should be judged on its power to predict \citep{friedman1953essays}, we feel however that an instrumentalist position about predictive accuracy is still ambiguous in the social sciences, especially when the final actual observed outcome is somehow far away from the model's predictions.  
+To take some explanatory and well-known examples, 
+consider some very low-probability events, all actually occurred during 2016, such as the Donald Trump's win against Hillary Clinton in the US presidential elections, UK Brexit, and the Leicester's Premier League's win in soccer.  None of the best data-scientists and modelers would bet even a dollar on each of these events happening---consult \cite{gelman2016trumpleicester,  gelman2016elections2, gelman2016elections} for some more considerations about these facts.  Can all of these rare,  though actually observed, events falsify the finest algorithms and models that did not correctly predict their occurrence? Does it make sense to  criticize such social science models/algorithms by retrospective evaluations of probabilistic predictions?   We believe that social science methods require more valid motivations to validate or falsify underlying theories beyond that of providing \emph{bad} predictions for rare events \citep{gelman1998estimating}, such as a deep inspection of quality of data, psychological attitudes, study design, inclusion of more/other covariates and eventual interactions, and so on. Scientific falsification detected by wrong predictions \citep{popper1934logic} is a powerful and exceptional tool, but in this paper we caution  its abuse/misuse.  We give more details on this weak instrumentalist position in the next sections.
 
-A well-known historical example of predictive confirmation in chemistry dates back to the middle of the 19th century---see \cite{maher1988prediction} for  details. At that time, more than 60 chemical elements were known, and new ones continued to be discovered. Some prominent chemists attempted to determine their atomic weights, 
-densities and other properties, by collecting experimental observations. In 1871, the Russian chemist Dmitri Mendeleev noticed that arranging the elements by their atomic 
-weights, valences and particular chemical properties tended to show periodical recurrences. He found some gaps in the pattern and argued that these missing values corresponded to 
-some existing elements that had not yet been discovered. He named three of these elements (eka-aluminium, eka-boron, and eka-silicon) and gave some detailed descriptions of their 
-properties. Despite the skepticism of the scientific community,  French Paul-Emile Lecoq de Boisbaudran in 1874,  Swedish Lars Fredrik Nilson in 1878, and  German Clemens 
-Winkler in 1886 discovered three elements that corresponded to descriptions of eka-aluminium, eka-boron, and exa-silicon: these three elements are now respectively 
-known as gallium, scandium and germanium.  Mendeleev's predictive ability was remarkable---the Royal Society awarded him the Davy Medal in 1882---, and the newly discovered elements represented pieces of evidence that confirmed the theory.
 
-Predictive confirmation is still ambiguous in the social sciences. As argued by \cite{popper1944poverty, popper1945poverty} and \cite{sarewitz1999prediction}, the social sciences 
-have long tried to emulate physical sciences in developing invariant mathematical laws of human behavior and interaction to predict economics quantities, elections, policies, etc.; 
-many scholars agreed that a social theory should be judged on its power to predict \citep{friedman1953essays}. 
 
-However, we believe that social science predictions require more motivations to validate underlying theories. In the 2016 United States presidential election   Donald Trump (Republican) defeated   Hillary Clinton (Democrat) by winning the electoral college (304 vs 227), but gaining a lower voter percentage (46.1\% vs 48.2\%). According to various online poll aggregators, Clinton was given a 65\% or 80\% or 90\% chance of winning the electoral college.  As \cite{gelman2016elections} argues:
+%A well-known historical example of predictive confirmation in chemistry dates back to the middle of the 19th century---see \cite{maher1988prediction} for  details. At that time, more than 60 chemical elements were known, and new ones continued to be discovered. Some prominent chemists attempted to determine their atomic weights, 
+%densities and other properties, by collecting experimental observations. In 1871, the Russian chemist Dmitri Mendeleev noticed that arranging the elements by their atomic 
+%weights, valences and particular chemical properties tended to show periodical recurrences. He found some gaps in the pattern and argued that these missing values corresponded to 
+%some existing elements that had not yet been discovered. He named three of these elements (eka-aluminium, eka-boron, and eka-silicon) and gave some detailed descriptions of their 
+%properties. Despite the skepticism of the scientific community,  French Paul-Emile Lecoq de Boisbaudran in 1874,  Swedish Lars Fredrik Nilson in 1878, and  German Clemens 
+%Winkler in 1886 discovered three elements that corresponded to descriptions of eka-aluminium, eka-boron, and exa-silicon: these three elements are now respectively 
+%known as gallium, scandium and germanium.  Mendeleev's predictive ability was remarkable---the Royal Society awarded him the Davy Medal in 1882---, and the newly discovered elements represented pieces of evidence that confirmed the theory.
 
-\begin{quote}
-\emph{
- These probabilities were high because Clinton had been leading in the polls for months; the probabilities were not 100\% because it was recognized that the final polls might be off by quite a bit from the actual election outcome. Small differences in how the polls were averaged corresponded to large apparent differences in win probabilities; hence we argued that the forecasts that were appearing, were not so different as they seemed based on those reported odds. The final summary is that the polls were off by about 2\% (or maybe 3\%, depending on which poll averaging you?re using), which, again, is a real error of moderate size that happened to be highly consequential given the distribution of the votes in the states this year.
- }
-\end{quote}
+% In the 2016 United States presidential election   Donald Trump (Republican) defeated   Hillary Clinton (Democrat) by winning the electoral college (304 vs 227), but gaining a lower voter percentage (46.1\% vs 48.2\%). According to various online poll aggregators, Clinton was given a 65\% or 80\% or 90\% chance of winning the electoral college.  As \cite{gelman2016elections} argues:
 %
-In November 2016, many modelers including Nate Silver, the founder of the well-known FiveThirtyEight blog (\url{https://fivethirtyeight.com}), failed to predict Trump's win. However, it is naive to conclude that these models failed because their underlying mechanism was wrong; rather, political science predictions cannot  act as theory's only confirmation tools for many reasons, for instance nonresponse and voter turnout, as explained by \cite{gelman2016elections2}:
+%\begin{quote}
+%\emph{
+% These probabilities were high because Clinton had been leading in the polls for months; the probabilities were not 100\% because it was recognized that the final polls might be off by quite a bit from the actual election outcome. Small differences in how the polls were averaged corresponded to large apparent differences in win probabilities; hence we argued that the forecasts that were appearing, were not so different as they seemed based on those reported odds. The final summary is that the polls were off by about 2\% (or maybe 3\%, depending on which poll averaging you?re using), which, again, is a real error of moderate size that happened to be highly consequential given the distribution of the votes in the states this year.
+% }
+%\end{quote}
+%%
+%In November 2016, many modelers including Nate Silver, the founder of the well-known FiveThirtyEight blog (\url{https://fivethirtyeight.com}), failed to predict Trump's win. However, it is naive to conclude that these models failed because their underlying mechanism was wrong; rather, political science predictions cannot  act as theory's only confirmation tools for many reasons, for instance nonresponse and voter turnout, as explained by \cite{gelman2016elections2}:
+%
+%\begin{quote}
+%\emph{
+%Yes, the probability statements are not invalidated by the occurrence of a low-probability event. But we can learn from these low-probability outcomes. In the polling example, yes an error of 2\% is within what one might expect from nonsampling error in national poll aggregates, but the point is that nonsampling error has a reason: it?s not just random. In this case it seems to have arisen from a combination of differential nonresponse, unexpected changes in turnout, and some sloppy modeling choices. It makes sense to try to understand this, not to just say that random things happen and leave it at that.
+%}
+%\end{quote}
 
-\begin{quote}
-\emph{
-Yes, the probability statements are not invalidated by the occurrence of a low-probability event. But we can learn from these low-probability outcomes. In the polling example, yes an error of 2\% is within what one might expect from nonsampling error in national poll aggregates, but the point is that nonsampling error has a reason: it?s not just random. In this case it seems to have arisen from a combination of differential nonresponse, unexpected changes in turnout, and some sloppy modeling choices. It makes sense to try to understand this, not to just say that random things happen and leave it at that.
-}
-\end{quote}
-
-\section{The role of prediction in statistical learning: what we usually do, what we do not do, what we should do}
+\section{The role of prediction in statistical learning}
+% what we usually do, what we do not do, what we should do
 \label{sec:role}
 
 \color{blue}
-Questa  diventerebbe la nuova sezione 2, da riformulare. Probabilmente 3.1 si tiene, mentre 3.2 e 3.3 vanno ripensate e cambiate un po' di contenuti. 3.4 come e' al momento si toglie, e qualcosa si ricomprende da altre parti.
+Questa  e' da riformulare. Probabilmente 3.1 si tiene, mentre 3.2 e 3.3 vanno ripensate e cambiate un po' di contenuti. 3.4 come e' al momento si toglie, e qualcosa si ricomprende da altre parti.
 \color{black}
 
 \subsection{From the observed to the observable}
