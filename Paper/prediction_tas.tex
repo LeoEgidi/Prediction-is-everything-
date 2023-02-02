@@ -248,12 +248,6 @@ consider some very low-probability events, all actually occurred during 2016, su
 \color{blue}
 Punti da trattare:
 
-- come si fa previsione nel moderno stat. learning., quali sono i criteri informativi, bias-variance trade-off, exp test mse, etc.
-
-- inferenza e previsione sono solitamente viste come facce e oprazioni distinte, quasi antitetiche \citep{shmueli2010explain}, ma invece potremmo renderle molto piu vicine e complementari tramite concetto ampio di predictive inference \citep{billheimer2019predictive}.
-
-- mettere in luce problemi predittivi e 'cattive pratiche' del moderno data-mining (shaking training set, tuning parameters, black-box, complexity), che spesso creano profonda distanza tra attori e 'modellisti'. 
-
 - mettere in luce come una inferenza predittiva, che il paradigma Bayesiano già sposa abbondantemente, sia la strada fondamentale per una filosofia debolmente strumentalista, nonché il modo più trasparente per inquadrare le teorie scientifiche tramite modellazione statistica e superare i problemi descritti sopra: perche trasparenza? perche le cose osservate, a differenza dei parametri, sono sotto gli occhi di tutti e possono essere monitorate.
 
 - quello della WI e' un vero e proprio protocollo comportamentale (rivedere Tab.1), con regole e norme
@@ -349,31 +343,33 @@ This is the reason why we provocatively claim that \emph{prediction is not every
 
 We need to reason whether the statistical predictive tools are useful for the \emph{desiderata} we stated in the previous section. If we wish to make prediction a reliable tool to explain the development of some theories, we should guarantee that the usual tools are appropriate to this task. In short, how we asses and measure predictive accuracy? Moreover, is this assessment worth to provide useful explanations about our theory? 
 
-A typical assessment is based on information criteria, such as Akaike Information Criterion (AIC) \citep{akaike1973information}, Bayesian Information Criterion (BIC) \citep{}, and Deviance Information Criterion (DIC) \citep{spiegelhalter2002bayesian}. Though, the three metrics above exhibit two main flaws: they do not provide any kind of prediction uncertainty and they rely on the number of \emph{nominal} parameters included in the model \citep{gelman2014understanding}: for these reasons, their use should be limited to a restricted case of applications. Recent proposals such as the Watanabe-Akaike Information Criteria (WAIC) \citep{watanabe2010asymptotic} and Leave-One-Out cross validation Information Criteria (LOOIC) \citep{vehtari2017practical}, naturally framed in a Bayesian paradigm, incorporate the uncertainty propagating from the parameters to the distribution of observable values by estimating the expected log pointwise predictive density for a new dataset. Although all the predictive information criteria may fail in some practical situations, LOOIC and WAIC acknowledge the intrinsic model uncertainty, by highlighting the role of the observable values, rather than parameters.
+A typical assessment is based on information criteria, such as Akaike Information Criterion (AIC) \citep{akaike1973information}, Bayesian Information Criterion (BIC) \citep{schwarz1978estimating}, and Deviance Information Criterion (DIC) \citep{spiegelhalter2002bayesian}. Though, the three metrics above exhibit two main flaws: they do not provide any kind of prediction uncertainty and they rely on the number of \emph{nominal} parameters included in the model \citep{gelman2014understanding}: for these reasons, their use should be limited to a restricted case of applications. Recent proposals such as the Watanabe-Akaike Information Criteria (WAIC) \citep{watanabe2010asymptotic} and Leave-One-Out cross validation Information Criteria (LOOIC) \citep{vehtari2017practical}, naturally framed in a Bayesian paradigm, incorporate the uncertainty propagating from the parameters to the distribution of observable values by estimating the expected log pointwise predictive density for a new dataset. Although all the predictive information criteria may fail in some practical situations, LOOIC and WAIC acknowledge the intrinsic model uncertainty, by highlighting the role of the observable values, rather than parameters.
 A transparent predictive and explainable tool should encompass data, parameters and future data not focusing on parameters plug-in estimates alone; in such a way, the falsification of a single piece makes the joint model falsifiable.
 
-\color{blue}
-arrivato qui: 26 gennaio
-\color{black}
 
 
-Another typical assessment  is given by the generalization performance of a learning method related to the predictive performance on a test set.
-Unfortunately, it is commonly unfeasible to calculate the test mea-squared errors, because we are often in a situation in which we do not have any test data available.
-% As suggested by \cite{hastie2009elements}, it does not seem possible to estimate the conditional error in \eqref{eq:test_MSE} appropriately, given only the information in the same training set $\tau$.  
-For such reasons, we may introduce a related quantity, the \emph{expected test MSE}, or \emph{expected generalization error}, which is usually estimated by cross-validation \citep{hastie2009elements} and related statistical methods.
-%\begin{equation}
-%\text{exp test MSE}\equiv \textrm{E}[\text{Test MSE}] = 
-%%\textrm{E} \left[ y_{n+1}-\hat{f}({x}_{n+1}) \right]^2 
-% \text{Var}(\hat{f}({x}_{n+1}))+ \text{Bias}^2(\hat{f}({x}_{n+1}))+\text{Var}(\epsilon),
-%\label{eq:exp_test_MSE}
-%\end{equation}
-%%
-%where the expectation is taken across many training sets, $\text{Var}(\hat{f}(x_{n+1}))$ is the variance for $\hat{f}(x_{n+1})$, $\text{Bias}^2(\hat{f}(x_{n+1}))$ is the squared bias,  $\text{Var}(\epsilon)$ is the error variance.  This final term, known as the irreducible error, is the minimum lower bound for the test MSE. Since we only ever have access to the training data points (including the randomness associated with the  $\epsilon$ values) we cannot ever hope to get a ``more accurate" fit than what the variance of the residuals offer.
-It is well-known that the performance of a statistical method requires low variance as well low bias. 
-Statistical procedures often incur in the \emph{bias-variance 
-trade-off} \citep{james2013introduction}, the challenge is to find a compromise by controlling for both bias and variance.
-The predictive goal is to select the model where the expected test MSE is lowest: the statisticians should try to minimize it by choosing the model that simultaneously has low variance and low bias.
-However, this is a relevant and difficult challenge, much debated within the statistical community: more complex models, with lower bias, tend to overfit the data, by yielding  poor  predictive results and then higher variance; conversely, too simple models tend to not fit the data adequately and have higher bias. 
+
+Another typical assessment  is given by the generalization performance of a learning method related to the predictive performance on a test set; unfortunately, it is commonly not feasible to calculate the test mean-squared errors, because we are often in a situation in which we do not have any test data available.
+\cite{hastie2009elements} propose to use the \emph{expected test MSE}, or \emph{expected generalization error}, usually estimated by cross-validation  and related statistical methods, and resulting as the sum between the variance, the squared bias, and the irreducible error of the posed algorithm. The predictive goal is then to select the model where the expected test MSE is lowest, by choosing the model that simultaneously has low variance and low bias.
+It is in fact well-known that the performance of a statistical learning method requires low variance as well low bias: the challenge is to find a compromise by controlling for both bias and variance. However, this is a relevant and difficult challenge, widely known as the \emph{bias-variance 
+trade-off} \citep{hastie2009elements, james2013introduction}, much debated within the statistical community: more complex models, with lower bias, tend to overfit the data, by yielding  poor  predictive results and then higher variance; conversely, too simple models tend to not fit the data adequately and have higher bias. 
+
+Concerning the bias-variance dilemma, we think this is usually seen as the \emph{Holy Grail} of the modern statistical learning, and we would try to slightly falsifying its 
+importance by highlighting at least four criticisms for this predictive protocol. 
+
+
+\begin{itemize}
+\item[(i)] \textbf{Applicability} It is pretty impossible to monitor and assess bias and variance of a statistical learning method in real-life applications. 
+\item[(ii)] \textbf{Prescription} Even though we were able to compute them and retrieve a valid assessment for the expected test MSE, we 
+would not have neither a scientific prescription about the predictive accuracy and the potential overfitting of our algorithm: \emph{how and when does a model provide 
+overfitting? Do we have a numerical, or somehow objective, scale to assess this task?} \item[(iii)] \textbf{Data-shaking}  Over the last years, statisticians developed some methods by having in mind to  reduce their variance and improve their predictive accuracy, by aggregating thousand versions of the same method by use of bootstrap \citep{breiman1996bagging}, eventually perturbing the training set \citep{freund1996experiments} and the choice of the predictors to ensure de-correlation \citep{ho1995random} in classification and 
+regression trees \citep{breiman1984classification}. This pushed the statisticians to do \emph{whatever it takes} to produce effective \emph{weapons of mass prediction}, 
+including bad practices such as \emph{shaking the training set} in order to obtain the best prediction, or suddenly change the number of predictors used in a given random forest split, or the interaction depth parameter in boosting methods. Modern data-scientists are used to train their procedures on the \emph{training set}, which is chosen at the beginning. A common strategy is to select the first half of a 
+dataset to train the algorithm, and the second half to test it; another strategy consists of selecting only a percentage---say,75\% of the dataset---and using the remaining 25\% to  test the algorithm. However, a small change in the dataset can cause a large change in the final predictions, and some adjustments are often required to increase the algorithm's robustness.
+\item [(iv)] \textbf{Interpretability, transparency and falsification} Points (i)--(iii) above contributed to build very powerful, complex, and obscure black-box predictive algorithms, such as neural networks \citep{bishop1994neural}, which are rarely interpretable, explainable \citep{xu2019explainable} and falsifiable from a scientific point of view.  \emph{How could we fruitfully use the same method in other settings if we do not know how we built it?}
+\end{itemize}
+
+
 
 
 %Rather, if we are framed in a Bayesian context we intend the unobserved and future values $\tilde{y}$ to come from the posterior predictive distribution, denoted here by $p(\tilde{y}|y)$, which incorporates the intrinsic uncertainty propagating from the parameters---summarized by the posterior distribution---to the observable future values. 
@@ -391,44 +387,10 @@ However, this is a relevant and difficult challenge, much debated within the sta
 
 
 
-%As brilliantly argued by \cite{breiman2001statistical}, there are two cultures in the use of statistical modeling to reach conclusions from data: a stochastic data model consisting 
-%of predictors, parameters and random noise to explain the response variable $y$ is adopted by the data modeling culture; a function of the predictors to predict the response variable 
-%$y$ is assumed by the algorithmic modeling culture, also named machine learning (ML) culture. The two approaches strongly differ in their validation: goodness-of-fit tests vs. 
-%predictive accuracy on out-of-sample data.  It is evident that the data modeling culture---linear regression, generalized linear models, Cox model, etc.---is aimed at extracting some information about how nature is associating the response variable to the dependent variable, whereas the algorithmic culture---decision and classification trees, neural nets---is more oriented to predicting future values of the response variable given the values of the predictors.
-%It is out of the scope of this paper to cover in more detail the two modeling classes, it is enough to be aware of the differences.
-
-%The historical appeal of the ML field dates back the mid-1980s, when neural nets and decision trees became incredibly popular \citep{breiman1984classification} in areas where parametric data models were not applicable, such as 
-%speech, image, and handwriting recognition, and prediction in financial markets. In analyzing real data from these fields, the only criterion to evaluate these 
-%algorithms was predictive accuracy: this is translated in finding an algorithm $f(x)$ able to be a good predictor for $y$ for future values of $x$, the so called \emph{test set}. To alleviate the degree of overfitting and the lack of 
-%predictive robustness in decision trees, in the mid-1990s some data scientists argued that by aggregating many trees and perturbing the training set, using bagging , boosting 
-%\citep{freund1996experiments} or random forests \citep{ho1995random}, dramatically increased the predictive accuracy of the trees, by decreasing the variance.
-
-%\subsection{Training set selection: the tree case}
 
 
-\color{blue}
-citazioni utili:
-
-aic : \cite{akaike1973information}
-
-dic: \cite{spiegelhalter2002bayesian}
-
-cart: \cite{breiman1984classification}
-
-bagging: \cite{breiman1996bagging}
-
-boosting: \cite{freund1996experiments}
-
-rf: \citep{ho1995random}
-
-***********************************
-\color{black}
-
-Data scientists are used to training their procedures on the \emph{training set}, which is chosen at the beginning. A common strategy is to select the first half of a 
-dataset to train the algorithm, and the second half to test it; another strategy consists of selecting only a percentage---say,75\% of the dataset---and using the remaining 25\% to  test the algorithm. However, a small change in the dataset can cause a large change in the final predictions, and some adjustments are often required to increase the algorithm's robustness.  This ``training shaking'' is popular despite controversy, and allows us to discuss the eventual supremacy of the prediction over model construction and interpretation.
 
 
-In what follows, we relax these boundaries and merge the two cultures, by referring to this fusion as the field of statistical learning. The list of considerations contained in the next section is valid for algorithmic and stochastic modelers aimed at predictive purposes.
 
 
 %In the case of decision trees, it turned out that a tree that is grown very deep tends to suffer from high variance and low bias. This means that the tree is likely to 
@@ -463,24 +425,21 @@ In what follows, we relax these boundaries and merge the two cultures, by referr
 %\section{Predictive instrumentalism and  how to make predictive models transparent and falsifiable}
 %\label{sec:instr}
 
-\color{blue}
- Da rivedere 4.1 e modificare abbastanza, la 4.2 probabilmente molto da accorciare/cambiare.
-\color{black}
 
-\subsection{Weak instrumentalism}
+\subsection{Weak instrumentalism for statistical learning}
 %\jonah{I relaxed the distinction between ML and statistics, and talk more generally in terms of statistical learning}
 
-As statisticians and (data) scientists, demanded to build models for social and physical sciences, our efforts should be addressed to produce good, transparent and well posed algorithms/models, and make them falsifiable upon a strong check \citep{gelman2013philosophy}.
-
-However, lately the need for powerful prediction weapons emerged, especially in the machine learning field, and the goodness of a modeling 
+As statisticians, demanded to build models for social and physical sciences, our efforts should be addressed to produce good, transparent and well posed statistical learning methods, and possibly make them falsifiable upon a strong check of their components \citep{gelman2013philosophy}.
+However, as mentioned in the previous section, the goodness of a modeling 
 procedure is often associated with its predictive ability on out-of-sample scenarios. As a consequence, only good predictive models are 
-retained, whereas the others, even when sophisticated and well built, are discarded; predictive accuracy became the only discrimination's tool to 
-decide between good and bad statistical models/algorithms. We refer to this philosophical position as \emph{strong instrumentalism}, for which 
-the predictive accuracy carried out by the algorithms is constitutive---and not only symptomatic---of  broader scientific success. 
-%In the 
-%recent yers,  the only rationale to evaluate the goodness of an algorithmic modeling procedure is to look at its 
-%predictive accuracy on out-of-sample/future data;
+retained, whereas the others, even when sophisticated and well built, are discarded; predictive accuracy became in many fields the only tool to 
+decide between good and bad statistical methods. We refer to this philosophical position as \emph{strong instrumentalism}, for which 
+the predictive accuracy carried out by the algorithms is constitutive---and not only symptomatic---of  broader scientific success. \color{red}
 People strictly adhering to this philosophical perspective are usually inclined towards some ``munging'' procedures, such as ``shaking the training set'', or ``over-tuning'' some tuning parameters to ensure lower variance and higher accuracy; for the most of the time, these data scientists seem apparently ready to do ``whatever it takes'' to improve over the previous methods. 
+
+\color{blue}
+arrivato qui
+\color{black}
 
 It is worth stressing that evaluating a model/algorithm in light of its ability to predict future data is not shameful at all; conversely, it turned out to be beneficial in many areas, for instance where a parametric 
 stochastic model failed to be really generative and useful. However, even if predictions of future data were good tools to falsify a posed theory,  some strong instrumentalist 

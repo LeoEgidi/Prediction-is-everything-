@@ -14,6 +14,11 @@ Billheimer, D. (2019).
 \newblock Predictive inference and scientific reproducibility.
 \newblock {\em The American Statistician\/}~{\em 73\/}(sup1), 291--295.
 
+\bibitem[\protect\citeauthoryear{Bishop}{Bishop}{1994}]{bishop1994neural}
+Bishop, C.~M. (1994).
+\newblock Neural networks and their applications.
+\newblock {\em Review of scientific instruments\/}~{\em 65\/}(6), 1803--1832.
+
 \bibitem[\protect\citeauthoryear{Bjornstad}{Bjornstad}{1990}]{bjornstad1990predictive}
 Bjornstad, J.~F. (1990).
 \newblock Predictive likelihood: A review.
@@ -164,6 +169,11 @@ Sarewitz, D. and R.~Pielke~Jr (1999).
 \newblock Prediction in science and policy.
 \newblock {\em Technology in Society\/}~{\em 21\/}(2), 121--133.
 
+\bibitem[\protect\citeauthoryear{Schwarz}{Schwarz}{1978}]{schwarz1978estimating}
+Schwarz, G. (1978).
+\newblock Estimating the dimension of a model.
+\newblock {\em The annals of statistics\/}, 461--464.
+
 \bibitem[\protect\citeauthoryear{Shmueli}{Shmueli}{2010}]{shmueli2010explain}
 Shmueli, G. (2010).
 \newblock To explain or to predict?
@@ -194,5 +204,14 @@ Watanabe, S. (2010).
   applicable information criterion in singular learning theory.
 \newblock {\em Journal of Machine Learning Research\/}~{\em 11\/}(Dec),
   3571--3594.
+
+\bibitem[\protect\citeauthoryear{Xu, Uszkoreit, Du, Fan, Zhao, and Zhu}{Xu
+  et~al.}{2019}]{xu2019explainable}
+Xu, F., H.~Uszkoreit, Y.~Du, W.~Fan, D.~Zhao, and J.~Zhu (2019).
+\newblock Explainable ai: A brief survey on history, research areas, approaches
+  and challenges.
+\newblock In {\em Natural Language Processing and Chinese Computing: 8th CCF
+  International Conference, NLPCC 2019, Dunhuang, China, October 9--14, 2019,
+  Proceedings, Part II 8}, pp.\  563--574. Springer.
 
 \end{thebibliography}
