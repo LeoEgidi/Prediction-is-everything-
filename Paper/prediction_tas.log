@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.1.31)  2 FEB 2023 12:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.1.31)  2 FEB 2023 18:00
 entering extended mode
 **./prediction_tas.tex
 (prediction_tas.tex
@@ -570,43 +570,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--71
 [1
 
 {C:/Users/17245/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-[3] [4] [5] [6] [7]
-Missing character: There is no à in font cmr12!
-Missing character: There is no é in font cmr12!
-Missing character: There is no ù in font cmr12!
- [8] [9] [10] [11] [12]
-Overfull \hbox (3.05719pt too wide) in paragraph at lines 369--370
+[3] [4] [5] [6] [7] [8] [9] [10] [11] [12]
+Overfull \hbox (3.05719pt too wide) in paragraph at lines 354--355
 []\OT1/cmr/bx/n/12 Interpretability, trans-parency and fal-si-fi-ca-tion \OT1/c
 mr/m/n/12 Points (i)--(iii) above con-tributed
  []
 
-[13] [14]
-
-LaTeX Warning: Float too large for page by 47.87074pt on input line 492.
-
-(prediction_tas.bbl
+[13] [14] (prediction_tas.bbl
 Missing character: There is no â in font cmti12!
 Missing character: There is no € in font cmti12!
 Missing character: There is no “ in font cmti12!
- [15] [16] [17] [18]) [19] (prediction_tas.aux) ) 
+ [15] [16] [17]) [18] (prediction_tas.aux) ) 
 Here is how much of TeX's memory you used:
  13707 strings out of 493303
- 268433 string characters out of 3138691
- 313623 words of memory out of 3000000
+ 268441 string characters out of 3138691
+ 312688 words of memory out of 3000000
  16989 multiletter control sequences out of 15000+200000
  10129 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,8n,56p,1408b,272s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on prediction_tas.pdf (19 pages, 148427 bytes).
+ 62i,5n,56p,1408b,274s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on prediction_tas.pdf (18 pages, 138836 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
+ 87 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
