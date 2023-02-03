@@ -49,6 +49,13 @@ Dawid, A.~P. (1984).
 \newblock {\em Journal of the Royal Statistical Society: Series A
   (General)\/}~{\em 147\/}(2), 278--290.
 
+\bibitem[\protect\citeauthoryear{Erikson and Wlezien}{Erikson and
+  Wlezien}{2016}]{erikson2016forecasting}
+Erikson, R.~S. and C.~Wlezien (2016).
+\newblock Forecasting the presidential vote with leading economic indicators
+  and the polls.
+\newblock {\em PS: Political Science \& Politics\/}~{\em 49\/}(4), 669--672.
+
 \bibitem[\protect\citeauthoryear{Forster}{Forster}{2002}]{forster2002predictive}
 Forster, M.~R. (2002).
 \newblock Predictive accuracy as an achievable goal of science.
@@ -73,18 +80,29 @@ Geisser, S. (2017).
 \bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016a}]{gelman2016trumpleicester}
 Gelman, A. (2016a).
 
-\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016b}]{gelman2016elections2}
+\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016b}]{gelman2016lessons}
 Gelman, A. (2016b).
+\newblock 19 lessons for political scientists from the 2016 election.
+
+\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016c}]{gelman2016elections2}
+Gelman, A. (2016c).
 \newblock Election surprise, and three ways of thinking about probability.
 
-\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016c}]{gelman2016elections}
-Gelman, A. (2016c).
+\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016d}]{gelman2016elections}
+Gelman, A. (2016d).
 \newblock Explanations for that shocking 2\% shift.
 
-\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016d}]{gelman2016problems}
-Gelman, A. (2016d).
+\bibitem[\protect\citeauthoryear{Gelman}{Gelman}{2016e}]{gelman2016problems}
+Gelman, A. (2016e).
 \newblock The problems with p-values are not just with p-values.
 \newblock {\em The American Statistician\/}~{\em 70\/}(10).
+
+\bibitem[\protect\citeauthoryear{Gelman, Carlin, Stern, Dunson, Vehtari, and
+  Rubin}{Gelman et~al.}{2013}]{gelman2013bayesian}
+Gelman, A., J.~B. Carlin, H.~S. Stern, D.~B. Dunson, A.~Vehtari, and D.~B.
+  Rubin (2013).
+\newblock {\em Bayesian data analysis}.
+\newblock Chapman and Hall/CRC.
 
 \bibitem[\protect\citeauthoryear{Gelman and Hennig}{Gelman and
   Hennig}{2017}]{gelman2017beyond}
@@ -121,6 +139,12 @@ Hastie, T., R.~Tibshirani, and J.~Friedman (2009).
   and prediction}.
 \newblock Springer Science \& Business Media.
 
+\bibitem[\protect\citeauthoryear{Hibbs~Jr}{Hibbs~Jr}{2008}]{hibbs2008implications}
+Hibbs~Jr, D.~A. (2008).
+\newblock Implications of the ‘bread and peace’model for the 2008 us
+  presidential election.
+\newblock {\em Public Choice\/}~{\em 137\/}(1-2), 1.
+
 \bibitem[\protect\citeauthoryear{Hitchcock and Sober}{Hitchcock and
   Sober}{2004}]{hitchcock2004prediction}
 Hitchcock, C. and E.~Sober (2004).
@@ -140,6 +164,10 @@ James, G., D.~Witten, T.~Hastie, and R.~Tibshirani (2013).
 \newblock {\em An introduction to statistical learning}, Volume 112.
 \newblock Springer.
 
+\bibitem[\protect\citeauthoryear{Kremp}{Kremp}{2016}]{kremp2016state}
+Kremp, P.-A. (2016).
+\newblock State and national poll aggregation.
+
 \bibitem[\protect\citeauthoryear{Kuhn}{Kuhn}{1962}]{kuhn1962structure}
 Kuhn, T.~S. (1962).
 \newblock The structure of scientific revolutions.
@@ -149,6 +177,12 @@ Kuhn, T.~S. (1962).
 Lakatos, I. (1976).
 \newblock Falsification and the methodology of scientific research programmes.
 \newblock In {\em Can theories be refuted?}, pp.\  205--259. Springer.
+
+\bibitem[\protect\citeauthoryear{Linzer}{Linzer}{2013}]{linzer2013dynamic}
+Linzer, D.~A. (2013).
+\newblock Dynamic bayesian forecasting of presidential elections in the states.
+\newblock {\em Journal of the American Statistical Association\/}~{\em
+  108\/}(501), 124--134.
 
 \bibitem[\protect\citeauthoryear{Popper}{Popper}{1934}]{popper1934logic}
 Popper, K. (1934).

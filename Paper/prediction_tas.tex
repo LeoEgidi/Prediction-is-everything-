@@ -418,7 +418,7 @@ As statisticians, demanded to build models for social and physical sciences, our
 However, as mentioned in the previous section, the goodness of a modeling 
 procedure is often associated with its predictive ability on out-of-sample scenarios. As a consequence, only good predictive models are 
 retained, whereas the others, even when sophisticated and well built, are discarded; predictive accuracy became in many fields the only tool to 
-decide between good and bad statistical methods. Points (i)--(iv) in Section \ref{sec:good} refer to the \emph{strong instrumentalism} philosophical position, for which 
+decide between good and bad statistical methods. Points (i)--(iv) in Section \ref{sec:good} refer to some bad practices raised by the \emph{strong instrumentalism} philosophical position, for which 
 the predictive accuracy carried out by the algorithms is constitutive---and not only symptomatic---of  broader scientific success. 
 
 
@@ -431,21 +431,21 @@ and selected on the ground of its predictive accuracy, the underlying theory to 
 
 It is clear to us that a valid contribution to a transparent and falsifiable science should embrace both methods' explainability and predictive accuracy. To do this, we feel we are ready to propose a \emph{weak instrumentalist} philosophical position, a sort of behavioral protocol, that can be listed in the following bullets.
 
-\color{red}
+
 \begin{itemize}
-\item[(1)] \textbf{Applicability} Social sciences are different from hard sciences. Then, statistical methods for social sciences should not be discarded just because of their poor predictive accuracy.
-\item[(2)] \textbf{Prescription} predictive inference \citep{billheimer2019predictive}; Distribution of the observables, falsificationist Bayesianism \citep{gelman2017beyond};
-\item[(3)] \textbf{Data-treatment} not invasive wrt predictive accuracy results; sensitivity analysis fully reported.
-\item[(4)] \textbf{Interpretability, transparency, and falsification} joint model for parameters, observed and observable. Variability. Predictive distribution for NHST. Explanable AI
+\item[(1)] \textbf{Applicability} The field of application of the modern statistical learning methods should be carefully explored. As a remark, social sciences are different from hard sciences: then, statistical methods for social sciences should not be discarded just because of their poor predictive accuracy. For instance, forecasting presidential elections \citep{linzer2013dynamic, kremp2016state} is quite complex, as remarked by \cite{gelman2016elections, gelman2016lessons}, since many predictive issues arise. We just focus on three of them. First of all, using voter intentions instead of voter predictions is proved to be less effective. Then, it is very hard to collect a representative sample of voters. Third, many covariates such as the national economy can play a relevant role to forecast the elections' outcome, as suggested by \cite{hibbs2008implications, erikson2016forecasting}: the choice and the mix of national-level and individual-level covariates is often problematic in these applications. 
+\item[(2)] \textbf{Prescription} When faced with the difficult task of assessing the adequacy of a method, the predictive inference of future observables \citep{billheimer2019predictive, geisser2017predictive} along with probabilistic statements about these quantities in future applications, rather than the bias-variance tradeoff,  could help us better taking decisions.  To this aim, the Bayesian inference approach, especially for what concerns the falsificationist Bayesianism invoked by \cite{gelman2017beyond}, matches these desiderata through the posterior predictive distribution of the observables \citep{gelman2013bayesian}. 
+\item[(3)] \textbf{Data-treatment} Any data adjustment, or any \emph{ad hoc} data procedure, should not be done with the purpose of improving the predictive accuracy of the posed method.  In simple words, any data-treatment should  not be invasive with respect to the predictive accuracy results. As such, \emph{shaking the training set} to obtain better forecasts should be avoided. Rather, the aims of the study in terms of predictive capabilities should be fixed \emph{before} applying any algorithmic step.  If we are interested in distinct  predictive scenarios, a full sensitivity analysis must be thoroughly reported, along with the explanation about the considered training, validation, and test set and the choice/tuning of the hyper-parameters---e.g., the interaction depth in boosting methods, the parameters fixed for a parametric hyper-prior distribution in Bayesian setting. 
+\item[(4)] \textbf{Interpretability, transparency, and falsification} A statistical learning method should be interpretable and as transparent as possible. The modern statistical workflow requires high interactions  between statisticians, computer scientists, and data-miners, and for such reason the algorithmic protocols should be well documented, accurate, and rich. To achieve these tasks, the methods should be \emph{falsifiable} from the distinct working units in an open manner, and the single pieces as much comprehensible as possible. This implies, among others: reporting measures of variability in the predictions, and not only point predictions; clarifying the operational choices, such as the design of the study, the aims, the samples, the tuning parameters, the training and the test set, the hypotheses, the model likelihood, the prior distributions, before applying any algorithmic procedure; reporting eventual failures in forecasting abilities and not masking them with ad-hoc explanations.
 \end{itemize}
 
 \color{blue}
-arrivato qui. Fare una tabellina di confronto tra strong e weak instrumentalism.
+arrivato qui. Rivedere punti sopra e fare tabella.
 \color{black}
 
-%\begin{table}
-%\caption{Weak instrumentalism summary}
-%\framebox[.96\linewidth][l]{\parbox{.92\linewidth}{
+\begin{table}
+\caption{Weak instrumentalism vs strong instrumentalism summary}
+\framebox[.96\linewidth][l]{\parbox{.92\linewidth}{
 %\vspace{0.2cm}
 %
 %\emph{ General science}
@@ -481,8 +481,8 @@ arrivato qui. Fare una tabellina di confronto tra strong e weak instrumentalism.
 %\vspace{-0.2cm}
 %\item[ p10] To be falsifiable, ML techniques need to be transparently posed
 %\end{enumerate}
-% }}
-%\end{table}
+ }}
+\end{table}
 
 %In other way said, a supposedly valid scientific theory should exist \emph{before} the future data have been revealed, and produce some immediate benefits to the scientific community, similarly as the falling bodies theory of Galilei first, and the law of universal gravitation of Newton then: corroborating or rejecting a model/algorithm on the basis of observable future values only is often far from the scientists' requirements and economic funds of the current project.
 
