@@ -63,11 +63,14 @@
 
 \bigskip
 \begin{abstract}
-Prediction is an unavoidable task for data scientists, and over the last few decades, statistics and machine learning have become the most popular `prediction weapons' in many fields. However, prediction should always be associated with a measure of uncertainty - because from it  we can only reconstruct and 
-falsify the model/algorithm decisions. Machine learning methods offer many point predictions,  but they rarely yield a measure of uncertainty, whereas statistical 
-models usually do a poor job of communicating predictive results.
-According to Popper?s falsification philosophy, natural and physical sciences can be falsified on the grounds of incorrect predictions: however  this is not always true in the social sciences.
-We move then to a weak instrumentalist philosophy: Predictive accuracy is not always constitutive of scientific success, especially in the social sciences.\\
+\color{blue}
+da scrivere ex-novo alla fine
+\color{black}
+%Prediction is an unavoidable task for data scientists, and over the last few decades, statistics and machine learning have become the most popular `prediction weapons' in many fields. However, prediction should always be associated with a measure of uncertainty - because from it  we can only reconstruct and 
+%falsify the model/algorithm decisions. Machine learning methods offer many point predictions,  but they rarely yield a measure of uncertainty, whereas statistical 
+%models usually do a poor job of communicating predictive results.
+%According to Popper?s falsification philosophy, natural and physical sciences can be falsified on the grounds of incorrect predictions: however  this is not always true in the social sciences.
+%We move then to a weak instrumentalist philosophy: Predictive accuracy is not always constitutive of scientific success, especially in the social sciences.\\
 \end{abstract}
 
 \noindent%
@@ -339,13 +342,13 @@ Another typical assessment  is given by the generalization performance of a lear
 It is in fact well-known that the performance of a statistical learning method requires low variance as well low bias: the challenge is to find a compromise by controlling for both bias and variance. However, this is a relevant and difficult challenge, widely known as the \emph{bias-variance 
 trade-off} \citep{hastie2009elements, james2013introduction}, much debated within the statistical community: more complex models, with lower bias, tend to overfit the data, by yielding  poor  predictive results and then higher variance; conversely, too simple models tend to not fit the data adequately and have higher bias. 
 
-Concerning the bias-variance dilemma, we think this is usually seen as the \emph{Holy Grail} of the modern statistical learning, and we would try to slightly falsifying its 
-importance by highlighting at least four criticisms for this predictive protocol. 
+Concerning the bias-variance dilemma, we think this is usually seen as the \emph{Holy Grail} of the modern statistical learning, and as such it implied a strong instrumentalism orientation of the whole statistical learning field.
+For such reason, we try here to alleviate its importance by highlighting at least four criticisms for this predictive protocol. 
 
 
 \begin{itemize}
-\item[(i)] \textbf{Applicability} It is pretty impossible to monitor and assess bias and variance of a statistical learning method in real-life applications. 
-\item[(ii)] \textbf{Prescription} Even though we were able to compute them and retrieve a valid assessment for the expected test MSE, we 
+\item[(i)] \textbf{Applicability} Statistical learning methods are widely applied to many distinct fields, ranging from economics, to psychology, biology,  physics, chemistry, and political sciences. Nevertheless, it is rarely reported an \emph{application's protocol} to drive the user towards a wise application of their methods with respect to the field of application. Using a random forest to predict gene mutation is different than using a random forest to predict the price of the oil. However, we are usually not aware of the boundaries of the statistical garden, using the well-known quote by the American statistician John Tukey: \emph{``The best thing about being a statistician is that you get to play in everyone's backyard''} \citep{brillinger2014wonderful}.  In rough words, over the years we overreacted to the Tukey's words, and we delude ourselves that we can play in anyone's garden exactly with the same tools. In our opinion, this is inherently wrong: we can not grow trees and (random) forests in every garden.
+\item[(ii)] \textbf{Prescription}  It is pretty impossible to monitor and assess bias and variance of a statistical learning method in real-life applications.  Even though we were able to compute them and retrieve a valid assessment for the expected test MSE, we 
 would not have neither a scientific prescription about the predictive accuracy and the potential overfitting of our algorithm: \emph{how and when does a model provide 
 overfitting? Do we have a numerical, or somehow objective, scale to assess this task?} \item[(iii)] \textbf{Data-treatment}  Over the last years, statisticians developed some methods by having in mind to  reduce their variance and improve their predictive accuracy, by aggregating thousand versions of the same method by use of bootstrap \citep{breiman1996bagging}, eventually perturbing the training set \citep{freund1996experiments} and the choice of the predictors to ensure de-correlation \citep{ho1995random} in classification and 
 regression trees \citep{breiman1984classification}. This pushed the statisticians to do \emph{whatever it takes} to produce effective \emph{weapons of mass prediction}, 
@@ -433,55 +436,38 @@ It is clear to us that a valid contribution to a transparent and falsifiable sci
 
 
 \begin{itemize}
-\item[(1)] \textbf{Applicability} The field of application of the modern statistical learning methods should be carefully explored. As a remark, social sciences are different from hard sciences: then, statistical methods for social sciences should not be discarded just because of their poor predictive accuracy. For instance, forecasting presidential elections \citep{linzer2013dynamic, kremp2016state} is quite complex, as remarked by \cite{gelman2016elections, gelman2016lessons}, since many predictive issues arise. We just focus on three of them. First of all, using voter intentions instead of voter predictions is proved to be less effective. Then, it is very hard to collect a representative sample of voters. Third, many covariates such as the national economy can play a relevant role to forecast the elections' outcome, as suggested by \cite{hibbs2008implications, erikson2016forecasting}: the choice and the mix of national-level and individual-level covariates is often problematic in these applications. 
-\item[(2)] \textbf{Prescription} When faced with the difficult task of assessing the adequacy of a method, the predictive inference of future observables \citep{billheimer2019predictive, geisser2017predictive} along with probabilistic statements about these quantities in future applications, rather than the bias-variance tradeoff,  could help us better taking decisions.  To this aim, the Bayesian inference approach, especially for what concerns the falsificationist Bayesianism invoked by \cite{gelman2017beyond}, matches these desiderata through the posterior predictive distribution of the observables \citep{gelman2013bayesian}. 
-\item[(3)] \textbf{Data-treatment} Any data adjustment, or any \emph{ad hoc} data procedure, should not be done with the purpose of improving the predictive accuracy of the posed method.  In simple words, any data-treatment should  not be invasive with respect to the predictive accuracy results. As such, \emph{shaking the training set} to obtain better forecasts should be avoided. Rather, the aims of the study in terms of predictive capabilities should be fixed \emph{before} applying any algorithmic step.  If we are interested in distinct  predictive scenarios, a full sensitivity analysis must be thoroughly reported, along with the explanation about the considered training, validation, and test set and the choice/tuning of the hyper-parameters---e.g., the interaction depth in boosting methods, the parameters fixed for a parametric hyper-prior distribution in Bayesian setting. 
+\item[(1)] \textbf{Applicability} The field of application of the modern statistical learning methods should be carefully explored. As a remark, social sciences are different from hard sciences: forecasting a human behavior is often more problematic than forecasting the evolution of a physical system.  As an illustrative example, forecasting presidential elections \citep{linzer2013dynamic, kremp2016state} is quite complex, as remarked by \cite{gelman2016elections, gelman2016lessons}, since many predictive issues arise. We just focus on three of them. First of all, using voter intentions instead of voter predictions is proved to be less effective. Then, it is very hard to collect a representative sample of voters. Third, many covariates such as the national economy can play a relevant role to forecast the elections' outcome, as suggested by \cite{hibbs2008implications, erikson2016forecasting}: the choice and the mix of national-level and individual-level covariates is often problematic in these applications. 
+
+The same method could provide dramatically different predictive performances in terms of the field for which is proposed: then, as the ancient Romans were used to say, we suggest to embrace the \emph{divide et impera} philosophy. As a practical corollary, statistical methods for social sciences should not be discarded just because of their poor predictive accuracy.
+\item[(2)] \textbf{Prescription} When faced with the difficult task of assessing the adequacy of a method, the predictive inference of future observables \citep{billheimer2019predictive, geisser2017predictive} along with probabilistic statements about these quantities in future applications, rather than the bias-variance tradeoff,  could help us  taking better decisions.  To this aim, the Bayesian inference approach, especially for what concerns the falsificationist Bayesianism invoked by \cite{gelman2017beyond}, matches these desiderata through the posterior predictive distribution of the observables \citep{gelman2013bayesian}. 
+\item[(3)] \textbf{Data-treatment} Any data adjustment, or any \emph{ad hoc} data procedure, should not be done with the purpose of improving the predictive accuracy of the posed method.  In simple words, any data-treatment should  not be invasive with respect to the predictive accuracy results. As such, \emph{shaking the training set} to obtain better forecasts should be avoided. Rather, the aims of the study in terms of predictive capabilities should be fixed \emph{before} applying any algorithmic step.  If we are interested in distinct  predictive scenarios, a full sensitivity analysis must be thoroughly reported, along with the explanation about the considered training, validation, and test set and the choice/tuning of the hyper-parameters---e.g., the interaction depth in boosting methods, or the parameters fixed for a parametric hyper-prior distribution in Bayesian setting. 
 \item[(4)] \textbf{Interpretability, transparency, and falsification} A statistical learning method should be interpretable and as transparent as possible. The modern statistical workflow requires high interactions  between statisticians, computer scientists, and data-miners, and for such reason the algorithmic protocols should be well documented, accurate, and rich. To achieve these tasks, the methods should be \emph{falsifiable} from the distinct working units in an open manner, and the single pieces as much comprehensible as possible. This implies, among others: reporting measures of variability in the predictions, and not only point predictions; clarifying the operational choices, such as the design of the study, the aims, the samples, the tuning parameters, the training and the test set, the hypotheses, the model likelihood, the prior distributions, before applying any algorithmic procedure; reporting eventual failures in forecasting abilities and not masking them with ad-hoc explanations.
 \end{itemize}
 
-\color{blue}
-arrivato qui. Rivedere punti sopra e fare tabella.
-\color{black}
+
 
 \begin{table}
-\caption{Weak instrumentalism vs strong instrumentalism summary}
-\framebox[.96\linewidth][l]{\parbox{.92\linewidth}{
+\caption{Weak vs strong instrumentalism summary}
+\framebox[.92\linewidth][l]{\parbox{.92\linewidth}{
 %\vspace{0.2cm}
 %
-%\emph{ General science}
-%\begin{enumerate}
-%\item[p1] Predictive accuracy is not always constitutive of scientific success
-%\vspace{-0.2cm}
-%\item[p2] Scientific falsification on the ground of wrong predictions is sometimes misleading, especially in social sciences (Trump's election, Leicester win, Brexit)
-%\vspace{-0.2cm}
-%\item[p3]  Supposedly valid scientific theories should exist {before} the future data have been revealed
-%\vspace{-0.2cm}
-%\item[p4] Prediction is not explicitly part of the formulation of a 
-%scientific hypothesis {at the time the law is posed}, but it becomes relevant and relevant as science advances
-%\end{enumerate}
-%
-%\vspace{0.1cm}
-%
-%\emph{ Statistics}
-%\begin{enumerate}
-%\item[p5] Take care of variability in the statistical predictions
-%\vspace{-0.2cm}
-%\item[p6] If necessary, go beyond the distinction between inference and prediction, and consider a joint model for data, parameters and future data (falsificationist Bayes)
-%\vspace{-0.2cm}
-%\item[p7] Rather than reasoning in terms of variance and bias, reason more in terms of predictive information criteria and posterior predictive distribution
-%\end{enumerate}
-%
-%\vspace{0.1cm}
-%
-%\emph{ Machine Learning}
-%\begin{enumerate}
-%\item[p8] `Shaking the training set' to improve predictive accuracy is an obscure step
-%\vspace{-0.2cm}
-%\item[p9] Avoid to tune the algorithm with the only task to improve predictive accuracy
-%\vspace{-0.2cm}
-%\item[ p10] To be falsifiable, ML techniques need to be transparently posed
-%\end{enumerate}
+\begin{small}
+\begin{tabular}{cccc}
+& \emph{ Strong instrumentalism} & & 
+
+
+\emph{Weak instrumentalism} \\
+
+\textbf{Applicability} & play in anyone's garden &  & \emph{divide et impera}\\
+\textbf{Prescription} & bias-variance tradeoff && predictive inference \\
+\textbf{Data-treatment} & shaking training set, over-tuning&& sensitivity analysis \\
+\textbf{Interpretability} & black-boxes && method transparency\\
+
+\end{tabular} 
+\end{small}
+
  }}
+ 
 \end{table}
 
 %In other way said, a supposedly valid scientific theory should exist \emph{before} the future data have been revealed, and produce some immediate benefits to the scientific community, similarly as the falling bodies theory of Galilei first, and the law of universal gravitation of Newton then: corroborating or rejecting a model/algorithm on the basis of observable future values only is often far from the scientists' requirements and economic funds of the current project.
@@ -654,23 +640,13 @@ arrivato qui. Rivedere punti sopra e fare tabella.
 \section{Discussion}
 \label{sec:concl}
 
+
+As statisticians required to build good models and accomodate complex data, we must warn statistical learning users about the role of prediction. Predictive accuracy is not always constitutive of scientific success: Prediction is not everything, however prediction could be seen as an alternative inferential tool to explain the models. In this paper we propose a weak instrumentalist position for statistical learning, by highlighting and warning about the use and the abuse coming from a strong predictivism in the modern statistical learning. The results is a practical behavioral protocol with some main points such as the applicability, the prescription, the data treatment, and the interpretability.
+
+
 \color{blue}
-Da scrivere ex-novo.
+arrivato qui.
 \color{black}
-
-%Prediction is central in the progress of science and has become even more relevant in statistics and data science, as the availability of new 
-%computational tools has become common to accommodate data and predict new events. The entire field of science changed drastically over the last 
-%decades, new disciplines entered the scientific environment, and social sciences became a new frontier where predictive accuracy was required. 
-%
-%Natural and physical sciences progressed with Popper's falsificationism  a main consequence of which is the 
-%strong predictivism: scientific theories should be falsified in light of wrong predictions. However, social sciences are not falsifiable in the 
-%same way: some social events---presidential elections, football results, and policy effects---are not perfectly predictable for many reasons, such 
-%as data origins and unpredictable human behaviors. In this paper, we relax the assumptions behind strong instrumentalism and we provide a 
-%several points (see Table 1) to frame statistical and ML techniques within a weak instrumentalist philosophy, in which the main 
-%proposals regard algorithm transparency and variability in predictions.
-%
-%As statisticians required to build good models to accomodate complex data, we must warn statisticians and data science users about the role of prediction. Predictive accuracy is not always constitutive of scientific success: Prediction is not everything, but is vital, and it is our responsibility to choose the gun or the bazooka.
-
 
 
 
