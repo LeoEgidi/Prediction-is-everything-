@@ -64,7 +64,7 @@
 \bigskip
 \begin{abstract}
 
-The role of prediction in science is still ambiguous, and even the modern statistical learning field could benefit from a deep investigation.  Is a method with a low predictive accuracy a bad method? Moreover, is a poor predictive accuracy able to falsify a posed theoretical model? Conversely, is a high predictive accuracy always constitutive of scientific success?  Statisticians argued a lot about the relationship/conflict existing between prediction and explanation: in this paper, we wish to overcome this conflict by proposing a practical behavioral protocol to warn about possible uses and abuses of the main forecasting practices and to reason in terms of transparency and falsification.
+Being the ultimate goal of science to find and reveal the truth, it is still ambiguous and controversial the role of prediction with respect to this task. Due to years characterized by larger and larger computational resources and vast amounts of data available, the same issue is worth to be investigated  in the modern statistical learning field too.  Is a method with a low predictive accuracy a bad method? Moreover, is a poor predictive accuracy able to falsify a posed theoretical model? Conversely, is a high predictive accuracy always constitutive of scientific success?  Statisticians argued a lot about the tension existing between prediction and explanation: in this paper, we wish to overcome this conflict by proposing a practical behavioral protocol to warn about possible uses and abuses of the predictive practices usually addressed by the modern statistical learning methods and to reason in terms of predictive inference, transparency, and falsification.
 
 %Prediction is an unavoidable task for data scientists, and over the last few decades, statistics and machine learning have become the most popular `prediction weapons' in many fields. However, prediction should always be associated with a measure of uncertainty - because from it  we can only reconstruct and 
 %falsify the model/algorithm decisions. Machine learning methods offer many point predictions,  but they rarely yield a measure of uncertainty, whereas statistical 
@@ -74,7 +74,7 @@ The role of prediction in science is still ambiguous, and even the modern statis
 \end{abstract}
 
 \noindent%
-{\it Keywords:}  predictive accuracy; explanation; protocol; falsification.
+{\it Keywords:}  predictive accuracy; explanation; protocol; predictive inference; falsification.
 \vfill
 
 \newpage
@@ -122,8 +122,8 @@ statistical community about the distinction between explanatory and predictive m
 statistical models for testing causal hypotheses or explanations---e.g. between a set of covariates and a response variable; we define prediction or predictive modeling the action of using a model (or device, algorithm) to produce predictions for new or future 
 observations. The milestone of this debate can be considered as one of the most influential papers ever, \cite{breiman2001statistical}, where Leo Breiman shed light on two distinct cultures, the modeling and the algorithmic one, which usually raised the importance of causal explanation and prediction, respectively. 
 
-However, these two dimensions often appear conflated, and any attempt to state the supremacy of one of the two entities over the other is in most cases misleading.  For such reason, we think the debate about the supposed prevalence of one of the two dimensions is local and application-dependent and, in general, wasteful.
-Rather,  we could try to go beyond, by incorporating prediction in the explanation step. As statisticians, we spent most of our efforts and our best years for reporting statistical estimates and standard errors, along with measures of \emph{statistical 
+However, these two dimensions  appear often conflated, and any attempt to state the supremacy of one of the two entities over the other is in most cases misleading.  For such reason, we think the debate about the supposed prevalence of one of the two dimensions is local and application-dependent and, in general, wasteful.
+Rather,  we could try to go beyond, by incorporating prediction in the explanation step, following some of the suggestions raised by the \emph{integrative modeling} approach \citep{hofman2021integrating}. As statisticians, we spent most of our efforts and our best years for reporting statistical estimates and standard errors, along with measures of \emph{statistical 
 significance} \citep{gelman2016problems}, for \emph{unobservable} parameters that do not exist in real life; rather, in this paper we maintain with \cite{billheimer2019predictive} that inferential 
 statistics is \emph{inherently predictive} and should be focused on probabilistic predictions of future \emph{observable} events and quantities. In such a way, the 
 predictive inference paradigm \citep{bjornstad1990predictive,  geisser2017predictive}, somehow in line with the prequentialism theory of \cite{dawid1984present}, allows the comparison of competing scientific theories by way of predictive accuracy and avoids to emphasize the estimation of virtual and artificial parameters.    Moreover, from a communication point of view observed values are easier to interpret and much more accessible to non-statisticians than artificial parameters.
@@ -143,7 +143,7 @@ However, taking prediction to assess and explain model capability does not solve
 %prediction in the scientific process;  many scientists and philosophers of science, with the pioneering work of Popper,  consider prediction as a confirmation theory approach for 
 %science. 
 %In this paper, we revise this position by considering first the role of prediction in the progress of science from Galileo Galilei to Albert Einstein; then, we analyse the role of prediction in modern statistical learning methods, by drawing an analogy between the steps required to formulate a scientific theory and those required to set up a Bayesian model.
-\emph{weak instrumentalism} (herafter, WI), under which predictive accuracy is constitutive of scientific success only when the 
+\emph{weak instrumentalism} (herafter, WI) approach, under which predictive accuracy is constitutive of scientific success only when the 
 underlying statistical methods are falsifiable and transparently designed to predict future and new events.  In other words, there are many contexts, especially in the social sciences, where falsification through the prediction's fallacy should be replaced by a more consistent idea of falsification: we believe this position may be beneficial for the so-called hard sciences as well.  On one hand, mathematical and quantitative laws formulated by Galilei and Newton 
 were physical and deterministic with which  particular future facts could have been predicted with absolute precision; on the other hand, probabilistic and statistical laws designed  to describe human behavior and social facts are stochastic laws, with which particular future  events could be predicted with an intrinsic amount of uncertainty. 
 Of course, as statisticians we want to do our best in predict future social events, but we cannot entirely evaluate a model's performance only on the ground of its predictive accuracy. Using Popper's terminology, incorrect social sciences predictions should not be the only tool to falsify a theory.

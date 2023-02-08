@@ -165,6 +165,15 @@ Ho, T.~K. (1995).
 \newblock In {\em Proceedings of 3rd international conference on document
   analysis and recognition}, Volume~1, pp.\  278--282. IEEE.
 
+\bibitem[\protect\citeauthoryear{Hofman, Watts, Athey, Garip, Griffiths,
+  Kleinberg, Margetts, Mullainathan, Salganik, Vazire, et~al.}{Hofman
+  et~al.}{2021}]{hofman2021integrating}
+Hofman, J.~M., D.~J. Watts, S.~Athey, F.~Garip, T.~L. Griffiths, J.~Kleinberg,
+  H.~Margetts, S.~Mullainathan, M.~J. Salganik, S.~Vazire, et~al. (2021).
+\newblock Integrating explanation and prediction in computational social
+  science.
+\newblock {\em Nature\/}~{\em 595\/}(7866), 181--188.
+
 \bibitem[\protect\citeauthoryear{James, Witten, Hastie, and Tibshirani}{James
   et~al.}{2013}]{james2013introduction}
 James, G., D.~Witten, T.~Hastie, and R.~Tibshirani (2013).
